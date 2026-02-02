@@ -22,89 +22,37 @@
 \twocolumn
 \pagenumbering{arabic}
 
-\title{Exploring Anti-Money-Laundering:\\ Classification of Pre-Raised 
-Alarms\\
-{\Large A Preliminary Study Using Real-World Alarm Data\\[-0.9em]}
-{\footnotesize 9th Semester Master's Project}}
+\title{Main Title:\\ Main title second line\\
+{\Large Subtitle\\Subtitle second line\\}
+{\footnotesize Master's Thesis}}
 
 
 \author{%
-    \IEEEauthorblockN{%
-        \parbox{\linewidth}{\centering
-        Aleksandar Nikolaev Stavrev,
-        Joyesh Meshram, \\
-        Mihail Grigorov Gerginov,
-        Nicklas Peter Kvist Gislinge
-        }%
-    }%
-    \and
     \IEEEauthorblockA{%
-        \parbox{\linewidth}{\centering
-        anst24@student.aau.dk,
-        jmeshr24@student.aau.dk, \\
-        mgergi24@student.aau.dk,
-        ngisli21@student.aau.dk%
-    }}%
-    \and
-    \IEEEauthorblockA{%
-        \parbox{\linewidth}{\centering
-            \textit{Department of Computer Science, Aalborg University}\\
-            \textit{Aalborg, Denmark}%
-        }
+    	\parbox{\linewidth}{\centering
+    		\textit{Department of Computer Science, Aalborg University}\\
+    		\textit{Aalborg, Denmark}
+    	}
     }
-
-
-    %%% This part need some centering, since there are 3 on each line and the
-    %%% second line is not spaced like the first line.
-    % \IEEEauthorblockN{Gustav C. R. Grønborg}
-    % \IEEEauthorblockA{\textit{Student at Dept. of Computer Science} \\
-    % \textit{Aalborg University} \\
-    % Aalborg, Denmark \\
-    % gcrg21@student.aau.dk}
-    % \and
-    % \IEEEauthorblockN{Hugin J. Zachariasen}
-    % \IEEEauthorblockA{\textit{Student at Dept. of Computer Science} \\
-    % \textit{Aalborg University} \\
-    % Aalborg, Denmark \\
-    % hjulia21@student.aau.dk}
-    % \and
-    % \IEEEauthorblockN{Magnus H. Jensen}
-    % \IEEEauthorblockA{\textit{Student at Dept. of Computer Science} \\
-    % \textit{Aalborg University} \\
-    % Aalborg, Denmark \\
-    % majeni21@student.aau.dk}
-    % \and
-
-    % \IEEEauthorblockN{Martin C. B. Nielsen}
-    % \IEEEauthorblockA{\textit{Student at Dept. of Computer Science} \\
-    % \textit{Aalborg University} \\
-    % Aalborg, Denmark \\
-    % maniem21@student.aau.dk}
-    % \and
-    % \IEEEauthorblockN{Nicklas P. K. Gislinge}
-    % \IEEEauthorblockA{\textit{Student at Dept. of Computer Science} \\
-    % \textit{Aalborg University} \\
-    % Aalborg, Denmark \\
-    % ngisli21@student.aau.dk}
-    % \and
-    % \IEEEauthorblockN{Tobias S. Madsen}
-    % \IEEEauthorblockA{\textit{Student at Dept. of Computer Science} \\
-    % \textit{Aalborg University} \\
-    % Aalborg, Denmark \\
-    % tsma21@student.aau.dk}
-}
+    \\
+    \IEEEauthorblockN{Nicklas Peter Kvist Gislinge\\
+    	ngisli21@student.aau.dk}
+    \IEEEauthorblockA{\textit{Student at Dept. of Computer Science} \\
+    	\textit{Aalborg University} \\
+    	Aalborg, Denmark}
+    	}
 
 \maketitle
 \thispagestyle{plain}
 \pagestyle{plain}
 
 \begin{abstract}
-  Transaction monitoring systems generate large volumes of \gls{aml} alarms, many of which do not escalate. This paper studies the downstream task of predicting the outcome of alarms after they are raised, using available alarm and customer features. We evaluate monolithic tabular models, ensembles constructed by partitioning data by employee or by alert category, a voting classifier, neural network models, and AutoGluon. Evaluation uses class sensitive metrics and safeguards designed to reduce over optimization. Results show that the partitioned ensembles and the neural models do not yield consistent benefits in this setting, while AutoGluon achieves the strongest overall performance and a robust balance across metrics. The resulting binary decision supports a screening workflow for human investigation.
+  \textbf{Insert Abstract Here}
   
 \end{abstract}
 
 \begin{IEEEkeywords}
-Anti-Money Laundering (AML); Transaction Monitoring Systems (TMS); Machine Learning; Binary Classification; Ensemble Learning;
+Insert; Keywords; Separated; By; Semi colons;
 \end{IEEEkeywords}
 % \printglossaries
 %\listoftodos

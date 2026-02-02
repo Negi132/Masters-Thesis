@@ -1,15 +1,16 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'master.blg'
-[223] biber-MSWIN64:340> INFO - === 
-[289] Biber.pm:419> INFO - Reading 'master.bcf'
-[452] Biber.pm:979> INFO - Found 34 citekeys in bib section 0
-[469] Biber.pm:4419> INFO - Processing section 0
-[482] Biber.pm:4610> INFO - Looking for bibtex file 'bib/mybib.bib' for section 0
-[551] bibtex.pm:1713> INFO - LaTeX decoding ...
-[638] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/mybib.bib'
-[973] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[973] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[973] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[973] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1014] bbl.pm:660> INFO - Writing 'master.bbl' with encoding 'UTF-8'
-[1044] bbl.pm:763> INFO - Output to master.bbl
+[163] biber-MSWIN64:340> INFO - === 
+[209] Biber.pm:419> INFO - Reading 'master.bcf'
+[333] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
+[350] Biber.pm:4419> INFO - Processing section 0
+[363] Biber.pm:4610> INFO - Looking for bibtex file 'bib/mybib.bib' for section 0
+[370] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[370] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[370] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[370] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[370] bbl.pm:660> INFO - Writing 'master.bbl' with encoding 'UTF-8'
+[370] bbl.pm:763> INFO - Output to master.bbl
+[371] Biber.pm:131> WARN - Data source 'bib/mybib.bib' is empty, ignoring
+[371] Biber.pm:131> WARN - I didn't find a database entry for 'MyAss' (section 0)
+[371] Biber.pm:133> INFO - WARNINGS: 2

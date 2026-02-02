@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.17)  19 JAN 2026 13:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.17)  2 FEB 2026 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1536,7 +1536,19 @@ Package glossaries Info: Writing glossary file master.glo on input line 88.
 \@quotelevel=\count532
 \@quotereset=\count533
 
-(./master.aux (./sections/appendix/appA.aux) (./sections/appendix/appB.aux))
+(./master.aux)
+Runaway argument?
+{sec:results 
+! File ended while scanning use of \@newl@bel.
+<inserted text> 
+                \par 
+l.21 \begin{document}
+                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
 \openout1 = `master.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -1557,7 +1569,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
-
 -- Lines per column: 56 (exact).
 Package hyperref Info: Link coloring OFF on input line 21.
 (./master.out) (./master.out)
@@ -1633,12 +1644,11 @@ most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
 loading the todonotes package. on input line 21.
 
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 98.
 (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
 
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1647,7 +1657,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
 
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1656,245 +1666,50 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 98
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 46
 .
 
 (c:/texlive/2024/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-Overfull \hbox (3.50006pt too wide) in paragraph at lines 98--98
+Overfull \hbox (3.50006pt too wide) in paragraph at lines 46--46
  [] 
  []
 
 
-Overfull \hbox (3.50006pt too wide) in paragraph at lines 98--98
+Overfull \hbox (3.50006pt too wide) in paragraph at lines 46--46
  [] 
  []
 
 
-Overfull \hbox (3.50006pt too wide) in paragraph at lines 98--98
+Overfull \hbox (3.50006pt too wide) in paragraph at lines 46--46
  [] 
  []
 
-(./setup/docSetup.tex (./sections/introduction.tex [1{c:/texlive/2024/texmf-var
-/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips
-/base/8r.enc}
+(./setup/docSetup.tex (./sections/introduction.tex)
+(./sections/related_works.tex) (./sections/problem_formulation.tex)
+(./sections/data_preprocessing.tex) (./sections/implementation.tex)
+(./sections/experiments.tex) (./sections/results.tex)
+(./sections/conclusion.tex) (./sections/acknowledgement.tex)) [1{c:/texlive/202
+4/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/font
+s/enc/dvips/base/8r.enc}
 
 \openout5 = `master.ist'.
 
 
 
-]) (./sections/related_works.tex
-Underfull \vbox (badness 2245) has occurred while \output is active []
-
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 106--113
-
- []
-
-) (./sections/problem_formulation.tex
-<fig/aml_clas_flow.png, id=306, 393.981pt x 540.492pt>
-File: fig/aml_clas_flow.png Graphic file (type png)
-<use fig/aml_clas_flow.png>
-Package pdftex.def Info: fig/aml_clas_flow.png  used on input line 55.
-(pdftex.def)             Requested size: 412.80157pt x 566.321pt.
-) (./sections/data_preprocessing.tex
-[3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./fig/aml_clas_flow.png>]) (./sections/implementation.tex [5]
-Underfull \hbox (badness 10000) in paragraph at lines 60--74
- []\T1/ptm/m/it/10 (+20) Neural Net-works: [] \T1/ptm/m/n/10 (+20) Neu-ral net-
-works rep-re-sent a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--74
-
- []
-
-
-Underfull \hbox (badness 1616) in paragraph at lines 98--103
-[]\T1/ptm/m/n/10 (+20) In ad-di-tion, we con-sider Transformer-based en-coders,
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--103
-
- []
-
-
-Underfull \hbox (badness 3690) in paragraph at lines 106--112
- \T1/ptm/m/it/10 (+20) 2) Variable-length His-to-ries and Padding: [][][] \T1/p
-tm/m/n/10 (+20) Cus-tomer
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--112
-
- []
-
-[6]) (./sections/experiments.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--28
-
- []
-
-
-Package caption Warning: \setcaptiontype
-(caption)                outside box or environment on input line 29.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--108
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 157--161
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--172
-
- []
-
-
-Underfull \hbox (badness 1874) in paragraph at lines 175--180
-\T1/ptm/m/n/10 (+20) within our dataset, we utilise both [][]Syn-thetic Mi-nor-
-ity
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--193
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--210
-
- []
-
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 22
-4.
-(c:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `pcr' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [8]
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
-
- []
-
-
-Underfull \hbox (badness 2418) in paragraph at lines 273--286
-\T1/ptm/m/n/10 (+20) hy-per-pa-ram-e-ter op-ti-miza-tion, the com-bi-na-tions i
-n-cluded
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--286
-
- []
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 288--8
-
- []
-
-(./sections/results.tex [9]
-Underfull \hbox (badness 1540) in paragraph at lines 60--62
-[]\T1/ptm/b/n/10 (+20) High ac-cu-racy but finds vir-tu-ally no pos-i-tives:
- []
-
-
-Overfull \hbox (6.70218pt too wide) in paragraph at lines 80--89
- [][] 
- []
-
-
-Overfull \hbox (12.68666pt too wide) in paragraph at lines 110--119
- [][] 
- []
-
-(./fig/mono_results.tex) (./fig/ensemble_results.tex
-Overfull \hbox (3.83842pt too wide) in paragraph at lines 7--35
- [][] 
- []
-
-) [10] (./fig/regular_results.tex
-Overfull \hbox (9.17436pt too wide) in paragraph at lines 7--37
- [][] 
- []
-
-)
-<fig/bce_thresholds.pdf, id=496, 512.70578pt x 222.9128pt>
-File: fig/bce_thresholds.pdf Graphic file (type pdf)
-<use fig/bce_thresholds.pdf>
-Package pdftex.def Info: fig/bce_thresholds.pdf  used on input line 157.
-(pdftex.def)             Requested size: 252.0pt x 109.56155pt.
-<fig/focal_thresholds.pdf, id=497, 512.70578pt x 222.9128pt>
-File: fig/focal_thresholds.pdf Graphic file (type pdf)
-<use fig/focal_thresholds.pdf>
-Package pdftex.def Info: fig/focal_thresholds.pdf  used on input line 163.
-(pdftex.def)             Requested size: 252.0pt x 109.56155pt.
- (./fig/rnn_results_bce_new.tex) (./fig/rnn_results_focal_new.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <./fig/bce_thresholds.pdf> <./fig/focal_thresholds.pdf>]
-(./fig/gru_results_bce_new.tex) (./fig/gru_results_focal_new.tex)
-(./fig/transformer_results_bce_new.tex)
-(./fig/transformer_results_focal_new.tex [12]) [13]) (./sections/conclusion.tex
-) (./sections/acknowledgement.tex)) [14] [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16
-
 ]
-(./sections/appendix.tex [17
+
+LaTeX Warning: Empty bibliography on input line 62.
+
+(./sections/appendix.tex [2
 
 ]
 \openout2 = `sections/appendix/appA.aux'.
 
- (./sections/appendix/appA.tex) [18
+ (./sections/appendix/appA.tex) [3
 
-]
-\openout2 = `sections/appendix/appB.aux'.
-
-
-(./sections/appendix/appB.tex
-Underfull \hbox (badness 2744) in paragraph at lines 6--17
-\T1/ptm/m/n/10 (+20) Rows shaded in light red cor-re-spond to [][][][][][], lig
-ht blue to [][][][][][], and light green to
- []
-
-
-Overfull \vbox (5.7443pt too high) has occurred while \output is active []
-
-
-[19
-
-
-
-
-]) [20])
+])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1911,105 +1726,43 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-(./master.aux (./sections/appendix/appA.aux) (./sections/appendix/appB.aux))
+(./master.aux (./sections/appendix/appA.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
-Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 46FCC31F21DB499C0DC1CFE27A1F8D1A;8521.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `master.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `master.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  7264CF3307AFAF2DB19E92F74F5A9C17;3450.
 Package logreq Info: Writing requests to 'master.run.xml'.
 \openout1 = `master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44947 strings out of 474103
- 841695 string characters out of 5747481
- 2024496 words of memory out of 5000000
- 65957 multiletter control sequences out of 15000+600000
- 699510 words of font info for 437 fonts, out of 8000000 for 9000
+ 43114 strings out of 474103
+ 808626 string characters out of 5747481
+ 1942496 words of memory out of 5000000
+ 64645 multiletter control sequences out of 15000+600000
+ 668249 words of font info for 185 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 99i,17n,96p,2352b,1475s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{glo:rfc} has been referenced but does not exist, re
-placed by a fixed one
-
-
-pdfTeX warning (dest): name{glo:bce} has been referenced but does not exist, re
-placed by a fixed one
-
-
-pdfTeX warning (dest): name{glo:smote} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:ce} has been referenced but does not exist, rep
-laced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:ee} has been referenced but does not exist, rep
-laced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:mm} has been referenced but does not exist, rep
-laced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:gru} has been referenced but does not exist, re
-placed by a fixed one
-
-
-pdfTeX warning (dest): name{glo:ml} has been referenced but does not exist, rep
-laced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:gnn} has been referenced but does not exist, re
-placed by a fixed one
-
-
-pdfTeX warning (dest): name{glo:rnn} has been referenced but does not exist, re
-placed by a fixed one
-
-
-pdfTeX warning (dest): name{glo:cnn} has been referenced but does not exist, re
-placed by a fixed one
-
-
-pdfTeX warning (dest): name{glo:aucroc} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:vc} has been referenced but does not exist, rep
-laced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:nn} has been referenced but does not exist, rep
-laced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:lsb} has been referenced but does not exist, re
-placed by a fixed one
-
-
-pdfTeX warning (dest): name{glo:aml} has been referenced but does not exist, re
-placed by a fixed one
-
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/
-texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf
--dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1
-/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on master.pdf (20 pages, 432526 bytes).
+ 99i,10n,96p,2352b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024
+/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts
+/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on master.pdf (3 pages, 59316 bytes).
 PDF statistics:
- 846 PDF objects out of 1000 (max. 8388607)
- 706 compressed objects within 8 object streams
- 174 named destinations out of 1000 (max. 500000)
- 68524 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 79 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
+ 32 named destinations out of 1000 (max. 500000)
+ 42509 words of extra memory for PDF output out of 42996 (max. 10000000)
 
