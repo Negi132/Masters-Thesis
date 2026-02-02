@@ -1,0 +1,38 @@
+\begin{table}[H]
+	\centering
+	\definecolor{monoRow}{RGB}{255,210,210} % stronger light red
+	\definecolor{empRow}{RGB}{205,225,255} % stronger soft blue
+	\definecolor{catRow}{RGB}{205,255,205} % stronger soft green
+	\setlength{\tabcolsep}{4pt}
+	\begin{tabular}{l l cc cc c c}
+		\toprule
+		& & \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+		\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+		Clf & Scorer & Added & Closed & Added & Closed & Accuracy & FBeta \\
+		\midrule
+		\rowcolor{empRow}
+LR & rec\_add & 0.992 & 0.140 & 0.181 & \bestcell{0.989} & 0.277 & 0.685 \\
+\rowcolor{catRow}
+LR & rec\_add & 0.996 & \worstcell{0.016} & 0.163 & 0.952 & 0.174 & 0.659 \\
+\rowcolor{catRow}
+LR & fbeta\_add & \bestcell{0.988} & 0.089 & 0.172 & 0.974 & 0.234 & 0.671 \\
+\rowcolor{monoRow}
+KNC & prec\_add & 0.272 & 0.998 & \bestcell{0.971} & 0.877 & 0.881 & 0.293 \\
+\rowcolor{monoRow}
+KNC & f1\_add & 0.480 & 0.982 & 0.837 & 0.908 & \bestcell{0.901} & 0.501 \\
+\rowcolor{empRow}
+DTC & rec\_add & \bestcell{0.988} & 0.051 & 0.167 & 0.956 & 0.202 & 0.662 \\
+\rowcolor{catRow}
+RFC & rec\_add & 1.000 & 0.002 & \worstcell{0.161} & 1.000 & \worstcell{0.162} & 0.658 \\
+\rowcolor{catRow}
+RFC & prec\_closed & \worstcell{0.012} & 1.000 & 1.000 & 0.841 & 0.841 & \worstcell{0.014} \\
+\rowcolor{monoRow}
+RFC & accuracy & 0.439 & \bestcell{0.990} & 0.893 & 0.902 & \bestcell{0.901} & 0.463 \\
+\rowcolor{monoRow}
+RFC & fbeta\_add & 0.972 & 0.397 & 0.236 & 0.986 & 0.489 & \bestcell{0.741} \\
+\rowcolor{catRow}
+HGBC & prec\_add & 0.000 & 0.998 & 0.000 & \worstcell{0.839} & 0.837 & 0.000 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Summary of minimum and maximum values per metric}
+\end{table}

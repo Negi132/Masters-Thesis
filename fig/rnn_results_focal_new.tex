@@ -1,0 +1,33 @@
+\begin{table}[H]
+\centering
+\definecolor{focalRow}{RGB}{205,255,205}    % stronger soft green
+\begin{tabular}{l rr rr rr}
+\toprule
+& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+threshold & added & closed & added & closed & f1score & accuracy \\
+\midrule
+0.050 & \bestcell{1.000} & \worstcell{0.000} & 0.163 & \worstcell{0.000} & 0.280 & 0.163 \\
+0.100 & \bestcell{1.000} & \worstcell{0.000} & 0.163 & \worstcell{0.000} & 0.280 & 0.163 \\
+0.150 & \bestcell{1.000} & \worstcell{0.000} & 0.163 & \worstcell{0.000} & 0.280 & 0.163 \\
+0.200 & \bestcell{1.000} & \worstcell{0.000} & 0.163 & \worstcell{0.000} & 0.280 & 0.163 \\
+0.250 & \bestcell{1.000} & \worstcell{0.000} & 0.163 & \worstcell{0.000} & 0.280 & 0.163 \\
+0.300 & 0.989 & 0.035 & 0.166 & \bestcell{0.944} & 0.284 & 0.191 \\
+0.350 & 0.925 & 0.118 & 0.169 & 0.890 & \bestcell{0.286} & 0.249 \\
+0.400 & 0.860 & 0.144 & 0.163 & 0.841 & 0.274 & 0.260 \\
+0.450 & 0.489 & 0.562 & \bestcell{0.178} & 0.850 & 0.261 & 0.550 \\
+0.500 & \worstcell{0.000} & 0.991 & \worstcell{0.000} & 0.836 & \worstcell{0.000} & 0.830 \\
+0.550 & \worstcell{0.000} & 0.991 & \worstcell{0.000} & 0.836 & \worstcell{0.000} & 0.830 \\
+0.600 & \worstcell{0.000} & 0.993 & \worstcell{0.000} & 0.836 & \worstcell{0.000} & 0.831 \\
+0.650 & \worstcell{0.000} & 0.998 & \worstcell{0.000} & 0.837 & \worstcell{0.000} & 0.836 \\
+0.700 & \worstcell{0.000} & 0.999 & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+0.750 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+0.800 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+0.850 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+0.900 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+0.950 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+\bottomrule
+\end{tabular}
+\caption{Threshold sweep for focal loss on the test set (RNN)}
+\label{tab:focal_loss_rnn_new}
+\end{table}

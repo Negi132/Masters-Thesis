@@ -1,0 +1,113 @@
+\section{Related Works} \label{sec:related-works}
+
+The detection of money laundering through machine learning has 
+evolved over the past decade, with research spanning 
+core detection methodologies, human-AI collaboration, 
+and advanced neural architectures. This 
+section reviews literature within those fields. However, due to the 
+specific niche, role, and organizational placement 
+of the proposed solution within 
+\gls{lsb}, certain aspects of this body of 
+work are less directly applicable in our 
+context and are discussed inline below.
+
+\subsection{Traditional Machine Learning Approaches for AML}
+
+The application of machine learning to anti-money laundering detection has been 
+widely studied. Early reviews by Chen et 
+al.~\cite{chen2018learning} 
+establish foundational taxonomies of machine learning techniques, including 
+anomaly detection, clustering, classification, and network analysis for suspicious 
+transaction detection. Jensen and 
+Iosifidis~\cite{jensen2023fightingmoneylaunderingstatistics} 
+provide a more recent framework, distinguishing between 
+client risk profiling and suspicious behaviour flagging, addressing 
+class imbalance challenges, feature engineering issues, and evaluation 
+metrics appropriate for imbalanced datasets. 
+
+Building on these foundations, recent work has demonstrated the 
+practical effectiveness of supervised learning approaches on real-world 
+banking data. Jullum et al.~\cite{jullum2020detecting} use 
+data from DNB, 
+Norway's largest bank, to show that including non-reported alerts in training 
+improves model performance. They also introduce performance measures 
+for comparing ML approaches to existing rule-based AML systems. 
+Namdar et 
+al.~\cite{namdar2025antimoneylaunderingmachinelearning} 
+present a 16-step 
+supervised learning pipeline achieving $0.961$ \gls{aucroc} on 
+high-risk client 
+identification, with emphasis on explainable AI modules for feature 
+importance, which improves understanding of how models prioritize clients 
+for investigation.
+
+One recent survey by Fan et 
+al.~\cite{fan2025deeplearningapproachesantimoney} reviews 
+deep learning 
+approaches for mobile transaction AML, covering \glspl{cnn}, 
+\glspl{rnn}, transformers, 
+and \glspl{gnn} while addressing challenges of false 
+positives, 
+limited data availability, and real-time 
+detection requirements.\\
+Together, the above works provide a 
+general theoretical basis, and serve as a preliminary guide for our model 
+selection.
+
+\subsection{Human-AI Collaboration and Modelling Analyst Behaviour}
+
+An underexplored area is how human analysts and AI systems collaborate 
+in AML detection, and how analyst decision-making patterns can be 
+captured and replicated. Recent 
+research~\cite{kadam2024enhancingfinancialfrauddetection} 
+demonstrates how Subject Matter Expert (SME) feedback annotations can be propagated 
+through transaction graphs to improve fraud detection models, showing 
+$7.24\%$ average improvement in AUC when human expertise from AML analysts 
+is incorporated into ML systems through feedback loops.
+
+Nagarakanti~\cite{nagarakanti2025human} provides analysis 
+showing that experienced financial professionals improve AI-generated risk 
+assessments by $42.8\%$ when market conditions deviate from historical 
+patterns, 
+and that human interventions improve lending outcomes by $19.7\%$ for edge 
+cases. 
+The documented collaborative fraud detection workflow, in which analysts 
+correctly resolve $81.7\%$ of complex anomaly cases, illustrates the importance 
+and impact of expert analyst decision-making within human–AI systems.
+
+A methodological framework for evaluating Human-AI 
+Collaboration 
+systems~\cite{fragiadakis2025evaluatinghumanaicollaborationreview} includes 
+fraud detection as a domain of study, examining task allocation, 
+interaction patterns, and how humans and AI contribute to collaborative outcomes. 
+The framework discusses detection rates (true/false positives) as evaluation 
+metrics and provides structured approaches for evaluating collaboration modes 
+(AI-Centric, Human-Centric, and Symbiotic), which is directly applicable to 
+understanding how AML analysts should interact with and be modelled within AI 
+systems.\\
+The insights of these papers align closely with the objectives of the proposed 
+system, which only aims to assist \gls{aml} employees, not replace them. 
+Particularly, we explore the possibility that employee-based ensembles may 
+exhibit particular aptitude for this task. The results will be discussed in 
+\autoref{sec:results}.
+
+\subsection{Addressing Class Imbalance in AML Detection}
+
+Class imbalance is a practical challenge in AML detection, 
+as fraudulent transactions often constitute less than $1\%$ of 
+all data. Liu et al.~\cite{liu2021pick} address this 
+challenge 
+through PC-GNN, a graph-based approach using label-balanced sampling to 
+construct sub-graphs for mini-batch training, neighbourhood sampling to 
+choose relevant neighbours, and aggregation across different relations. 
+Tests on YelpChi and Amazon benchmark datasets show improvements 
+over state-of-the-art baselines.
+
+Ruchay et al.~\cite{ruchay2023imbalanced} focus on handling 
+class imbalance in fraudulent bank transactions using the 
+CreditCardFraud\footnote{https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud}
+ dataset. Their work employs Tomek Links' resampling algorithm and emphasizes 
+appropriate evaluation metrics for imbalanced data (Precision, Recall, F1, IBA) 
+rather than accuracy alone, achieving $99.99\%$ accuracy with proper handling 
+of imbalance.\\
+

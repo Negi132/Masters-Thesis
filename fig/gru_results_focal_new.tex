@@ -1,0 +1,33 @@
+\begin{table}[H]
+\centering
+\definecolor{focalRow}{RGB}{205,255,205}    % stronger soft green
+\begin{tabular}{l rr rr rr}
+\toprule
+& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+threshold & added & closed & added & closed & f1score & accuracy \\
+\midrule
+0.050 & \bestcell{0.978} & \worstcell{0.023} & 0.163 & 0.846 & 0.279 & 0.178 \\
+0.100 & 0.952 & 0.043 & 0.162 & 0.820 & 0.277 & 0.191 \\
+0.150 & 0.930 & 0.058 & 0.161 & \worstcell{0.812} & 0.274 & 0.200 \\
+0.200 & 0.930 & 0.069 & 0.162 & 0.835 & 0.277 & 0.209 \\
+0.250 & 0.925 & 0.081 & 0.163 & 0.848 & 0.278 & 0.219 \\
+0.300 & 0.919 & 0.089 & 0.164 & 0.850 & 0.278 & 0.224 \\
+0.350 & 0.919 & 0.091 & 0.164 & 0.853 & 0.279 & 0.226 \\
+0.400 & 0.919 & 0.102 & 0.166 & \bestcell{0.867} & \bestcell{0.281} & 0.235 \\
+0.450 & 0.543 & 0.528 & \bestcell{0.183} & 0.856 & 0.273 & 0.531 \\
+0.500 & 0.011 & 0.967 & 0.059 & 0.834 & 0.018 & 0.811 \\
+0.550 & 0.011 & 0.975 & 0.077 & 0.835 & 0.019 & 0.818 \\
+0.600 & \worstcell{0.000} & 0.982 & \worstcell{0.000} & 0.835 & \worstcell{0.000} & 0.823 \\
+0.650 & \worstcell{0.000} & 0.993 & \worstcell{0.000} & 0.836 & \worstcell{0.000} & 0.831 \\
+0.700 & \worstcell{0.000} & 0.995 & \worstcell{0.000} & 0.837 & \worstcell{0.000} & 0.833 \\
+0.750 & \worstcell{0.000} & 0.996 & \worstcell{0.000} & 0.837 & \worstcell{0.000} & 0.834 \\
+0.800 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+0.850 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+0.900 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+0.950 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.837 & \worstcell{0.000} & \bestcell{0.837} \\
+\bottomrule
+\end{tabular}
+\caption{Threshold sweep for focal loss on the test set (GRU)}
+\label{tab:focal_loss_gru_new}
+\end{table}

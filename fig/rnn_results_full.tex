@@ -1,0 +1,68 @@
+\begin{table}[H]
+\caption{\\Threshold sweep for BCE and focal loss on the raw test set (RNN)}
+\definecolor{bceRow}{RGB}{205,225,255}    % stronger soft blue
+\definecolor{focalRow}{RGB}{205,255,205}    % stronger soft green
+\label{tab:threshold_sweep_bce_vs_focal_rnn_full}
+\subcaption{BCE Loss}
+\begin{tabular}{l rr rr rr}
+\toprule
+& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+threshold & added & closed & added & closed & f1score & accuracy \\
+\midrule
+0.050 & \bestcell{0.982} & \worstcell{0.110} & \worstcell{0.129} & 0.978 & 0.228 & \worstcell{0.214} \\
+0.100 & \bestcell{0.982} & 0.116 & 0.130 & 0.979 & 0.229 & 0.219 \\
+0.150 & \bestcell{0.982} & 0.120 & 0.130 & \bestcell{0.980} & 0.230 & 0.222 \\
+0.200 & 0.973 & 0.123 & 0.130 & 0.971 & 0.229 & 0.223 \\
+0.250 & 0.973 & 0.125 & 0.130 & 0.971 & 0.229 & 0.225 \\
+0.300 & 0.973 & 0.128 & 0.130 & 0.972 & 0.230 & 0.228 \\
+0.350 & 0.973 & 0.129 & 0.130 & 0.972 & 0.230 & 0.229 \\
+0.400 & 0.973 & 0.130 & 0.131 & 0.972 & 0.230 & 0.230 \\
+0.450 & 0.954 & 0.132 & \worstcell{0.129} & 0.956 & 0.227 & 0.229 \\
+\rowcolor{bceRow}
+0.500 & 0.589 & 0.562 & 0.153 & 0.911 & \bestcell{0.243} & 0.565 \\
+0.550 & 0.146 & 0.939 & 0.242 & 0.891 & 0.182 & 0.845 \\
+0.600 & 0.137 & 0.945 & 0.250 & 0.891 & 0.177 & 0.849 \\
+0.650 & 0.132 & 0.951 & 0.266 & 0.891 & 0.177 & 0.854 \\
+0.700 & 0.132 & 0.956 & 0.287 & 0.891 & 0.181 & 0.858 \\
+0.750 & 0.128 & 0.957 & 0.286 & 0.891 & 0.177 & 0.859 \\
+0.800 & 0.114 & 0.959 & 0.272 & 0.890 & 0.161 & 0.859 \\
+0.850 & 0.110 & 0.960 & 0.267 & \worstcell{0.889} & 0.155 & 0.859 \\
+0.900 & \worstcell{0.105} & 0.963 & 0.274 & \worstcell{0.889} & \worstcell{0.152} & 0.861 \\
+0.950 & \worstcell{0.105} & \bestcell{0.967} & \bestcell{0.299} & \worstcell{0.889} & 0.155 & \bestcell{0.865} \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\subcaption{Focal loss}
+
+\begin{tabular}{l rr rr rr}
+\toprule
+& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+threshold & added & closed & added & closed & f1score & accuracy \\
+\midrule
+0.050 & \bestcell{1.000} & \worstcell{0.000} & 0.118 & \worstcell{0.000} & 0.212 & \worstcell{0.118} \\
+0.100 & \bestcell{1.000} & \worstcell{0.000} & 0.118 & \worstcell{0.000} & 0.212 & \worstcell{0.118} \\
+0.150 & \bestcell{1.000} & 0.055 & 0.124 & \bestcell{1.000} & 0.221 & 0.167 \\
+0.200 & \bestcell{1.000} & 0.065 & 0.126 & \bestcell{1.000} & 0.223 & 0.176 \\
+0.250 & \bestcell{1.000} & 0.069 & 0.126 & \bestcell{1.000} & 0.224 & 0.179 \\
+\rowcolor{focalRow}
+0.300 & \bestcell{1.000} & 0.071 & 0.126 & \bestcell{1.000} & 0.224 & 0.181 \\
+0.350 & \bestcell{1.000} & 0.072 & 0.126 & \bestcell{1.000} & 0.224 & 0.182 \\
+0.400 & \bestcell{1.000} & 0.075 & 0.127 & \bestcell{1.000} & \bestcell{0.225} & 0.184 \\
+0.450 & 0.059 & 0.968 & 0.200 & 0.885 & 0.092 & 0.861 \\
+0.500 & 0.027 & 0.987 & 0.222 & 0.883 & 0.049 & 0.874 \\
+0.550 & 0.023 & 0.991 & 0.263 & 0.883 & 0.042 & 0.877 \\
+0.600 & 0.023 & 0.993 & 0.312 & 0.883 & 0.043 & 0.878 \\
+0.650 & 0.023 & 0.993 & 0.312 & 0.883 & 0.043 & 0.878 \\
+0.700 & 0.018 & 0.994 & 0.308 & 0.883 & 0.034 & 0.879 \\
+0.750 & 0.018 & 0.999 & 0.667 & 0.883 & 0.036 & \bestcell{0.883} \\
+0.800 & 0.018 & 0.999 & \bestcell{0.800} & 0.883 & 0.036 & \bestcell{0.883} \\
+0.850 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.882 & \worstcell{0.000} & 0.882 \\
+0.900 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.882 & \worstcell{0.000} & 0.882 \\
+0.950 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & 0.882 & \worstcell{0.000} & 0.882 \\
+\bottomrule
+\end{tabular}
+\end{table}

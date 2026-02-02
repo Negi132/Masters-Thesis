@@ -1,0 +1,116 @@
+\section{Modelling Approaches} \label{sec:implementation}
+We treat alarm handling as a supervised binary classification task. Given the
+features available at decision time, the model predicts whether an alarm is
+more likely to be escalated (\textit{ADDED TO CASE}) or not (\textit{CLOSED}).
+We compare tabular baselines, sequence models over customer alarm histories,
+and simple ensembles.
+\subsection{Tabular baselines and tree ensembles}
+
+We benchmark multiple classifier families under a single, consistent training and
+evaluation protocol. The scikit learn estimator interface makes this practical,
+because it standardizes fitting, prediction, and model selection across a wide
+range of methods \cite{pedregosa2011scikit}. We treat model choice as empirical,
+since there is no universally best learner across problem settings \cite{wolpert1997nfl}.
+
+We include Logistic Regression as a transparent baseline. In high stakes
+decisions, there are strong arguments for using interpretable models when they
+are adequate for the task. \cite{rudin2019stop}
+
+We also include simple classical baselines. k Nearest Neighbours is a standard
+nonparametric reference method in pattern recognition \cite{cover1967nn}, and
+Gaussian Naive Bayes provides a lightweight probabilistic baseline.
+
+For tree models, we include both single trees and ensembles. Random Forests are
+a widely used ensemble method based on bagging over trees. \cite{breiman2001rf}
+We also include gradient boosting, which builds an additive model by iteratively
+fitting weak learners to improve the objective. \cite{friedman2001gbm}
+To cover widely used scalable implementations of boosting, we include XGBoost
+and LightGBM. \cite{chen2016xgboost,ke2017lightgbm}
+
+
+Because alarm outcomes are typically imbalanced, we report class sensitive
+metrics and summarize trade offs using precision and recall rather than accuracy
+alone. \cite{saito2015pr}
+
+
+The evaluated classifiers are:
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Logistic Regression
+		\item K Nearest Neighbours
+		\item Gaussian Naive Bayes
+		\item Decision Tree
+		\item Random Forest
+		\item Histogram based Gradient Boosting
+		\item XGBoost
+		\item LightGBM
+		\item Recurrent Neural Network
+		\item GRU
+		\item Transformer
+	\end{itemize}
+\end{multicols}
+
+\subsection{Sequence Models}
+
+In addition, we evaluate sequence oriented neural architectures as a separate
+experimental track, including recurrent neural networks, GRU, and Transformers
+\cite{elman1990rnn,cho2014gru,vaswani2017attention}.
+
+\subsubsection*{Neural Networks}
+Neural networks represent a complementary approach to the traditional machine
+learning classifiers discussed above. We include them to investigate whether
+sequence-aware architectures can exploit temporal dependencies in alarm
+histories. However, we hypothesize that neural networks perform suboptimally
+compared to classical machine learning methods in this setting, as suggested by
+recent evaluations of deep models on tabular datasets~\cite{shwartzziv2022tabular,grinsztajn2022tree}.
+The primary reason is the limited size of the available dataset: with
+approximately $7{,}600$ alarms and 19 features, the data volume falls
+well below the scale at which deep learning methods typically demonstrate their
+advantage over gradient-boosted trees and other tabular classifiers. Neural
+networks generally require larger datasets to learn robust
+representations and avoid overfitting, whereas tree-based ensembles and linear
+models are better suited to small-to-medium tabular datasets with hand-crafted
+features~\cite{shwartzziv2022tabular,grinsztajn2022tree}.\\
+
+\subsubsection{Model Choice}
+
+To model temporal dependencies in alarm histories,
+we employ neural architectures that learn a 
+latent representation of a customer's alarm sequence.
+In general, these models process the sequence of past alarms and produce a
+hidden representation that summarizes the relevant information, which then
+serves as input to a linear classifier for the current decision.
+
+\glspl{rnn} provide a
+natural baseline for this setting by iteratively updating
+a hidden state as new alarms arrive. However, standard \glspl{rnn}
+are known to suffer from vanishing gradients, which limits their
+ability to capture dependencies over longer 
+sequences~\cite{pascanu2013difficulty}.
+
+To address this, we also consider \glspl{gru},
+which introduce update and reset gates to regulate the flow of information
+across time steps. These gating mechanisms allow the model to retain or 
+discard historical information selectively, making \glspl{gru} well suited for 
+scenarios where older alarms may become irrelevant as customer behaviour
+evolves~\cite{cho2014learning,chung2014empirical}.
+
+In addition, we consider Transformer-based encoders, which replace
+recurrence with self-attention mechanisms. Self-attention allows each
+alarm in a sequence to attend directly to all others, enabling the model
+to learn which past alarms are most informative for the current decision,
+regardless of their temporal distance~\cite{vaswani2017attention}.\\
+
+\subsubsection{Variable-length Histories and Padding}
+
+Customer alarm histories vary substantially in length (1-62 alarms). To accommodate this
+variability, sequences are padded to a fixed maximum length of 10 alarms. For recurrent
+models, padded elements are excluded from computation via sequence packing,
+while the Transformer model employs padding masks and masked pooling operations.
+As a result, the learned representations depend only on observed alarms and not on
+artificial padding.\\
+
+\subsection{Ensembling}
+
+\subsubsection{Voting Classifier}
+Using the Scikit-learn VotingClassifier we can create an ensemble that introduces diversity between the models. This method takes outputs from the ensemble models and performs a majority vote to create a final result. This works well on models that perform similarly well and can eliminate their individual weak-points. However, the implementation in Scikit-learn is designed in a way where it always fits the models itself. This made it difficult to get a fair comparison between other methods such as what we have already done. To bypass these limitation we inject the pre-trained models and skip the fitting step. This saved on duplicate training time and ensured accurate comparisons. This also meant going back to the original implementation and making sure to save the models, as well as any other information that is needed to test the results, such as the train-test split or the label encoder.

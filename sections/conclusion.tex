@@ -1,0 +1,20 @@
+\section{Conclusion \& Future Works}\label{sec:conclusion&future-works}
+\subsection{Conclusion}
+This paper set out to examine whether ensemble-based approaches built on employee and category data partitioning provide any advantages over monolithic models, voting-based combinations, or neural networks for use in post-alarm \gls{aml} classification. It has been found that the partitioned ensemble approaches do not provide benefits on this dataset. In practice, they perform worse than monolithic training and also produce a higher share of over-optimized models. Voting classifiers try to mimic human behaviours by combining various base models, although the viable models show good performance they have a higher chance of being over optimized. Monoliths on average perform better than ensembles and have the best model between the employe ensemble, category ensemble and monoliths. Furthermore, the neural network experiments show that the evaluated architectures are performing great with the given data. Changes in loss functions change the results to more recall-heavy predictions, however, often at the expense of poorer performance on the other metrics. In contrast, AutoGluon shows the strongest overall performance across the reported results. As such, the findings support monolithic tabular modelling as a reliable baseline for this task, and AutoGluon as generally the most promising candidate for producing a binary screening decision that supports human review.
+
+
+
+\subsection{Future Work}\label{sec:futurework}
+To further investigate this topic, one could 
+start with the following subjects:
+
+\paragraph{Larger Voting Classifiers}
+The \glspl{vc} constructed in this paper were all consisting of three 
+models. One could explore how the performance of the classifiers 
+change when utilizing a larger number of models within the \gls{vc}. 
+
+\paragraph{Larger dataset}
+With more information from NetCompnany linking the transactions to the alarms might provide useful features to train on. Additionally with more time \gls{lsb} will accumulate more data.
+
+\paragraph{Hyperparameter optimization}
+Explore further hyperparameter optimization such as Optuna, RandomSearch, multi-objective optimization and compare their results for possible gains. 

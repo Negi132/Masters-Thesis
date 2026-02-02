@@ -1,0 +1,30 @@
+\begin{table*}[t]
+	\centering
+	\definecolor{monoRow}{RGB}{255,210,210} % stronger light red
+	\definecolor{empRow}{RGB}{205,225,255} % stronger soft blue
+	\definecolor{catRow}{RGB}{205,255,205} % stronger soft green
+	\begin{tabular}{l l cc cc c c}
+		\toprule
+		& & \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+		\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+		Clf & Scorer & Added & Closed & Added & Closed & Accuracy & FBeta \\
+		\midrule
+		DTC, GNB, LGBMC & rec\_add & \worstcell{0.547} & 0.024 & 0.010 & 0.745 & 0.463 & 0.562 \\
+		\rowcolor{white}
+		HGBC, LR, RFC & fbeta\_closed & 0.000 & 1.000 & \bestcell{0.161} & 0.000 & 0.161 & 0.000 \\
+		\rowcolor{white}
+		DTC, GNB, LR & rec\_add & 0.717 & \worstcell{0.016} & \worstcell{0.011} & 0.791 & 0.604 & 0.723 \\
+		\rowcolor{white}
+		DTC, GNB, RFC & rec\_add & \bestcell{0.738} & 0.016 & 0.012 & \bestcell{0.796} & \bestcell{0.621} & \bestcell{0.743} \\
+		\rowcolor{white}
+		LGBMC, RFC, XGBC & rec\_add & 0.010 & 0.638 & 0.110 & 0.127 & 0.111 & \worstcell{0.011} \\
+		\rowcolor{white}
+		KNC, RFC, XGBC & rec\_closed & 0.001 & 0.642 & 0.110 & \worstcell{0.011} & 0.104 & 0.001 \\
+		\rowcolor{white}
+		HGBC, LR, XGBC & fbeta\_closed & 0.000 & \bestcell{0.972} & 0.157 & 0.000 & 0.157 & 0.000 \\
+		\rowcolor{white}
+		DTC, KNC, LGBMC & f1\_add & 0.009 & 0.150 & 0.028 & 0.054 & \worstcell{0.032} & 0.010 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Summary of minimum and maximum values per metric for the vote classifier}
+\end{table*}

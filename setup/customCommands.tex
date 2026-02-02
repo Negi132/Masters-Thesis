@@ -1,0 +1,68 @@
+% Highlight text and add a todo
+% Use: "\hltodo{Here goes the text you want to make a comment to}{Here goes your notes to the text}"
+\newcommand{\hltodo}[2]{\texthl{#1}\todo{#2}}
+
+% Make an indented quote
+% NOTE: It is needed to insert a "\cite{}" as the second parameter
+% Use: "\indentquote{Here goes the quote}{\cite{Here goes the cite}}"
+
+\newcommand{\indentquote}[3]
+{
+\begin{center}
+    \begin{minipage}{0.75\textwidth}
+        \textit{``#1''}~#2
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+
+\newcommand{\algorithmautorefname}{Algorithm}
+\newcommand{\listingautorefname}{Listing}
+
+
+% Long division
+\setcounter{MaxMatrixCols}{20}
+\newcommand{\longdiv}{\smash{\mkern-0.43mu\vstretch{1.31}{\hstretch{.7}{)}}\mkern-5.2mu\vstretch{1.31}{\hstretch{.7}{)}}}}
+
+
+% Circle around numbers
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
+\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}
+
+%The given symbol or text (\text{mytext}) in a circle
+%To be used always in math mode
+\newcommand{\circlesign}[1]{
+    \mathbin{
+        \mathchoice
+        {\buildcirclesign{\displaystyle}{#1}}
+        {\buildcirclesign{\textstyle}{#1}}
+        {\buildcirclesign{\scriptstyle}{#1}}
+        {\buildcirclesign{\scriptscriptstyle}{#1}}
+    }
+}
+
+\newcommand\buildcirclesign[2]{%
+    \begin{tikzpicture}[baseline=(X.base), inner sep=0.5, outer sep=-0.5]
+    \node[draw,circle] (X)  {\ensuremath{#1 #2}};
+    \end{tikzpicture}%
+}
+
+\newcommand{\smallop}[1]{%
+    \ensuremath{%
+        \mathbin{%
+            \raisebox{0.3ex}{\scalebox{0.63}{%
+                \ensuremath{#1}%
+            }}%
+        }%
+    }%
+}%
+\definecolor{maxcell}{RGB}{0,120,0}   % dark green
+\definecolor{mincell}{RGB}{160,0,0}   % dark red
+
+\newcommand{\bestcell}[1]{\cellcolor{maxcell}{\color{white}\textbf{#1}}}
+\newcommand{\worstcell}[1]{\cellcolor{mincell}{\color{white}\textbf{#1}}}

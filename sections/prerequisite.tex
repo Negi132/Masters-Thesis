@@ -1,0 +1,25 @@
+\section{Prerequisite} \label{sec:prerequisite}
+
+\subsection{Prompt Processing Architecture}
+
+The energy consumption analysis compares three different prompt processing
+approaches.
+
+\begin{enumerate}
+    \item An \gls{slm} run on the GPU.
+    \item An \gls{nlm} run on the GPU.
+    \item A custom \gls{nlp} based model run on the CPU.
+\end{enumerate}
+
+The reason for running the methods on different architectures, stems from their
+different practical implementations. Due to the relative complexity of
+\glspl{slm}, it was decided to run it on the GPU, utilising its capabilities of
+larger computational complexity. Initial testing supported this choice, as the
+\gls{slm} experienced significant performance improvements running on the GPU,
+compared to the CPU. The \gls{nlp} approach is much simpler, allowing it to run
+on the CPU, and gaining no significant benefit by being run on the GPU. The
+\gls{nlm} exists in an area between the other options. However, preliminary
+testing shows that there is no significant difference in prompt processing
+speeds depending on the architecture in our specific testing environment,
+therefore it was chosen to run on the GPU, to be a closer comparison to the
+\gls{slm}.

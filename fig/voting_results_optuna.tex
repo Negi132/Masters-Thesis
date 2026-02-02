@@ -1,0 +1,48 @@
+\begin{table}[H]
+	\centering
+	\definecolor{monoRow}{RGB}{255,210,210} % stronger light red
+	\definecolor{empRow}{RGB}{205,225,255} % stronger soft blue
+	\definecolor{catRow}{RGB}{205,255,205} % stronger soft green
+	\setlength{\tabcolsep}{4pt}
+	\begin{tabular}{l l cc cc c c}
+		\toprule
+		& & \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+		\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+		Clf & Scorer & Added & Closed & Added & Closed & Accuracy & FBeta \\
+\midrule
+\rowcolor{monoRow}
+LR & fbeta\_add & 0.935 & 0.509 & 0.268 & 0.976 & 0.578 & \bestcell{0.748}\\
+\rowcolor{catRow}
+LR & accuracy & 0.000 & 1.000 & 0.000 & \worstcell{0.839} & 0.839 & 0.000\\
+\rowcolor{monoRow}
+RFC & f1\_add & 0.545 & 0.958 & 0.713 & 0.916 & \bestcell{0.891} & 0.558\\
+\rowcolor{empRow}
+RFC & prec\_add & 0.000 & 1.000 & 0.000 & \worstcell{0.839} & 0.839 & 0.000\\
+\rowcolor{catRow}
+RFC & prec\_add & \worstcell{0.012} & 1.000 & 1.000 & 0.841 & 0.841 & \worstcell{0.014}\\
+\rowcolor{empRow}
+LGBMC & rec\_add & 0.947 & 0.062 & \worstcell{0.162} & 0.860 & 0.205 & 0.639\\
+\rowcolor{empRow}
+LGBMC & prec\_add & 0.008 & 0.997 & 0.333 & 0.840 & 0.838 & 0.009\\
+\rowcolor{empRow}
+HGBC & rec\_add & \bestcell{0.988} & 0.060 & 0.168 & 0.963 & 0.210 & 0.664\\
+\rowcolor{catRow}
+GNB & fbeta\_add & 1.000 & \worstcell{0.026} & 0.165 & 1.000 & \worstcell{0.183} & 0.663\\
+\rowcolor{monoRow}
+GNB & rec\_add & 0.980 & 0.213 & 0.193 & \bestcell{0.982} & 0.337 & 0.696\\
+\rowcolor{catRow}
+GNB & prec\_add & 0.000 & 1.000 & 0.000 & \worstcell{0.839} & 0.839 & 0.000\\
+\rowcolor{catRow}
+GNB & accuracy & 0.000 & 1.000 & 0.000 & \worstcell{0.839} & 0.839 & 0.000\\
+\rowcolor{catRow}
+KNC & fbeta\_add & \bestcell{0.988} & 0.070 & 0.169 & 0.968 & 0.218 & 0.666\\
+\rowcolor{monoRow}
+KNC & prec\_add & 0.256 & 0.998 & \bestcell{0.955} & 0.875 & 0.878 & 0.276\\
+\rowcolor{catRow}
+KNC & prec\_add & \worstcell{0.012} & 1.000 & 1.000 & 0.841 & 0.841 & \worstcell{0.014}\\
+\rowcolor{catRow}
+KNC & accuracy & 0.175 & \bestcell{0.990} & 0.768 & 0.862 & 0.859 & 0.189\\
+\bottomrule
+	\end{tabular}
+	\caption{Summary of minimum and maximum values per metric with Optuna}
+\end{table}

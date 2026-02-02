@@ -1,0 +1,114 @@
+\subsection{Proofs}\label{app:A}
+
+\subsubsection{Proof: Recall Added 100\% = 
+	Precision Closed 
+	100\%}\label{app:A:RecallPrecision}
+Proof of Recall added = Precision Closed 
+when both are at 100\%:
+\[
+\textbf{Claim:}\quad 
+\operatorname{Recall}_{\text{Added}} = 1 
+\iff 
+\operatorname{Precision}_{\text{Closed}} = 
+1.
+\]
+
+\[
+\textbf{Setup:}
+\]
+Consider a binary classification problem 
+with classes 
+\(\{\text{Added},\text{Closed}\}\).
+Let "Added" be the positive class and 
+"Closed" be the negative class, and define 
+the confusion matrix counts:
+
+\[
+\begin{array}{c|cc}
+	& \widehat{\text{Added}} & 
+	\widehat{\text{Closed}} \\
+	\hline
+	\text{Added} & TP & FN \\
+	\text{Closed} & FP & TN
+\end{array}
+\]
+
+The recall for the class Added is
+\[
+\operatorname{Recall}_{\text{Added}} \;=\; 
+\frac{TP}{TP+FN}.
+\]
+
+The precision for the class Closed 
+(treating Closed as the class of interest) 
+is
+\[
+\operatorname{Precision}_{\text{Closed}} 
+\;=\; \frac{TN}{TN+FN}.
+\]
+(Here, the denominator \(TN+FN\) counts 
+all predictions of 
+\(\widehat{\text{Closed}}\), of which 
+\(TN\) are correct and \(FN\) are 
+incorrect.)
+
+\[
+\textbf{Proof:}
+\]
+
+\[
+(\Rightarrow)\quad
+\operatorname{Recall}_{\text{Added}} = 1
+\;\Longrightarrow\;
+\frac{TP}{TP+FN} = 1
+\;\Longrightarrow\;
+TP = TP+FN
+\;\Longrightarrow\;
+FN = 0.
+\]
+
+If \(FN=0\), then
+\[
+\operatorname{Precision}_{\text{Closed}}
+= \frac{TN}{TN+FN}
+= \frac{TN}{TN+0}
+= 1.
+\]
+Hence 
+\(\operatorname{Recall}_{\text{Added}} = 1 
+\Rightarrow 
+\operatorname{Precision}_{\text{Closed}} = 
+1.\)
+
+\[
+(\Leftarrow)\quad
+\operatorname{Precision}_{\text{Closed}} = 
+1
+\;\Longrightarrow\;
+\frac{TN}{TN+FN} = 1
+\;\Longrightarrow\;
+TN = TN+FN
+\;\Longrightarrow\;
+FN = 0.
+\]
+
+If \(FN=0\), then
+\[
+\operatorname{Recall}_{\text{Added}}
+= \frac{TP}{TP+FN}
+= \frac{TP}{TP+0}
+= 1.
+\]
+Hence 
+\(\operatorname{Precision}_{\text{Closed}} 
+= 1 \Rightarrow 
+\operatorname{Recall}_{\text{Added}} = 1.\)
+
+\[
+\textbf{Conclusion:}\quad
+\operatorname{Recall}_{\text{Added}} = 1 
+\iff FN = 0 \iff 
+\operatorname{Precision}_{\text{Closed}} = 
+1.
+\qquad\square
+\]

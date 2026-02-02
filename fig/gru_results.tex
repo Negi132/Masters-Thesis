@@ -1,0 +1,52 @@
+\begin{table}[H]
+\label{tab:threshold_sweep_bce_vs_focal_gru}
+\centering
+\definecolor{bceRow}{RGB}{205,225,255}    % stronger soft blue
+\definecolor{focalRow}{RGB}{205,255,205}    % stronger soft green
+\subcaption{BCE Loss}
+\label{tab:bce_loss_gru}
+\begin{tabular}{l rr rr rr}
+\toprule
+& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+threshold & added & closed & added & closed & f1score & accuracy \\
+\midrule
+0.050 & 0.945 & 0.171 & 0.133 & 0.959 & 0.233 & 0.263 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+0.400 & 0.927 & 0.187 & 0.133 & 0.950 & 0.232 & 0.275 \\
+0.450 & 0.562 & 0.616 & 0.164 & 0.913 & 0.254 & 0.609 \\
+\rowcolor{bceRow}
+0.500 & 0.562 & 0.618 & 0.165 & 0.913 & 0.255 & 0.611 \\
+0.550 & 0.228 & 0.896 & 0.228 & 0.896 & 0.228 & 0.817 \\
+0.600 & 0.100 & 0.993 & 0.667 & 0.892 & 0.175 & 0.888 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+0.950 & 0.046 & 1.000 & 1.000 & 0.886 & 0.087 & 0.887 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\subcaption{Focal loss}
+\label{tab:focal_loss_gru}
+
+\begin{tabular}{l rr rr rr}
+\toprule
+& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+threshold & added & closed & added & closed & f1score & accuracy \\
+\midrule
+0.050 & 0.982 & 0.091 & 0.127 & 0.974 & 0.224 & 0.196 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+0.200 & 0.954 & 0.143 & 0.130 & 0.959 & 0.229 & 0.239 \\
+0.250 & 0.954 & 0.148 & 0.131 & 0.960 & 0.230 & 0.243 \\
+\rowcolor{focalRow}
+0.300 & 0.945 & 0.155 & 0.131 & 0.955 & 0.229 & 0.249 \\
+0.350 & 0.932 & 0.162 & 0.130 & 0.946 & 0.228 & 0.254 \\
+0.400 & 0.918 & 0.168 & 0.129 & 0.938 & 0.226 & 0.257 \\
+0.450 & 0.073 & 0.980 & 0.327 & 0.887 & 0.119 & 0.872 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+0.950 & 0.000 & 1.000 & 0.000 & 0.882 & 0.000 & 0.882 \\
+\bottomrule
+\end{tabular}
+\caption{Threshold sweep for BCE and focal loss on the test set (GRU)}
+\end{table}

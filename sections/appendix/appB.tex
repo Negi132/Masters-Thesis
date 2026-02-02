@@ -1,0 +1,247 @@
+\onecolumn
+\subsection{Summary Tables}\label{app:B}
+\definecolor{monoRow}{RGB}{255,210,210} % stronger light red
+\definecolor{empRow}{RGB}{205,225,255}  % stronger soft blue
+\definecolor{catRow}{RGB}{205,255,205}  % stronger soft green
+This appendix contains summary tables from the full data. Each 
+table is a summary of a larger table, and contains only the rows exhibiting 
+either a minimum or maximum value for each column, for better read- and 
+comparability.\\ 
+Rows shaded in light red correspond to \colorbox{monoRow}{\texttt{mono}}, light 
+blue to \colorbox{empRow}{\texttt{employee\_ensemble}}, and light green to 
+\colorbox{catRow}{\texttt{category\_ensemble}}. Cells  highlighted with dark 
+green are the highest values in the column. Cells highlighted with dark red are 
+the lowest values in the column. \\
+The appearance sequence of the rows within the table is arbitrary, as it was 
+dependant on the execution order during training. 
+
+\subsubsection{Gluon}
+\begin{longtable}{l rrrr rr} % 8 columns total	
+	\toprule
+	& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+	\cmidrule(lr){2-3}\cmidrule(lr){4-6}
+	Model & Added & Closed & Added & Closed & Accuracy & Fbeta \\
+	\midrule
+	\endfirsthead
+	
+	\toprule
+	& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+	\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+	Model & Added & Closed & Added & Closed & Accuracy & Fbeta \\
+	\midrule
+	\endhead
+	
+	\midrule
+	\multicolumn{7}{r}{\emph{Continued on next page}}\\
+	\endfoot
+	
+	\bottomrule
+	\endlastfoot
+
+XGBoost\_BAG\_L2      & 0.943             & \bestcell{0.628}  & \bestcell{0.327}  & 0.983             & \bestcell{0.785}  & \bestcell{0.794} \\
+WeightedEnsemble\_L3  & 0.951             & 0.577             & 0.302             & 0.984             & 0.764             & 0.783            \\
+WeightedEnsemble\_L2  & \bestcell{0.963}  & 0.546             & 0.290             & \bestcell{0.987}  & 0.755             & 0.782            \\
+LightGBM\_BAG\_L2     & \worstcell{0.939} & 0.596             & 0.308             & 0.981             & 0.767             & 0.780            \\
+RandomForest\_BAG\_L1 & 0.955             & 0.550             & 0.289             & 0.985             & 0.752             & 0.777            \\
+RandomForest\_BAG\_L2 & \bestcell{0.963}  & 0.527             & 0.281             & \bestcell{0.987}  & 0.745             & 0.775            \\
+XGBoost\_BAG\_L1      & 0.951             & 0.440             & 0.246             & \worstcell{0.979} & 0.696             & 0.739            \\
+LightGBM\_BAG\_L1     & 0.959             & \worstcell{0.377} & \worstcell{0.228} & 0.980             & \worstcell{0.668} & \worstcell{0.727} \\
+
+\caption{AutoGluon model performance using macro-averaged metrics.}
+\label{tab:autogluon_per_model}\\
+\end{longtable}
+
+\subsubsection{Viable Models Tables}
+
+\begin{longtable}{llrrrrrr}
+	
+	\toprule
+	&  &
+	\multicolumn{2}{c}{Recall} &
+	\multicolumn{2}{c}{Precision} &
+	&  \\
+	\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+	Base Classifier & Scorer & Added & Closed & Added & Closed & Accuracy & FBeta 
+	\\
+	\midrule
+	\endfirsthead
+	
+	\toprule
+	&  &
+	\multicolumn{2}{c}{Recall} &
+	\multicolumn{2}{c}{Precision} &
+	&  \\
+	\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+	Base Classifier & Scorer & Added & Closed & Added & Closed & Accuracy & F1 
+	\\
+	\midrule
+	\endhead
+	
+	\midrule
+	\multicolumn{8}{r}{\emph{Continued on next page}}\\
+	\endfoot
+	
+	\bottomrule
+	\endlastfoot
+\rowcolor{monoRow}
+RF & rec\_closed & \bestcell{0.996} & \worstcell{0.102} & 0.175 & \bestcell{0.992} & 0.246 & 0.679 \\
+\rowcolor{empRow}
+LR & rec\_add & 0.992 & 0.140 & 0.181 & 0.989 & 0.277 & 0.685 \\
+\rowcolor{catRow}
+DT & fbeta\_add & 0.992 & 0.130 & 0.179 & 0.988 & 0.269 & 0.683 \\
+\rowcolor{monoRow}
+HGBC & fbeta\_closed & 0.984 & 0.245 & 0.200 & 0.987 & 0.364 & 0.707 \\
+\rowcolor{monoRow}
+LR & rec\_add & 0.984 & 0.204 & 0.192 & 0.985 & 0.330 & 0.696 \\
+\rowcolor{monoRow}
+LR & rec\_closed & 0.976 & 0.123 & 0.176 & 0.963 & 0.260 & 0.671 \\
+\rowcolor{monoRow}
+RF & fbeta\_add & 0.972 & 0.397 & 0.236 & 0.986 & 0.489 & \bestcell{0.741} \\
+\rowcolor{catRow}
+RF & fbeta\_closed & 0.968 & 0.112 & 0.173 & 0.947 & 0.249 & 0.663 \\
+\rowcolor{empRow}
+DT & fbeta\_add & 0.959 & 0.151 & 0.178 & 0.951 & 0.282 & 0.667 \\
+\rowcolor{empRow}
+LR & rec\_closed & 0.955 & 0.103 & \worstcell{0.170} & 0.923 & \worstcell{0.240} & 0.653 \\
+\rowcolor{catRow}
+KNC & rec\_add & 0.943 & 0.187 & 0.182 & 0.945 & 0.309 & 0.665 \\
+\rowcolor{monoRow}
+GNB & rec\_add & 0.939 & 0.262 & 0.196 & 0.957 & 0.371 & 0.681 \\
+\rowcolor{monoRow}
+GNB & prec\_add & 0.939 & 0.262 & 0.196 & 0.957 & 0.371 & 0.681 \\
+\rowcolor{monoRow}
+GNB & rec\_closed & 0.939 & 0.262 & 0.196 & 0.957 & 0.371 & 0.681 \\
+\rowcolor{monoRow}
+GNB & prec\_closed & 0.939 & 0.262 & 0.196 & 0.957 & 0.371 & 0.681 \\
+\rowcolor{monoRow}
+GNB & acc & 0.939 & 0.262 & 0.196 & 0.957 & 0.371 & 0.681 \\
+\rowcolor{monoRow}
+GNB & f1\_add & 0.939 & 0.262 & 0.196 & 0.957 & 0.371 & 0.681 \\
+\rowcolor{monoRow}
+GNB & fbeta\_add & 0.939 & 0.262 & 0.196 & 0.957 & 0.371 & 0.681 \\
+\rowcolor{monoRow}
+GNB & fbeta\_closed & 0.939 & 0.262 & 0.196 & 0.957 & 0.371 & 0.681 \\
+\rowcolor{catRow}
+RF & rec\_closed & 0.939 & 0.213 & 0.186 & 0.948 & 0.330 & 0.669 \\
+\rowcolor{empRow}
+LR & fbeta\_closed & 0.939 & 0.119 & 0.170 & \worstcell{0.911} & 0.252 & \worstcell{0.646} \\
+\rowcolor{monoRow}
+LR & fb\_add & 0.931 & \bestcell{0.445} & \bestcell{0.244} & 0.971 & \bestcell{0.523} & 0.726 \\
+\rowcolor{empRow}
+DT & fbeta\_closed & 0.923 & 0.182 & 0.178 & 0.925 & 0.301 & 0.651 \\
+\rowcolor{empRow}
+RF & fbeta\_add & 0.919 & 0.304 & 0.202 & 0.951 & 0.403 & 0.678 \\
+\rowcolor{monoRow}
+LR & fbeta\_closed & 0.911 & 0.293 & 0.198 & 0.945 & 0.393 & 0.670 \\
+\rowcolor{empRow}
+KNC & rec\_closed & \worstcell{0.906} & 0.382 & 0.220 & 0.955 & 0.466 & 0.691 \\
+	\caption{Viable models with simple GridSearch optimization}
+	\label{tab:nonoptuna}\\
+\end{longtable}
+
+\begin{longtable}{llrrrrrr}
+	
+	\toprule
+	&  &
+	\multicolumn{2}{c}{Recall} &
+	\multicolumn{2}{c}{Precision} &
+	&  \\
+	\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+	Base Classifier & Scorer & Added & Closed & Added & Closed & Accuracy & FBeta 
+	\\
+	\midrule
+	\endfirsthead
+	
+	\toprule
+	&  &
+	\multicolumn{2}{c}{Recall} &
+	\multicolumn{2}{c}{Precision} &
+	&  \\
+	\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+	Base Classifier & Scorer & Added & Closed & Added & Closed & Accuracy & F1 
+	\\
+	\midrule
+	\endhead
+	
+	\midrule
+	\multicolumn{8}{r}{\emph{Continued on next page}}\\
+	\endfoot
+	
+	\bottomrule
+	\endlastfoot
+\rowcolor{monoRow}
+RF & rec\_closed & \bestcell{0.996} & \worstcell{0.102} & \worstcell{0.176} & \bestcell{0.992} & \worstcell{0.246} & 0.679 \\
+\rowcolor{empRow}
+LR & rec\_add & 0.992 & 0.140 & 0.181 & 0.989 & 0.277 & 0.685 \\
+\rowcolor{catRow}
+DT & fbeta\_add & 0.992 & 0.130 & 0.180 & 0.988 & 0.269 & 0.683 \\
+\rowcolor{monoRow}
+HGBC & fbeta\_closed & 0.984 & 0.245 & 0.200 & 0.987 & 0.364 & 0.707 \\
+\rowcolor{monoRow}
+LR & rec\_add & 0.984 & 0.205 & 0.192 & 0.985 & 0.330 & 0.696 \\
+\rowcolor{monoRow}
+LR & rec\_closed & 0.976 & 0.123 & 0.176 & 0.963 & 0.260 & 0.671 \\
+\rowcolor{monoRow}
+RF & fbeta\_add & 0.972 & \bestcell{0.397} & \bestcell{0.236} & 0.986 & \bestcell{0.489} & \bestcell{0.741} \\
+\rowcolor{catRow}
+RF & fbeta\_closed & 0.968 & 0.112 & 0.173 & 0.947 & 0.250 & 0.663 \\
+\rowcolor{empRow}
+DT & fbeta\_add & 0.959 & 0.151 & 0.178 & 0.951 & 0.282 & 0.667 \\
+\rowcolor{empRow}
+LR & rec\_closed & \worstcell{0.955} & 0.103 & \worstcell{0.170} & \worstcell{0.923} & \worstcell{0.240} & \worstcell{0.653} \\
+	\caption{Top viable models with simple GridSearch optimization}
+	\label{tab:nonoptuna_top10}\\
+\end{longtable}
+
+
+\subsubsection{Voting Classifier}
+
+\begin{longtable}{llrrrrrr}
+	
+	\toprule
+	&  &
+	\multicolumn{2}{c}{Recall} &
+	\multicolumn{2}{c}{Precision} &
+	&  \\
+	\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+	Base Classifier & Scorer & Added & Closed & Added & Closed & Accuracy & FBeta 
+	\\
+	\midrule
+	\endfirsthead
+	
+	\toprule
+	&  &
+	\multicolumn{2}{c}{Recall} &
+	\multicolumn{2}{c}{Precision} &
+	&  \\
+	\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+	Base Classifier & Scorer & Added & Closed & Added & Closed & Accuracy & F1 
+	\\
+	\midrule
+	\endhead
+	
+	\midrule
+	\multicolumn{8}{r}{\emph{Continued on next page}}\\
+	\endfoot
+	
+	\bottomrule
+	\endlastfoot
+		DTC, GNB, LGBMC & rec\_add & \worstcell{0.547} & 0.024 & 0.010 & 0.745 & 0.463 & 0.562 \\
+		\rowcolor{white}
+		HGBC, LR, RFC & fbeta\_closed & 0.000 & 1.000 & \bestcell{0.161} & 0.000 & 0.161 & 0.000 \\
+		\rowcolor{white}
+		DTC, GNB, LR & rec\_add & 0.717 & \worstcell{0.016} & \worstcell{0.011} & 0.791 & 0.604 & 0.723 \\
+		\rowcolor{white}
+		DTC, GNB, RFC & rec\_add & \bestcell{0.738} & 0.016 & 0.012 & \bestcell{0.796} & \bestcell{0.621} & \bestcell{0.743} \\
+		\rowcolor{white}
+		LGBMC, RFC, XGBC & rec\_add & 0.010 & 0.638 & 0.110 & 0.127 & 0.111 & \worstcell{0.011} \\
+		\rowcolor{white}
+		KNC, RFC, XGBC & rec\_closed & 0.001 & 0.642 & 0.110 & \worstcell{0.011} & 0.104 & 0.001 \\
+		\rowcolor{white}
+		HGBC, LR, XGBC & fbeta\_closed & 0.000 & \bestcell{0.972} & 0.157 & 0.000 & 0.157 & 0.000 \\
+		\rowcolor{white}
+		DTC, KNC, LGBMC & f1\_add & 0.009 & 0.150 & 0.028 & 0.054 & \worstcell{0.032} & 0.010 \\
+		\bottomrule
+	\caption{Summary of minimum and maximum values per metric for the vote classifier}
+	\label{tab:voting_reg}\\
+\end{longtable}

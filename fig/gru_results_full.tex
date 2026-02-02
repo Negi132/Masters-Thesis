@@ -1,0 +1,68 @@
+\begin{table}[H]
+\caption{\\Threshold sweep for BCE and focal loss on the raw test set (GRU)}
+\definecolor{bceRow}{RGB}{205,225,255}    % stronger soft blue
+\definecolor{focalRow}{RGB}{205,255,205}    % stronger soft green
+\label{tab:threshold_sweep_bce_vs_focal_gru_full}
+\subcaption{BCE Loss}
+\begin{tabular}{l rr rr rr}
+\toprule
+& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+threshold & added & closed & added & closed & f1score & accuracy \\
+\midrule
+0.050 & \bestcell{0.945} & \worstcell{0.171} & 0.133 & \bestcell{0.959} & 0.233 & \worstcell{0.263} \\
+0.100 & 0.941 & 0.175 & 0.133 & 0.956 & 0.233 & 0.265 \\
+0.150 & 0.941 & 0.178 & 0.133 & 0.957 & 0.233 & 0.268 \\
+0.200 & 0.932 & 0.180 & \worstcell{0.132} & 0.951 & 0.232 & 0.269 \\
+0.250 & 0.932 & 0.183 & 0.133 & 0.952 & 0.232 & 0.271 \\
+0.300 & 0.932 & 0.183 & 0.133 & 0.952 & 0.232 & 0.272 \\
+0.350 & 0.927 & 0.185 & 0.133 & 0.950 & 0.232 & 0.273 \\
+0.400 & 0.927 & 0.187 & 0.133 & 0.950 & 0.232 & 0.275 \\
+0.450 & 0.562 & 0.616 & 0.164 & 0.913 & 0.254 & 0.609 \\
+\rowcolor{bceRow}
+0.500 & 0.562 & 0.618 & 0.165 & 0.913 & \bestcell{0.255} & 0.611 \\
+0.550 & 0.228 & 0.896 & 0.228 & 0.896 & 0.228 & 0.817 \\
+0.600 & 0.100 & 0.993 & 0.667 & 0.892 & 0.175 & 0.888 \\
+0.650 & 0.091 & 0.995 & 0.714 & 0.891 & 0.162 & 0.888 \\
+0.700 & 0.082 & 0.996 & 0.750 & 0.890 & 0.148 & 0.888 \\
+0.750 & 0.078 & 0.997 & 0.773 & 0.889 & 0.141 & 0.888 \\
+0.800 & 0.073 & 0.998 & 0.842 & 0.889 & 0.134 & \bestcell{0.889} \\
+0.850 & 0.064 & 0.999 & 0.875 & 0.888 & 0.119 & 0.888 \\
+0.900 & 0.064 & 0.999 & 0.933 & 0.888 & 0.120 & \bestcell{0.889} \\
+0.950 & \worstcell{0.046} & \bestcell{1.000} & \bestcell{1.000} & \worstcell{0.886} & \worstcell{0.087} & 0.887 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\subcaption{Focal loss}
+
+\begin{tabular}{l rr rr rr}
+\toprule
+& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{Precision} & & \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+threshold & added & closed & added & closed & f1score & accuracy \\
+\midrule
+0.050 & \bestcell{0.982} & \worstcell{0.091} & 0.127 & \bestcell{0.974} & 0.224 & \worstcell{0.196} \\
+0.100 & 0.968 & 0.124 & 0.129 & 0.967 & 0.228 & 0.224 \\
+0.150 & 0.959 & 0.138 & 0.130 & 0.962 & 0.229 & 0.235 \\
+0.200 & 0.954 & 0.143 & 0.130 & 0.959 & 0.229 & 0.239 \\
+\rowcolor{focalRow}
+0.250 & 0.954 & 0.148 & 0.131 & 0.960 & \bestcell{0.230} & 0.243 \\
+0.300 & 0.945 & 0.155 & 0.131 & 0.955 & 0.229 & 0.249 \\
+0.350 & 0.932 & 0.162 & 0.130 & 0.946 & 0.228 & 0.254 \\
+0.400 & 0.918 & 0.168 & 0.129 & 0.938 & 0.226 & 0.257 \\
+0.450 & 0.073 & 0.980 & 0.327 & 0.887 & 0.119 & 0.872 \\
+0.500 & 0.023 & 0.988 & 0.208 & 0.883 & 0.041 & 0.874 \\
+0.550 & 0.014 & 0.995 & 0.273 & 0.883 & 0.026 & 0.879 \\
+0.600 & 0.009 & 0.998 & \bestcell{0.333} & \worstcell{0.882} & 0.018 & 0.881 \\
+0.650 & 0.005 & 0.999 & \bestcell{0.333} & \worstcell{0.882} & 0.009 & 0.881 \\
+0.700 & \worstcell{0.000} & 0.999 & \worstcell{0.000} & \worstcell{0.882} & \worstcell{0.000} & 0.881 \\
+0.750 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & \worstcell{0.882} & \worstcell{0.000} & \bestcell{0.882} \\
+0.800 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & \worstcell{0.882} & \worstcell{0.000} & \bestcell{0.882} \\
+0.850 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & \worstcell{0.882} & \worstcell{0.000} & \bestcell{0.882} \\
+0.900 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & \worstcell{0.882} & \worstcell{0.000} & \bestcell{0.882} \\
+0.950 & \worstcell{0.000} & \bestcell{1.000} & \worstcell{0.000} & \worstcell{0.882} & \worstcell{0.000} & \bestcell{0.882} \\
+\bottomrule
+\end{tabular}
+\end{table}
