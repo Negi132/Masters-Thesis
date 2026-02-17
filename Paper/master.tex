@@ -1,0 +1,68 @@
+% !TeX document-id = {42cfe4e0-d01f-4637-91f1-6050c3779721}
+% !TEX root = ./master.tex
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts%
+
+\usepackage[hidelinks]{hyperref}
+% \usepackage{hyperref}
+
+\usepackage[backend=biber,%
+            style=numeric,%
+            autocite=plain,%
+            sorting=none]{biblatex}
+\addbibresource{bib/mybib.bib}
+
+
+\input{setup/packages.tex}
+\input{setup/acronyms.tex}
+\input{setup/hyphensyion.tex}
+\input{setup/customCommands.tex}
+
+\begin{document}
+\twocolumn
+\pagenumbering{arabic}
+
+\title{Main Title:\\ Main title second line\\
+{\Large Subtitle\\Subtitle second line\\}
+{\footnotesize Master's Thesis}}
+
+
+\author{%
+    \IEEEauthorblockA{%
+    	\parbox{\linewidth}{\centering
+    		\textit{Department of Computer Science, Aalborg University}\\
+    		\textit{Aalborg, Denmark}
+    	}
+    }
+    \\
+    \IEEEauthorblockN{Nicklas Peter Kvist Gislinge\\
+    	ngisli21@student.aau.dk}
+    \IEEEauthorblockA{\textit{Student at Dept. of Computer Science} \\
+    	\textit{Aalborg University} \\
+    	Aalborg, Denmark}
+    	}
+
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
+
+\begin{abstract}
+  \textbf{Insert Abstract Here}
+  
+\end{abstract}
+
+\begin{IEEEkeywords}
+Insert; Keywords; Separated; By; Semi colons;
+\end{IEEEkeywords}
+% \printglossaries
+%\listoftodos
+\input{setup/docSetup.tex}
+
+\newpage
+\printbibliography
+
+\pagebreak
+\onecolumn
+\appendix
+\input{sections/appendix.tex}
+\end{document}

@@ -1,0 +1,10 @@
+# --- DATA FOLDER RULES ---
+
+# 1. Ignore everything inside any "Data" folder
+**/Data/**/*
+
+# 2. But... Keep the directories themselves (so Git can search inside them)
+!**/Data/**/
+
+# 3. And... Keep any Python scripts found inside those directories
+!**/Data/**/*.py
