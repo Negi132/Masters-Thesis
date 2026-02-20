@@ -1,0 +1,186 @@
+*************************************************************************************
+                             ENERGY DATA ANALYSIS REPORT                             
+*************************************************************************************
+Generated on: 2026-02-20 13:05:13
+
+
+=====================================================================================
+ANALYZING: Production_DK1_2024_cleaned.csv
+Full Path: ./Energy/Data\Production_DK1_2024_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      8,785 rows x 28 columns
+Memory Usage:    3.25 MB
+Time Range:      2024-01-01 00:00:00  to  2025-01-01 00:00:00
+Duration:        366 days 00:00:00
+Integrity:       No missing hours detected (Continuous).
+----------------------------------------
+Overall Dataset Missing Data: 0.00%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+HourUTC                          |    0.00% |            - |            - |            -
+HourDK                           |    0.00% |            - |            - |            -
+PriceArea                        |    0.00% |            - |            - |            -
+CentralPowerMWh                  |    0.00% |       401.94 |         1.29 |      1453.32
+LocalPowerMWh                    |    0.00% |       173.61 |        24.56 |       777.84
+CommercialPowerMWh               |    0.00% |        62.10 |        17.52 |       113.46
+LocalPowerSelfConMWh             |    0.00% |        55.18 |         7.98 |       169.85
+OffshoreWindLt100MW_MWh          |    0.00% |        99.95 |         0.00 |       250.63
+OffshoreWindGe100MW_MWh          |    0.00% |       599.57 |         0.00 |      1306.22
+OnshoreWindLt50kW_MWh            |    0.00% |         4.42 |         0.00 |        15.20
+OnshoreWindGe50kW_MWh            |    0.00% |      1035.66 |         1.02 |      3500.20
+HydroPowerMWh                    |    0.00% |         2.57 |         1.02 |         4.99
+SolarPowerLt10kW_MWh             |    0.00% |        31.09 |         0.04 |       305.37
+SolarPowerGe10Lt40kW_MWh         |    0.00% |         4.49 |         0.00 |        48.57
+SolarPowerGe40kW_MWh             |    0.00% |       240.69 |         0.01 |      1856.39
+SolarPowerSelfConMWh             |    0.00% |        30.67 |         0.00 |       445.55
+UnknownProdMWh                   |    0.00% |         0.32 |         0.00 |         3.68
+ExchangeNO_MWh                   |    0.00% |       723.08 |     -1706.51 |      1655.45
+ExchangeSE_MWh                   |    0.00% |       285.80 |      -751.87 |       760.80
+ExchangeGE_MWh                   |    0.00% |      -495.21 |     -2798.34 |      2619.99
+ExchangeNL_MWh                   |    0.00% |       -72.70 |      -704.18 |       684.51
+ExchangeGB_MWh                   |    0.00% |      -429.28 |     -1458.04 |      1405.41
+ExchangeGreatBelt_MWh            |    0.00% |        -5.30 |      -601.40 |       588.90
+GrossConsumptionMWh              |    0.00% |      2748.63 |      1535.98 |      4228.43
+GridLossTransmissionMWh          |    0.00% |        77.00 |        34.25 |       179.88
+GridLossInterconnectorsMWh       |    0.00% |        20.49 |         0.00 |       151.78
+GridLossDistributionMWh          |    0.00% |       103.27 |        62.79 |       216.55
+PowerToHeatMWh                   |    0.00% |       103.42 |         0.18 |       727.79
+
+
+=====================================================================================
+ANALYZING: Production_DK1_2025_cleaned.csv
+Full Path: ./Energy/Data\Production_DK1_2025_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      8,760 rows x 28 columns
+Memory Usage:    3.24 MB
+Time Range:      2025-01-01 00:00:00  to  2025-12-31 23:00:00
+Duration:        364 days 23:00:00
+Integrity:       No missing hours detected (Continuous).
+----------------------------------------
+Overall Dataset Missing Data: 0.00%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+HourUTC                          |    0.00% |            - |            - |            -
+HourDK                           |    0.00% |            - |            - |            -
+PriceArea                        |    0.00% |            - |            - |            -
+CentralPowerMWh                  |    0.00% |       300.17 |         0.00 |      1469.74
+LocalPowerMWh                    |    0.00% |       180.02 |        24.73 |       684.42
+CommercialPowerMWh               |    0.00% |        56.57 |        20.36 |       110.53
+LocalPowerSelfConMWh             |    0.00% |        88.13 |        16.67 |       294.07
+OffshoreWindLt100MW_MWh          |    0.00% |        75.62 |         0.00 |       235.70
+OffshoreWindGe100MW_MWh          |    0.00% |       611.92 |         0.00 |      1555.66
+OnshoreWindLt50kW_MWh            |    0.00% |         4.02 |         0.00 |        14.69
+OnshoreWindGe50kW_MWh            |    0.00% |       938.83 |         0.05 |      3362.26
+HydroPowerMWh                    |    0.00% |         1.57 |         0.28 |         4.36
+SolarPowerLt10kW_MWh             |    0.00% |        37.03 |         0.05 |       312.99
+SolarPowerGe10Lt40kW_MWh         |    0.00% |         6.08 |         0.00 |        56.23
+SolarPowerGe40kW_MWh             |    0.00% |       310.77 |         0.01 |      2427.97
+SolarPowerSelfConMWh             |    0.00% |        22.79 |         0.00 |       291.22
+UnknownProdMWh                   |    0.00% |         0.73 |         0.00 |         8.10
+ExchangeNO_MWh                   |    0.00% |       788.34 |     -1668.27 |      1623.62
+ExchangeSE_MWh                   |    0.00% |       388.86 |      -733.37 |       748.81
+ExchangeGE_MWh                   |    0.00% |      -592.36 |     -2609.78 |      2540.35
+ExchangeNL_MWh                   |    0.00% |         3.40 |      -704.25 |       687.68
+ExchangeGB_MWh                   |    0.00% |      -300.17 |     -1454.79 |      1404.80
+ExchangeGreatBelt_MWh            |    0.00% |       -23.96 |      -607.90 |       588.10
+GrossConsumptionMWh              |    0.00% |      2898.37 |      1135.17 |      4761.84
+GridLossTransmissionMWh          |    0.00% |        75.13 |         0.87 |       203.18
+GridLossInterconnectorsMWh       |    0.00% |        16.20 |         0.00 |        90.46
+GridLossDistributionMWh          |    0.00% |       104.39 |        41.67 |       240.13
+PowerToHeatMWh                   |    0.00% |       112.89 |         0.51 |      1202.51
+
+
+=====================================================================================
+ANALYZING: Production_DK2_2024_cleaned.csv
+Full Path: ./Energy/Data\Production_DK2_2024_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      8,785 rows x 28 columns
+Memory Usage:    3.25 MB
+Time Range:      2024-01-01 00:00:00  to  2025-01-01 00:00:00
+Duration:        366 days 00:00:00
+Integrity:       No missing hours detected (Continuous).
+----------------------------------------
+Overall Dataset Missing Data: 10.71%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+HourUTC                          |    0.00% |            - |            - |            -
+HourDK                           |    0.00% |            - |            - |            -
+PriceArea                        |    0.00% |            - |            - |            -
+CentralPowerMWh                  |    0.00% |       273.43 |         0.00 |      1040.69
+LocalPowerMWh                    |    0.00% |        50.28 |         5.88 |       208.09
+CommercialPowerMWh               |    0.00% |       144.50 |        21.15 |       303.57
+LocalPowerSelfConMWh             |    0.00% |        18.09 |         0.16 |        67.87
+OffshoreWindLt100MW_MWh          |    0.00% |        10.10 |         0.00 |        40.92
+OffshoreWindGe100MW_MWh          |    0.00% |       399.51 |         0.00 |       943.93
+OnshoreWindLt50kW_MWh            |    0.00% |         0.46 |         0.00 |         2.20
+OnshoreWindGe50kW_MWh            |    0.00% |       192.05 |         0.00 |       656.51
+HydroPowerMWh                    |    0.00% |         0.00 |         0.00 |         0.00
+SolarPowerLt10kW_MWh             |    0.00% |        15.88 |         0.03 |       151.14
+SolarPowerGe10Lt40kW_MWh         |    0.00% |         2.57 |         0.00 |        26.71
+SolarPowerGe40kW_MWh             |    0.00% |        83.31 |         0.00 |       549.91
+SolarPowerSelfConMWh             |    0.00% |        21.19 |         0.00 |       226.72
+UnknownProdMWh                   |    0.00% |         2.40 |         0.04 |        14.16
+ExchangeNO_MWh                   |  100.00% |          nan |          nan |          nan
+ExchangeSE_MWh                   |    0.00% |       760.32 |     -1687.24 |      1424.60
+ExchangeGE_MWh                   |    0.00% |      -349.61 |      -999.67 |       988.12
+ExchangeNL_MWh                   |  100.00% |          nan |          nan |          nan
+ExchangeGB_MWh                   |  100.00% |          nan |          nan |          nan
+ExchangeGreatBelt_MWh            |    0.00% |         0.70 |      -598.20 |       590.90
+GrossConsumptionMWh              |    0.00% |      1625.17 |       968.05 |      2568.45
+GridLossTransmissionMWh          |    0.00% |        33.15 |         0.05 |       114.95
+GridLossInterconnectorsMWh       |    0.00% |        10.94 |         0.00 |        41.83
+GridLossDistributionMWh          |    0.00% |        65.55 |        37.59 |       119.35
+PowerToHeatMWh                   |    0.00% |        20.23 |         0.03 |       151.13
+
+
+=====================================================================================
+ANALYZING: Production_DK2_2025_cleaned.csv
+Full Path: ./Energy/Data\Production_DK2_2025_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      8,760 rows x 28 columns
+Memory Usage:    3.24 MB
+Time Range:      2025-01-01 00:00:00  to  2025-12-31 23:00:00
+Duration:        364 days 23:00:00
+Integrity:       No missing hours detected (Continuous).
+----------------------------------------
+Overall Dataset Missing Data: 10.71%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+HourUTC                          |    0.00% |            - |            - |            -
+HourDK                           |    0.00% |            - |            - |            -
+PriceArea                        |    0.00% |            - |            - |            -
+CentralPowerMWh                  |    0.00% |       250.10 |         0.00 |       845.03
+LocalPowerMWh                    |    0.00% |        48.99 |         7.71 |       193.38
+CommercialPowerMWh               |    0.00% |       132.15 |         7.48 |       281.80
+LocalPowerSelfConMWh             |    0.00% |        21.85 |         0.21 |        88.89
+OffshoreWindLt100MW_MWh          |    0.00% |         9.72 |         0.00 |        43.27
+OffshoreWindGe100MW_MWh          |    0.00% |       362.05 |         0.00 |       958.72
+OnshoreWindLt50kW_MWh            |    0.00% |         0.41 |         0.00 |         9.22
+OnshoreWindGe50kW_MWh            |    0.00% |       172.00 |         0.01 |       618.20
+HydroPowerMWh                    |    0.00% |         0.00 |         0.00 |         0.00
+SolarPowerLt10kW_MWh             |    0.00% |        18.63 |         0.05 |       167.32
+SolarPowerGe10Lt40kW_MWh         |    0.00% |         3.37 |         0.00 |        32.32
+SolarPowerGe40kW_MWh             |    0.00% |        93.09 |         0.00 |       631.16
+SolarPowerSelfConMWh             |    0.00% |        20.84 |         0.00 |       298.62
+UnknownProdMWh                   |    0.00% |         5.91 |         0.10 |        51.87
+ExchangeNO_MWh                   |  100.00% |          nan |          nan |          nan
+ExchangeSE_MWh                   |    0.00% |       835.05 |     -1248.93 |      1402.05
+ExchangeGE_MWh                   |    0.00% |      -276.67 |      -999.71 |       987.34
+ExchangeNL_MWh                   |  100.00% |          nan |          nan |          nan
+ExchangeGB_MWh                   |  100.00% |          nan |          nan |          nan
+ExchangeGreatBelt_MWh            |    0.00% |        20.29 |      -598.10 |       597.10
+GrossConsumptionMWh              |    0.00% |      1717.78 |       987.62 |      2564.29
+GridLossTransmissionMWh          |    0.00% |        33.15 |         0.10 |        92.79
+GridLossInterconnectorsMWh       |    0.00% |        43.73 |         0.00 |       602.05
+GridLossDistributionMWh          |    0.00% |        66.70 |        12.92 |       135.74
+PowerToHeatMWh                   |    0.00% |        32.95 |         0.09 |       213.84
+
+

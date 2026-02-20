@@ -6,6 +6,7 @@ import os
 # CONFIGURATION
 # ==========================================
 
+INPUT_FOLDER = './Data'
 INPUT_PATTERN = "*_regional_timeseries.csv" 
 
 # 1. Missing Threshold: Drop if > 90% empty
@@ -102,8 +103,8 @@ def clean_dataset(filename):
 # ==========================================
 # EXECUTION
 # ==========================================
-
-files = glob.glob(INPUT_PATTERN)
+search_pattern = os.path.join(INPUT_FOLDER, INPUT_PATTERN)
+files = glob.glob(search_pattern)
 
 if not files:
     print(f"No files found matching '{INPUT_PATTERN}'")

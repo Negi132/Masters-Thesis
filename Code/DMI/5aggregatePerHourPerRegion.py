@@ -7,6 +7,8 @@ from collections import defaultdict
 # CONFIGURATION
 # ==========================================
 
+INPUT_FOLDER = './Data'
+
 # The columns to exclude from the averaging (metadata)
 # We group by timestamp, so we don't average that.
 IGNORE_COLS = {'station_id', 'timestamp_utc', 'count'}
@@ -100,7 +102,8 @@ def calculate_regional_averages(input_filename):
 # ==========================================
 
 # Find the files from the PREVIOUS step (must end in _hourly_avg.csv)
-files_to_process = sorted(glob.glob("*_hourly_avg.csv"))
+search_pattern = os.path.join(INPUT_FOLDER, "*_hourly_avg.csv")
+files_to_process = glob.glob(search_pattern)
 
 if not files_to_process:
     print("No station-average files found matching '*_hourly_avg.csv'.")

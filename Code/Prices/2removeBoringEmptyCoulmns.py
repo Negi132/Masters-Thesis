@@ -4,7 +4,7 @@ import os
 
 # --- CONFIGURATION ---
 # This matches the output folder from the previous script
-INPUT_FOLDER = './price_data_cleaned'
+INPUT_FOLDER = './Data/'
 # The specific files we expect to find
 TARGET_FILES = ['elspotprices_DK1.csv', 'elspotprices_DK2.csv']
 

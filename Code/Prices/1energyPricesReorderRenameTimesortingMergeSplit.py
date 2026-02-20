@@ -2,9 +2,9 @@ import pandas as pd
 import os
 
 # --- CONFIGURATION ---
-FILE_BEFORE = 'ElspotpricesBefore.csv'  # The "Before" file (SpotPrice naming)
-FILE_AFTER = 'DayAheadPricesAfter.csv'  # The "After" file (DayAhead naming)
-OUTPUT_FOLDER = './price_data_cleaned'
+FILE_BEFORE = './Data/ElspotpricesBefore.csv'  # The "Before" file (SpotPrice naming)
+FILE_AFTER = './Data/DayAheadPricesAfter.csv'  # The "After" file (DayAhead naming)
+OUTPUT_FOLDER = './Data/'
 
 def process_prices():
     if not os.path.exists(OUTPUT_FOLDER):

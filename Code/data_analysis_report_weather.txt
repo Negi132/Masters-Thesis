@@ -1,0 +1,212 @@
+*************************************************************************************
+                             WEATHER DATA ANALYSIS REPORT                            
+*************************************************************************************
+Generated on: 2026-02-20 13:05:13
+
+
+=====================================================================================
+ANALYZING: dmi_full_2024_raw_DK1_regional_timeseries_cleaned.csv
+Full Path: ./DMI/Data\dmi_full_2024_raw_DK1_regional_timeseries_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      8,784 rows x 24 columns
+Memory Usage:    2.11 MB
+Time Range:      2024-01-01 00:00:00  to  2024-12-31 23:00:00
+Duration:        365 days 23:00:00
+Integrity:       No missing hours detected (Continuous).
+----------------------------------------
+Overall Dataset Missing Data: 8.05%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+Timestamp_UTC                    |    0.00% |            - |            - |            -
+acc_precip                       |    0.00% |         0.22 |         0.00 |       184.99
+bright_sunshine                  |    0.14% |        12.10 |         0.00 |       505.97
+leaf_moisture                    |   17.83% |        49.62 |         0.00 |       859.88
+max_temp_12h                     |   87.58% |        -1.76 |       -26.70 |        15.90
+max_temp_w_date                  |    0.00% |         6.72 |        -7.09 |        21.64
+max_wind_speed_10min             |    0.00% |         5.62 |         1.16 |        16.86
+max_wind_speed_3sec              |    0.00% |         7.80 |         2.84 |        19.40
+mean_cloud_cover                 |    0.00% |        64.57 |         1.00 |        99.23
+mean_pressure                    |    0.00% |      1010.95 |       985.86 |      1031.55
+mean_radiation                   |    0.00% |       107.79 |         0.00 |       876.45
+mean_relative_hum                |    0.00% |        80.58 |        51.70 |        94.31
+mean_temp                        |    0.00% |         3.80 |        -8.29 |        17.60
+mean_wind_dir                    |    0.00% |       186.64 |        80.88 |       285.10
+mean_wind_dir_min0               |    0.00% |       184.86 |        94.31 |       282.88
+mean_wind_speed                  |    0.00% |         4.92 |         2.00 |        10.30
+min_temp                         |    0.00% |         5.71 |        -9.20 |        20.51
+min_temperature_12h              |   87.58% |        -6.16 |       -43.70 |         8.31
+temp_grass                       |    0.00% |         9.72 |        -7.45 |        30.65
+temp_soil_10                     |    0.00% |        10.61 |         1.07 |        20.53
+temp_soil_30                     |    0.03% |         9.58 |         1.81 |        16.50
+vapour_pressure_deficit_mean     |    0.00% |         0.24 |         0.00 |         1.58
+Stations_Reporting_Min           |    0.00% |         2.92 |         1.00 |         8.00
+Stations_Reporting_Max           |    0.00% |        81.87 |        78.00 |        91.00
+
+
+=====================================================================================
+ANALYZING: dmi_full_2024_raw_DK2_regional_timeseries_cleaned.csv
+Full Path: ./DMI/Data\dmi_full_2024_raw_DK2_regional_timeseries_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      8,784 rows x 19 columns
+Memory Usage:    1.78 MB
+Time Range:      2024-01-01 00:00:00  to  2024-12-31 23:00:00
+Duration:        365 days 23:00:00
+Integrity:       No missing hours detected (Continuous).
+----------------------------------------
+Overall Dataset Missing Data: 0.97%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+Timestamp_UTC                    |    0.00% |            - |            - |            -
+acc_precip                       |    0.00% |         0.17 |         0.00 |       162.55
+bright_sunshine                  |    0.14% |        13.13 |         0.00 |       519.32
+leaf_moisture                    |   17.99% |        26.95 |         0.00 |       644.50
+max_temp_w_date                  |    0.00% |        10.72 |        -6.07 |        27.19
+max_wind_speed_10min             |    0.00% |         5.79 |         0.90 |        16.00
+max_wind_speed_3sec              |    0.00% |         8.14 |         1.48 |        23.27
+mean_pressure                    |    0.00% |      1013.58 |       976.08 |      1040.45
+mean_radiation                   |    0.00% |       124.11 |         0.00 |      1007.63
+mean_relative_hum                |    0.00% |        82.90 |        43.00 |        99.52
+mean_temp                        |    0.00% |        10.27 |        -6.38 |        26.57
+mean_wind_dir                    |    0.00% |       183.29 |        17.40 |       339.20
+mean_wind_speed                  |    0.00% |         5.01 |         0.55 |        14.00
+min_temp                         |    0.00% |         9.84 |        -6.86 |        26.09
+temp_grass                       |    0.00% |        10.37 |       -11.21 |        31.35
+temp_soil_10                     |    0.00% |        10.90 |         1.14 |        21.40
+temp_soil_30                     |    0.24% |        10.30 |         1.80 |        17.37
+vapour_pressure_deficit_mean     |    0.00% |         0.27 |        -0.00 |         1.48
+Stations_Reporting_Min           |    0.00% |         4.03 |         1.00 |         7.00
+
+
+=====================================================================================
+ANALYZING: dmi_full_2025_raw_DK1_regional_timeseries_cleaned.csv
+Full Path: ./DMI/Data\dmi_full_2025_raw_DK1_regional_timeseries_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      8,760 rows x 25 columns
+Memory Usage:    2.17 MB
+Time Range:      2025-01-01 00:00:00  to  2025-12-31 23:00:00
+Duration:        364 days 23:00:00
+Integrity:       No missing hours detected (Continuous).
+----------------------------------------
+Overall Dataset Missing Data: 10.74%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+Timestamp_UTC                    |    0.00% |            - |            - |            -
+acc_precip                       |    0.00% |         0.16 |         0.00 |        45.46
+acc_precip_past24h               |   86.86% |         3.75 |         0.00 |       127.30
+bright_sunshine                  |   10.73% |        15.33 |         0.00 |        99.97
+leaf_moisture                    |    2.04% |        72.24 |         0.00 |      1380.00
+max_temp_12h                     |   81.88% |        -0.92 |       -35.20 |        16.57
+max_temp_w_date                  |    0.00% |         6.90 |        -5.16 |        21.88
+max_wind_speed_10min             |    0.00% |         5.31 |         1.01 |        17.28
+max_wind_speed_3sec              |    0.00% |         7.69 |         2.36 |        22.10
+mean_cloud_cover                 |    0.09% |        64.04 |         7.08 |       100.00
+mean_pressure                    |    0.00% |      1010.96 |       984.27 |      1030.49
+mean_radiation                   |    0.00% |       112.25 |         0.00 |       726.89
+mean_relative_hum                |    0.00% |        80.44 |        49.34 |        96.60
+mean_temp                        |    0.00% |         4.23 |        -6.78 |        17.16
+mean_wind_dir                    |    0.00% |       190.73 |        70.22 |       279.74
+mean_wind_dir_min0               |    0.09% |       182.05 |        82.29 |       267.89
+mean_wind_speed                  |    0.00% |         4.89 |         1.39 |        10.15
+min_temp                         |    0.00% |         5.84 |        -7.23 |        20.60
+min_temperature_12h              |   81.88% |        -5.53 |       -37.50 |         9.73
+temp_grass                       |    0.00% |        10.06 |        -8.20 |        32.93
+temp_soil_10                     |    0.00% |        10.58 |         0.42 |        22.18
+temp_soil_30                     |    4.86% |        10.47 |         1.80 |        20.00
+vapour_pressure_deficit_mean     |    0.00% |         0.25 |         0.00 |         1.77
+Stations_Reporting_Min           |    0.00% |         1.03 |         1.00 |         3.00
+Stations_Reporting_Max           |    0.00% |        81.66 |        72.00 |        88.00
+
+
+=====================================================================================
+ANALYZING: dmi_full_2025_raw_DK2_regional_timeseries_cleaned.csv
+Full Path: ./DMI/Data\dmi_full_2025_raw_DK2_regional_timeseries_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      8,760 rows x 20 columns
+Memory Usage:    1.84 MB
+Time Range:      2025-01-01 00:00:00  to  2025-12-31 23:00:00
+Duration:        364 days 23:00:00
+Integrity:       No missing hours detected (Continuous).
+----------------------------------------
+Overall Dataset Missing Data: 2.81%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+Timestamp_UTC                    |    0.00% |            - |            - |            -
+acc_precip                       |    0.00% |         0.12 |         0.00 |        44.51
+bright_sunshine                  |   10.73% |        15.78 |         0.00 |        95.13
+leaf_moisture                    |   14.30% |        28.17 |         0.00 |       863.50
+max_temp_w_date                  |    0.00% |        10.58 |        -6.03 |        28.50
+max_wind_speed_10min             |    0.00% |         5.55 |         0.95 |        15.47
+max_wind_speed_3sec              |    0.00% |         7.87 |         1.40 |        22.52
+mean_pressure                    |    0.00% |      1015.21 |       979.42 |      1045.79
+mean_radiation                   |    0.00% |       126.58 |         0.00 |       864.78
+mean_relative_hum                |    0.00% |        81.80 |        38.22 |       100.13
+mean_temp                        |    0.00% |        10.13 |        -6.44 |        27.61
+mean_wind_dir                    |    0.00% |       202.02 |        14.70 |       342.35
+mean_wind_speed                  |    0.00% |         4.79 |         0.54 |        14.48
+min_temp                         |    0.00% |         9.68 |        -7.03 |        26.37
+temp_grass                       |    0.01% |        10.38 |       -11.18 |        35.20
+temp_soil_10                     |    0.00% |        10.93 |         0.70 |        23.01
+temp_soil_30                     |   31.06% |         9.91 |         1.15 |        17.30
+vapour_pressure_deficit_mean     |    0.00% |         0.27 |        -0.01 |         1.82
+Stations_Reporting_Min           |    0.00% |         2.15 |         1.00 |         7.00
+Stations_Reporting_Max           |    0.00% |        32.47 |        32.00 |        33.00
+
+
+=====================================================================================
+ANALYZING: weather_dk1_2024Midas.json
+Full Path: ./DMI/Data\weather_dk1_2024Midas.json
+-------------------------------------------------------------------------------------
+Dimensions:      8,785 rows x 8 columns
+Memory Usage:    1.08 MB
+Time Range:      2023-12-31 23:00:00  to  2024-12-31 23:00:00
+Duration:        366 days 00:00:00
+Integrity:       No missing hours detected (Continuous).
+----------------------------------------
+Overall Dataset Missing Data: 0.50%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+avg_temp_dry                     |    0.00% |        10.03 |       -11.20 |        26.57
+avg_humidity                     |    0.00% |        83.26 |        35.33 |        99.67
+avg_cloud_cover                  |    3.84% |        57.63 |         0.00 |       112.00
+avg_wind_dir                     |    0.00% |       183.16 |         0.00 |       356.00
+avg_wind_speed                   |    0.00% |         4.19 |         0.00 |        13.83
+avg_radia_glob_past1h            |    0.00% |       115.91 |         0.00 |       850.67
+avg_sun_last1h_glob              |    0.15% |        12.33 |         0.00 |        60.00
+HourUTC                          |    0.00% |            - |            - |            -
+
+
+=====================================================================================
+ANALYZING: weather_dk1_2025Midas.json
+Full Path: ./DMI/Data\weather_dk1_2025Midas.json
+-------------------------------------------------------------------------------------
+Dimensions:      8,262 rows x 8 columns
+Memory Usage:    1.02 MB
+Time Range:      2024-12-31 23:00:00  to  2025-12-11 23:00:00
+Duration:        345 days 00:00:00
+WARNING:         Potential gap of 19 hours detected!
+----------------------------------------
+Overall Dataset Missing Data: 1.15%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+avg_temp_dry                     |    0.01% |        10.37 |        -7.17 |        26.73
+avg_humidity                     |    0.01% |        81.40 |        30.33 |       100.00
+avg_cloud_cover                  |    0.25% |        52.02 |         0.00 |       108.00
+avg_wind_dir                     |    0.01% |       194.65 |         0.00 |       356.00
+avg_wind_speed                   |    0.01% |         3.95 |         0.00 |        15.47
+avg_radia_glob_past1h            |    0.29% |       133.28 |         0.00 |       866.67
+avg_sun_last1h_glob              |    8.64% |        15.70 |         0.00 |        60.00
+HourUTC                          |    0.00% |            - |            - |            -
+
+

@@ -6,6 +6,8 @@ import glob
 # CONFIGURATION
 # ==========================================
 
+INPUT_FOLDER = './Data'
+
 # DK1 (West Denmark): Jylland (Jutland) + Fyn (Funen)
 # DK2 (East Denmark): Sjælland (Zealand) + Bornholm + Islands
 # We use a set for O(1) fast lookups
@@ -125,7 +127,8 @@ def split_file_by_zone(input_filename):
 
 # Pattern to find your aggregated files (e.g., "dmi_full_2024_raw.txt")
 # You can change this pattern to match whatever you named them in the previous script.
-files_to_process = sorted(glob.glob("dmi_full_*_raw.txt"))
+search_pattern = os.path.join(INPUT_FOLDER, "dmi_full_*_raw.txt")
+files_to_process = glob.glob(search_pattern)
 
 if not files_to_process:
     print("No aggregated files found matching 'dmi_full_*_raw.txt'.")

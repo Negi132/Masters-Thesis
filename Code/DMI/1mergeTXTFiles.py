@@ -36,12 +36,12 @@ def merge_txt_files(input_folder, output_filename, file_pattern="*.txt"):
 
 # Merge 2024
 merge_txt_files(
-    input_folder='./2024station/', 
-    output_filename='dmi_full_2024_raw.txt'
+    input_folder='./data/2024station/', 
+    output_filename='./data/dmi_full_2024_raw.txt'
 )
 
 # Merge 2025
 merge_txt_files(
-    input_folder='./2025station', 
-    output_filename='dmi_full_2025_raw.txt'
+    input_folder='./data/2025station', 
+    output_filename='./data/dmi_full_2025_raw.txt'
 )

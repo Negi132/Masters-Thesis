@@ -8,6 +8,8 @@ from datetime import datetime
 # CONFIGURATION
 # ==========================================
 
+INPUT_FOLDER = './Data'
+
 # Format of the timestamp in your DMI files
 # Example: "2024-01-01T00:00:00+00:00"
 DATE_FORMAT = "%Y-%m-%dT%H:%M:%S" 
@@ -124,7 +126,8 @@ def process_station_averages(input_filename):
 
 # Find the files from the previous step (e.g. "dmi_2024_DK1.txt")
 # You can adjust the pattern "*.txt" or "*.jsonl" as needed.
-files_to_process = sorted(glob.glob("*_DK*.txt"))
+search_pattern = os.path.join(INPUT_FOLDER, "*_DK*.txt")
+files_to_process = glob.glob(search_pattern)
 
 if not files_to_process:
     print("No DK1/DK2 files found! Please place this script in the data folder.")

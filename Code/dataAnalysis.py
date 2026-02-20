@@ -9,21 +9,28 @@ from datetime import datetime
 # CONFIGURATION
 # ==========================================
 
-# PATH ADJUSTMENT:
-# Point this to the folder containing your moved CSV/JSON files.
-# "." means current folder, "./weather_data" means a subfolder.
-DATA_FOLDER = "./DMI_Data" 
-
-# The name of the report file that will be generated
-OUTPUT_REPORT_FILE = "weather_data_analysis_report.txt"
-
-# Which files should we look for?
-# We use "**" to look inside all subfolders recursively.
-FILE_PATTERNS = [
-    "**/*_cleaned.csv",       # Your final cleaned weather data
-    "**/*_production.csv",    # Your production models
-    "**/*.json"               # The external consultant files
-]
+# We define exactly what files belong to which domain, and where to save the report
+DOMAINS = {
+    "Weather": {
+        "patterns": [
+            "./DMI/Data/*_timeseries_cleaned.csv",  # Your previously cleaned CSVs
+            "./DMI/Data/*.json"             # The newly added Midas JSON files
+        ],
+        "output": "data_analysis_report_weather.txt"
+    },
+    "Energy": {
+        "patterns": [
+            "./Energy/Data/*_cleaned.csv"
+        ],
+        "output": "data_analysis_report_energy.txt"
+    },
+    "Prices": {
+        "patterns": [
+            "./Prices/Data/*_cleaned.csv"
+        ],
+        "output": "data_analysis_report_price.txt"
+    }
+}
 
 # ==========================================
 # LOGGING HELPER
@@ -53,12 +60,12 @@ def analyze_file(filepath, report_file):
                 data = json.load(f)
             df = pd.DataFrame(data)
             
-            # Normalize column names for consistency
+            # Normalize column names so our time-check works on everything
             if 'datetime' in df.columns:
-                df.rename(columns={'datetime': 'Timestamp_UTC'}, inplace=True)
+                df.rename(columns={'datetime': 'HourUTC'}, inplace=True)
                 
         else:
-            # Load CSV (Our created files)
+            # Load CSV (Our standard output)
             df = pd.read_csv(filepath)
     except Exception as e:
         log(f"ERROR: Could not read file. Reason: {e}", report_file)
@@ -72,22 +79,24 @@ def analyze_file(filepath, report_file):
     mem_usage = df.memory_usage(deep=True).sum() / (1024 * 1024)
     log(f"Memory Usage:    {mem_usage:.2f} MB", report_file)
 
-    # 3. TIME COVERAGE
+    # 3. TIME COVERAGE & GAP DETECTION
     # ------------------------------------------------
     time_col = None
-    for col in ['Timestamp_UTC', 'time', 'datetime', 'Timestamp']:
+    # Look for known time columns across our 3 domains
+    for col in ['HourUTC', 'Timestamp_UTC', 'time', 'datetime', 'Timestamp']:
         if col in df.columns:
             time_col = col
             break
     
     if time_col:
         try:
-            df[time_col] = pd.to_datetime(df[time_col])
+            # utc=True standardizes everything and prevents offset bugs
+            df[time_col] = pd.to_datetime(df[time_col], utc=True)
             start_time = df[time_col].min()
             end_time = df[time_col].max()
             duration = end_time - start_time
             
-            log(f"Time Range:      {start_time}  to  {end_time}", report_file)
+            log(f"Time Range:      {start_time.strftime('%Y-%m-%d %H:%M:%S')}  to  {end_time.strftime('%Y-%m-%d %H:%M:%S')}", report_file)
             log(f"Duration:        {duration}", report_file)
             
             # Check for missing hours (gaps)
@@ -100,12 +109,12 @@ def analyze_file(filepath, report_file):
                 log("Integrity:       No missing hours detected (Continuous).", report_file)
             else:
                 log(f"Note:            {abs(missing_hours)} duplicate/extra timestamps found.", report_file)
-        except:
-            log("Time Parsing:    Could not parse time column.", report_file)
+        except Exception as e:
+            log(f"Time Parsing:    Could not parse time column '{time_col}'. ({e})", report_file)
     else:
         log("Time Column:     Not found.", report_file)
 
-    # 4. MISSING VALUES ANALYSIS
+    # 4. MISSING VALUES & FEATURE STATISTICS
     # ------------------------------------------------
     total_cells = num_rows * num_cols
     if total_cells == 0:
@@ -119,8 +128,10 @@ def analyze_file(filepath, report_file):
     log(f"Overall Dataset Missing Data: {total_missing_pct:.2f}%", report_file)
     log("-" * 40, report_file)
     
-    log("Feature Statistics (Missing % | Mean | Min | Max):", report_file)
-    log(f"{'Column Name':<30} | {'Miss %':<8} | {'Mean':<10} | {'Min':<10} | {'Max':<10}", report_file)
+    log("Feature Statistics (Numeric Summary):", report_file)
+    
+    # Header format tailored for 85 width
+    log(f"{'Column Name':<32} | {'Miss %':<8} | {'Mean':<12} | {'Min':<12} | {'Max':<12}", report_file)
     log("-" * 85, report_file)
 
     # Select only numeric columns for stats
@@ -145,7 +156,7 @@ def analyze_file(filepath, report_file):
             min_str = "-"
             max_str = "-"
             
-        log(f"{col:<30} | {missing:>7.2f}% | {mean_str:>10} | {min_str:>10} | {max_str:>10}", report_file)
+        log(f"{col:<32} | {missing:>7.2f}% | {mean_str:>12} | {min_str:>12} | {max_str:>12}", report_file)
 
     log("\n", report_file)
 
@@ -154,36 +165,36 @@ def analyze_file(filepath, report_file):
 # ==========================================
 
 def run_analysis():
-    print(f"Scanning for files in: {os.path.abspath(DATA_FOLDER)}")
+    print("Starting Comprehensive Data Analysis...\n")
     
-    found_files = []
-    for pattern in FILE_PATTERNS:
-        # recursive=True allows "**" to work
-        full_pattern = os.path.join(DATA_FOLDER, pattern)
-        found_files.extend(glob.glob(full_pattern, recursive=True))
-    
-    # Remove duplicates and sort
-    found_files = sorted(list(set(found_files)))
-
-    if not found_files:
-        print("No files found! Check your DATA_FOLDER path.")
-        return
-
-    print(f"Found {len(found_files)} files. Writing report to {OUTPUT_REPORT_FILE}...")
-    
-    # Open the report file once and append all analyses to it
-    with open(OUTPUT_REPORT_FILE, "w", encoding="utf-8") as report:
-        log("*************************************************************************************", report)
-        log("                           WEATHER DATA ANALYSIS REPORT                              ", report)
-        log("*************************************************************************************", report)
-        log(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", report)
-        log(f"Source Folder: {os.path.abspath(DATA_FOLDER)}", report)
-        log("\n", report)
-
-        for filepath in found_files:
-            analyze_file(filepath, report)
+    for domain, config in DOMAINS.items():
+        found_files = []
+        for pattern in config["patterns"]:
+            # Search for files
+            found_files.extend(glob.glob(pattern, recursive=True))
+        
+        # Remove duplicates and sort
+        found_files = sorted(list(set(found_files)))
+        
+        if not found_files:
+            print(f"⚠️ No files found for {domain} matching patterns.")
+            continue
             
-    print(f"Done! Report saved as: {OUTPUT_REPORT_FILE}")
+        output_file = config["output"]
+        print(f"-> Found {len(found_files)} files for {domain}. Writing report to {output_file}...")
+        
+        # Open report file for this specific domain
+        with open(output_file, "w", encoding="utf-8") as report:
+            log("*" * 85, report)
+            log(f"{domain.upper()} DATA ANALYSIS REPORT".center(85), report)
+            log("*" * 85, report)
+            log(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", report)
+            log("\n", report)
+
+            for filepath in found_files:
+                analyze_file(filepath, report)
+                
+        print(f"   ✅ {domain} analysis complete!\n")
 
 if __name__ == "__main__":
     run_analysis()

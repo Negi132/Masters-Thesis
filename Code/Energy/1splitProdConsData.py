@@ -5,7 +5,7 @@ import os
 # CONFIGURATION
 # ==========================================
 
-INPUT_FILE = "ProductionConsumptionSettlement.csv"
+INPUT_FILE = "./Data/ProductionConsumptionSettlement.csv"
 
 # Define the time ranges as requested
 # 2024: 2024-01-01 00:00 to 2025-01-01 00:00
@@ -51,7 +51,7 @@ def process_energy_data():
         df_2024 = df_area[mask_2024].copy()
         
         if not df_2024.empty:
-            filename_2024 = f"Production_{area}_2024.csv"
+            filename_2024 = f"./Data\Production_{area}_2024.csv"
             # Ensure strictly sorted by time
             df_2024.sort_values(by='HourUTC', ascending=True, inplace=True)
             df_2024.to_csv(filename_2024, index=False, sep=',')
@@ -66,7 +66,7 @@ def process_energy_data():
         df_2025 = df_area[mask_2025].copy()
         
         if not df_2025.empty:
-            filename_2025 = f"Production_{area}_2025.csv"
+            filename_2025 = f"./Data\Production_{area}_2025.csv"
             df_2025.sort_values(by='HourUTC', ascending=True, inplace=True)
             df_2025.to_csv(filename_2025, index=False, sep=',')
             print(f"  -> Saved {filename_2025} ({len(df_2025)} rows)")

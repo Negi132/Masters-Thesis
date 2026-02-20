@@ -3,7 +3,7 @@ import os
 from datetime import datetime, timezone
 
 # --- CONFIGURATION ---
-DATA_DIRECTORY = './'
+DATA_DIRECTORY = './data'
 FILE_EXTENSIONS = ('.txt', '.json', '.jsonl')
 
 def normalize_to_utc(timestamp_str):

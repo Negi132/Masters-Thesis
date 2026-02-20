@@ -1,0 +1,50 @@
+*************************************************************************************
+                             PRICES DATA ANALYSIS REPORT                             
+*************************************************************************************
+Generated on: 2026-02-20 13:05:13
+
+
+=====================================================================================
+ANALYZING: elspotprices_DK1_cleaned.csv
+Full Path: ./Prices/Data\elspotprices_DK1_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      24,172 rows x 5 columns
+Memory Usage:    4.70 MB
+Time Range:      2023-12-31 23:00:00  to  2025-12-31 23:00:00
+Duration:        731 days 00:00:00
+Note:            6627 duplicate/extra timestamps found.
+----------------------------------------
+Overall Dataset Missing Data: 0.00%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+HourUTC                          |    0.00% |            - |            - |            -
+HourDK                           |    0.00% |            - |            - |            -
+PriceArea                        |    0.00% |            - |            - |            -
+SpotPriceDKK                     |    0.00% |       583.72 |      -448.02 |      6982.42
+SpotPriceEUR                     |    0.00% |        78.21 |       -60.05 |       936.28
+
+
+=====================================================================================
+ANALYZING: elspotprices_DK2_cleaned.csv
+Full Path: ./Prices/Data\elspotprices_DK2_cleaned.csv
+-------------------------------------------------------------------------------------
+Dimensions:      24,172 rows x 5 columns
+Memory Usage:    4.70 MB
+Time Range:      2023-12-31 23:00:00  to  2025-12-31 23:00:00
+Duration:        731 days 00:00:00
+Note:            6627 duplicate/extra timestamps found.
+----------------------------------------
+Overall Dataset Missing Data: 0.00%
+----------------------------------------
+Feature Statistics (Numeric Summary):
+Column Name                      | Miss %   | Mean         | Min          | Max         
+-------------------------------------------------------------------------------------
+HourUTC                          |    0.00% |            - |            - |            -
+HourDK                           |    0.00% |            - |            - |            -
+PriceArea                        |    0.00% |            - |            - |            -
+SpotPriceDKK                     |    0.00% |       591.10 |      -447.46 |      6982.64
+SpotPriceEUR                     |    0.00% |        79.20 |       -59.96 |       936.31
+
+
