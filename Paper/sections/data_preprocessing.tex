@@ -1,9 +1,289 @@
 \section{Data and Preprocessing}\label{sec:data_preprocessing}
-
+The section will detail what data was used for training the different models, 
+as well as how it was preprocessed, with the purpose of enabling 
+reproducibility. All the code used for the project is available on 
+GitHub\footnote{link to github}. For transparency it should be noted that 
+generative AI tools have been used extensively for both writing and reviewing 
+the code. 
 \subsection{Data Sources}\label{sec:data_sources}
+\subsubsection{Weather data}
+The weather data used in the paper originates from \gls{dmi}. They collect 
+weather data from their numerous weather stations located in Denmark, 
+Greenland, and the Faroe Islands. They then provide weather forecasts on a 
+national scale. \\
+They publish their collected data through both API and downloadable files. They 
+also provide the data in different granularities, such as by station, 
+municipality, country, or by 10/20 square kilometre grid 
+areas\footnote{https://opendataapi.dmi.dk/v2/climateData/bulk/}. For this 
+paper, the data was accessed on a granularity level of individual stations. 
+Additionally, \gls{dmi} provides two different versions of meteorological 
+measurement data, one 
+version that is purely raw data, and one that has been processed for quality 
+control by \gls{dmi} employees. The quality controlled version of the data was 
+chosen for this paper. The utilized data has a date range from 00:00:00 - 
+01/01/2015 until 00:00:00 - 
+03/25/2026, the end of the range signifies the date the download was performed. 
+Downloading the data was preferred to avoid multiple API calls, as there were a 
+limit of $300.000$ measurements accessible through the API in each call. If one 
+wishes to develop a prediction model utilizing this data, and update it during 
+deployment, API calls would be the preferred method, to get limited daily data 
+amounts. 
 
-\subsection{Dataset Construction}\label{sec:dataset_construction}
+\subsubsection{Energy production \& consumption data}
+The data regarding energy \gls{pc} originates from 
+\gls{en}. They are a subsidiary of the Danish government and manages the Danish 
+energy grid. The also publish a variety of data regarding the Danish energy 
+grid, again, through both API and downloadable files. For the same reason as 
+with \gls{dmi}, downloadable files were chosen. The \gls{pc} data used for this 
+paper is acquired from the "Production and Consumption - Settlement" 
+publication\footnote{\url{https://www.energidataservice.dk/tso-electricity/productionconsumptionsettlement}}.
 
-\paragraph{\textbf{Feature Selection}}
+\subsubsection{Price data}
+The price data also originates from \gls{en}. In October of 2025 \gls{en} 
+changed their reporting format to follow the new 15-minute timing practices of 
+Nord Pool. Due to this, the previous publication was discontinued, and a new 
+one 
+was created in accordance with the new format. The price data for this paper 
+has been concatenated between these two different publications: Elspot 
+Prices\footnote{https://www.energidataservice.dk/tso-electricity/Elspotprices}, 
+from before October 2025, and 
+Day-Ahead-Prices\footnote{https://www.energidataservice.dk/tso-electricity/DayAheadPrices},
+for after October 2025. To ensure compatibility between these two formats, we 
+simply discard prices that are not exactly hourly in the newer dataset.
 
-\paragraph{\textbf{Target Label Preprocessing}}
+\subsubsection{Midas Energy data}
+Midas Energy has also provided weather data in the format they use for their 
+own prediction models. This is, in simple terms, a processed and generalised 
+version of the \gls{dmi} data. This data will later be used as a substitution 
+for the weather data, to gauge the difference between the two varieties of 
+weather data. It will also be added to the best performing models, to 
+investigate its direct impact. 
+
+\subsection{Data format and Preprocessing}
+This section details the data formats before and after preprocessing, as well 
+as the preprocessing pipeline for each data source.
+\begin{table*}[t]
+	\centering
+	\caption{Snapshot of a Data Record (Raw vs. 
+		Preprocessed)}
+	\label{tab:data_snapshot_wide}
+	\begin{tabular}{@{} l l l l l l l l @{}}
+		\toprule
+		\multicolumn{8}{@{}l}{\textbf{Raw Data 
+				Snapshot}} \\
+		\midrule
+		\textbf{Timestamp} & \textbf{Zone} & 
+		\textbf{Spot Price} & 
+		\textbf{Load} & \textbf{Wind Prod.} & 
+		\textbf{Solar Prod.} & 
+		\textbf{Temperature} & 
+		\textbf{Precipitation} \\
+		2026-04-26 12:00   & DK1           & 45.20 
+		EUR           & 3200 
+		MW       & 12.5 MW             & 400 
+		MW               & 14.2\textdegree 
+		C    & 0.0 mm                 \\
+		
+		\midrule
+		\midrule
+		
+		\multicolumn{8}{@{}l}{\textbf{Preprocessed 
+				Data Snapshot}} \\
+		\midrule
+		\textbf{Timestamp} & \textbf{Zone\_DK1} & 
+		\textbf{Price\_Norm} & 
+		\textbf{Load\_Norm} & \textbf{Wind\_Norm} 
+		& \textbf{Solar\_Norm} & 
+		\textbf{Temp\_Norm}  & 
+		\textbf{Precip\_Flag} \\
+		1761476400         & 1                  & 
+		0.23                 & 
+		0.65                & 0.41                
+		& 0.12                 & 
+		0.55                 & 
+		0                     \\
+		\bottomrule
+	\end{tabular}
+	\caption{\textbf{PLACEHOLDER - NOT REAL DATA DEPICTED.}}
+\end{table*}
+\subsubsection{Weather data}
+\paragraph{Raw data}
+The raw weather data as can be seen partly in table X, consists of various 
+real-time measurements performed by a variety of instruments located at 
+different weather stations. Each row in the raw data consists of: a measurement 
+ID, the geographical coordinates for the measurement, the measurement parameter 
+type, the time resolution with the related timeslots, the value, and the 
+station ID. It also includes several features related to \gls{dmi} quality 
+assurance, such as creation time, calculation time, quality control status, 
+etc., however, these are discarded as they have no metrological value. 
+Further, there exists four different timestamps within each entry. For the 
+purposes of this paper, we utilise the 'from' timestamp as the main timestamp, 
+as that will correspond to the price from 14:00 to 15:00.
+\paragraph{Preprocessed data}
+Preprocessing on the weather data mainly consisted of grouping each individual 
+measurement by station ID, then aggregating and averaging measurements to 
+become hourly if they are not already. Lastly, we once again aggregate these 
+hourly measurements by region, using both station ID as well as measurement 
+coordinates, to determine the region, ending up with one hourly dataset for the 
+DK1 and DK2 regions respectively. During this geographical segregation we also 
+excluded both Greenland, the Faroe Islands, and Bornholm, due to the 
+geographical distance from these regions to DK1 and DK2. This resulted in data 
+such as the example depicted in table X.
+Further validation of the preprocessed weather data was performed, in order to 
+ensure data quality. Features that did not have data for the entire period were 
+also entirely removed. This means that if a type of sensor was decommissioned 
+during the decade of training data its feature data would be entirely excluded 
+from training, to enable rolling-window cross-validation, as will be detailed 
+in \autoref{sec:experiments}.
+
+\subsubsection{Production and Consumption data}
+The \gls{pc} data required minimal preprocessing, as it was already published 
+in the hourly format. The only preprocessing performed on this dataset was 
+dividing it into the two regions, DK1 and DK2, which was already labelled 
+within a column of the dataset. Then we ensured that the date-range matched the 
+\gls{dmi} data. The data contained within the dataset consists of hourly 
+production of wind energy of various size-categories of wind-farms, both off- 
+and onshore, solar energy production of various size-categories of solar farms, 
+fossil-fuel related energy production, exchanges with neighbouring countries, 
+as well as Danish energy consumption data. Notably, columns relating to foreign 
+energy exchange contained frequent missing values when no exchange had occurred 
+between the countries during that specific hour. Since these missing values 
+correspond to an energy exchange of zero, they were explicitly encoded as such. 
+This ensures the models accurately interpret periods of national grid 
+isolation, without the need for interpolation.
+
+\subsubsection{Price}
+The price data was divided into two publication, due to the previously 
+mentioned Nord Pool formatting change. However, the columns in the tables where 
+still the same, so we just ensured that they were in the same order, and then 
+appended the most recent publication to the earlier one. We also discarded 
+non-hourly prices to keep formatting consistent across tables. 
+
+\subsubsection{General Preprocessing}
+Additionally, general preprocessing was performed across all datasets, or to 
+ensure consistent UTC time formatting, also removing the issue of daylight 
+savings time anomalies. Lastly, all datasets were sorted into ascending 
+timestamps, and data-ranges were enforced over all datasets.
+
+\subsubsection{Master Matrix Data}
+After preprocessing, all of these different tables were joined by their 
+timestamp, creating one master table, to be used for model training. 
+Additionally, several columns were created for the express purpose of either 
+enhancing model performance or combatting over-fitting of the models during 
+training. Four different categories of columns were added: 
+\paragraph{Date \& Time}
+Not to be confused with date-time, or timestamps, these columns instead relate 
+to representing the hour of the day, the day of the week, the month, 
+and the day of the year as ascending integers. We add these to give the models 
+an integer representation of the days and hours, to better let them interpret 
+consumption patterns, e.g. the differing patterns present during weekdays and 
+weekends. To enable detection of such patterns further, we also encode these 
+integers as Sine and Cosine waves, creating a scaled version of them, that may 
+be more useful to certain model types. Utilizing both mitigates the natural 
+symmetrical ambiguity that would be present otherwise, mapping each time step 
+to a unique coordinate on a unit circle. The waves were created using the 
+following formulae \ref{eq:sine_enc} and \ref{eq:cos_enc}:
+\begin{align}
+	x_{\text{sin}} &= \sin\left(\frac{2\pi x}{\max(x)}\right) 
+	\label{eq:sine_enc} \\
+	x_{\text{cos}} &= \cos\left(\frac{2\pi x}{\max(x)}\right) \label{eq:cos_enc}
+\end{align}
+where $x$ is the integer being encoded, and $\max(x)$ is the maximum value of 
+that specific period e.g., 24 for the hour of the day, or 365 for the day of 
+the year. Notably, day of month was deliberately excluded as a feature, 
+because of its variable period length, due to not all months contain the same 
+number of days, would introduce gaps at the end of shorter months that cannot 
+be cleanly resolved with a static denominator. A dynamic denominator, adjusting 
+$\max(x)$ to reflect the actual number of days in each specific month, would 
+resolve this, however, the same information is implicitly captured by the 
+combination of the day of year and month encodings already present.
+
+\paragraph{T-Minus data}
+Since we will be training tree-based models, which does not possess any 
+inherent memory capabilities, we introduce T-Minus data, or lagging data, which 
+are essentially just copies of earlier data at various horizons. All 
+weather-related measurements, as well as \gls{pc} related values, have been 
+copied and inserted 24-hours later, giving the model inherent access to 
+yesterdays weather and consumption at this exact hour, in order to predict the 
+price for the current hour. Additionally, for the price data specifically, 
+t-minus data was included for the previous 24-hour, 48-hour, and 168-hour, as 
+previous prices were deemed especially relevant for predicting the current 
+price.
+\paragraph{Targets}
+Originally, the absolute price was used as the target for model training. 
+However, to combat overfitting, a new target was introduced to the master 
+matrix: the delta target. Instead of trying to predict the absolute price, the 
+models were instructed to predict the change in price.
+\begin{equation}\label{eq:delta}
+	\Delta P_{t,h} = P_{t+h} - P_t
+\end{equation}
+where $P_t$ is the price at the current hour and $h$ is the forecast 
+horizon in hours.\\
+The results of 
+both training approaches will be discussed in \autoref{sec:results}.
+\paragraph{Groupings}
+To make training different variations of the data easier, each column was 
+assigned a group consisting of related columns. These groupings will be 
+discussed further in \autoref{sec:experiments}.
+
+\paragraph{Missing data and imputation}
+To ensure satisfactory data quality, features that are more than 90\% 
+empty, or have constant values in 95\% of rows, are dropped entirely prior to 
+training. These thresholds were chosen conservatively to retain as many 
+features as possible, under the assumption that moderately sparse features 
+could be recovered through imputation. A post-hoc audit confirmed that no 
+columns were dropped under the emptiness criterion across any dataset. The 
+constant value criterion resulted in the removal of two internal DMI 
+quality control columns, \texttt{Stations\_Reporting\_Min} and 
+\texttt{Stations\_Reporting\_Max}. These columns carry no 
+meteorological value and their removal is appropriate.
+
+For remaining missing values, three steps were performed to all columns. First, 
+interpolation is applied to gaps of up to 12 consecutive hours, to fill in 
+smaller gaps. Second, forward and backward filling are applied as a 
+supplementary pass, also capped at 12 hours each, to handle edge cases where 
+interpolation is insufficient, due to a one of the sides of the gap being open. 
+Any values still missing after both passes, implying a consecutive gap 
+exceeding 24 hours, are filled using the column mean as a last resort.
+
+The behaviour of this strategy differed substantially between data 
+sources. The price data required no imputation whatsoever, containing 
+zero missing values across both publications. The weather data was 
+largely clean, with 0.25\% and 0.53\% of values originally missing 
+in DK1 and DK2 respectively. The vast majority of these were 
+recovered by interpolation, with the mean fallback triggered only for 
+\texttt{temp\_soil\_30} and \texttt{leaf\_moisture} in specific years, 
+accounting for at most 0.02\% and 0.18\% of all weather values in DK1 
+and DK2 respectively. 
+
+The production and consumption data presented a different situation. 
+Approximately 9.87\% of its numeric values were 
+originally missing, concentrated entirely in four columns: 
+\texttt{UnknownProdMWh}, \texttt{CommercialPowerMWh}, 
+\texttt{GridLossInterconnectorsMWh}, and 
+\texttt{GridLossDistributionMWh}. These represent production and grid 
+measurement categories that were introduced or changed during the 
+11-year dataset period. In these cases, interpolation is not physically 
+meaningful, and the column mean effectively encodes the absence of a 
+measurement category as a neutral baseline value. Additionally, six exchange 
+columns containing frequent missing values were zero-filled separately, as a 
+missing exchange value physically corresponds to zero energy flow between 
+countries rather than an unknown measurement.
+
+We also create columns of binary flags to signal what data is natural and what 
+is synthetic. These flags are primarily motivated by 
+tree-based models, which lack any inherent mechanism to discount 
+uncertain inputs. By explicitly encoding which values are synthetic, tree-based 
+models may learn to route predictions away from relying on such criteria when 
+other features may be more reliable. Neural network-based 
+models can achieve a similar effect through their attention and gating 
+mechanisms without explicit flags, however, the flags are nonetheless present 
+within the master matrix for all models types, as they carry no cost for models 
+that do not benefit from them.\\
+
+\subsubsection{Midas Energy data}
+No preprocessing has been performed on the Midas Energy Data, except for 
+ensuring consistent time-formatting in relation to the other datasets. 
+
+%https://www.dmi.dk/friedata/dokumentation/climate-data link to description of 
+%weather data fields

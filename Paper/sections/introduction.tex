@@ -1,2 +1,168 @@
 \section{Introduction} \label{sec:introduction}
-Introduction goes here.
+In a world of increasing amounts of electric 
+vehicles, data centres, and 
+other large-scale electricity-hungry industries, electricity grids are 
+beginning to feel the strain~\cite{ppm-gridImpact}, contributing to an increase 
+in electricity prices~\cite{gridStrainIncreasingGraph}. When faced with such 
+increased prices, it is beneficial, from a monetary point of view, to schedule 
+electricity intensive tasks during periods where prices are low. 
+However, to do this, one must know when such low-price periods occur. In 
+Denmark, 
+the price of electricity is, in simple terms, fixed for the next 24-hour period 
+at noon daily\footnote{This is a simplification for ease of reading. For actual 
+	energy trading details one may visit 
+	\cite{nordpoolTrading}. It is also further 
+	explained in \autoref{sec:prereq}}. 
+This is often sufficient for household electricity use, as one can typically 
+schedule dishwashers, washing machines, and electric vehicle charging to happen 
+during the lowest point of that period. This can be done either through direct 
+scheduling on individual appliances or smart devices, or through smart home 
+management systems such as Home Assistant~\cite{homeAssistant}. Industrial 
+needs for 
+energy can involve larger and more time-sensitive electricity 
+demand~\cite{industrialHouseholdEnergyConsumption}, and may 
+therefore be more expensive. As an example, one might imagine a 
+near-future where fleets of electric trucks need their batteries charged 
+before delivery. In a scenario like this, it may be beneficial for such 
+companies, to be able to forecast electricity prices further into the future, 
+and plan their electricity consumption accordingly, to minimize charging costs. 
+\\
+
+When attempting to predict electricity prices, many different aspects can be 
+considered~\cite{forecastInput}. Among these, the ones of particular interest 
+to this paper are: 
+\begin{itemize}
+	\item Weather
+	\item Electricity production details
+	\item Electricity consumption details
+	\item Historical- or T-minus 
+	data\footnote{Data from an earlier point in 
+		time before the current time, e.g. 24 hours 
+		before.}
+	\item Time of year/month/week/day
+	\item Electricity exchange with foreign countries
+\end{itemize}
+
+One factor that influences electricity prices is the weather, 
+due to its direct impact on both electricity 
+production~\cite{productionPatterns} and 
+consumption~\cite{consumptionPatterns}. 
+In a country that has invested extensively in wind-energy, such as Denmark, the 
+weather directly impacts electricity production, as more that $80\%$ is 
+produced by renewable 
+sources~\cite{energiStyrelsenEnergiStatestik2022}. Steady winds, and to a 
+lesser extent, clear skies therefore affect energy production quite heavily in 
+Denmark, as necessities for efficient wind and solar energy production. 
+When it comes to consumption, human consumption patterns also change depending 
+on the weather~\cite{consumptionPatterns}. When it 
+is cold, people turn on the 
+heat to warm themselves, 
+and when it is hot, they turn on air conditioning, or fans, to stay cool. 
+Further, when it is cold, such as in the winter months, it is typically also 
+darker, necessitating the need to use lights more frequently. 
+
+These factors suggest that one can use the weather to predict electricity 
+\gls{pc} patterns, which implies that weather data may carry 
+useful information for electricity price forecasting. A substantial body of 
+prior work has examined short-term electricity price forecasting using 
+statistical, machine-learning, and deep-learning 
+approaches~\cite{energyPricePredictionMLNeighbors,energyPricePredictionUK,energyPricePredictionNovelDeepLearning},
+showing various results in different forecasting scenarios. However, many of 
+the reported results are obtained in specific market settings or with highly 
+specialized forecasting architectures, such as in 
+\cite{energyPricePredictionNovelDeepLearning}. Much of this prior work shares 
+common limitations, such as results typically being reported for a single model 
+trained on a fixed feature set. This may obscure the answer to what data 
+actually impact the performance of models in general. Someone wishing to deploy 
+a forecasting system is therefore left without clear guidance on whether 
+investing in comprehensive data collection is worthwhile, or whether a simpler 
+feature set would perform comparably. Further, while related studies exist, the 
+Danish setting combines several factors that are not jointly emphasized in most 
+of the literature reviewed here, such as its heavy investment into 
+wind-energy~\cite{energiStyrelsenEnergiStatestik2022}, its division of the 
+energy grid into two distinct bidding zones, and its heavy energy-exchange with 
+its neighbouring countries. \\
+
+This paper addresses these gaps through a large-scale ablation study, 
+systematically varying the feature composition, forecasting horizon, and 
+prediction target across 1.052 trained models. Rather than reporting the best 
+achievable performance under ideal conditions, the goal is to answer a 
+practically motivated question: how much data do you actually need? This is not 
+merely an academic exercise, but a question of practicality. An energy trading 
+company deploying a real-time forecasting system must weigh the cost of 
+acquiring and maintaining each data source against the marginal accuracy it may 
+provide. Understanding which feature categories contribute meaningfully, and at 
+which horizons they stop being useful, has direct commercial value.\\
+
+To investigate this dynamic across a broad spectrum of architectures, eight 
+different types of general-purpose machine learning algorithms and frameworks 
+are evaluated: 
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item RandomForest
+		\item XGBoost
+		\item LightGBM
+		\item CatBoost
+		\item LSTM
+		\item GRU
+		\item Transformer
+		\item AutoGluon
+	\end{enumerate}
+\end{multicols}
+Model training will be based on weather data gathered from the \gls{dmi}, as 
+well as electricity \gls{pc} data from \gls{en}. 
+To comprehensively evaluate the chosen forecasting 
+approaches, the experiments are structured around 
+three distinct prediction settings. First, the 
+models are trained on various data 
+constellations, ranging from purely 
+weather-related data, to a more comprehensive 
+dataset of weather, grid, and historical 
+price data. This is done to isolate the impact of 
+each specific data category. Second, the 
+forecasting horizon is expanded sequentially to 
+evaluate how the accuracy of each algorithm 
+deteriorates as it predicts further into the 
+future. Finally, the approaches are trained using 
+two distinct prediction targets: predicting the 
+absolute electricity price and predicting the 
+price delta. For the purpose of this paper, the 
+price delta refers to the change in price from the 
+current hour to the forecasted hour. This 
+dual-target approach is motivated by a desire to 
+anticipate model overfitting and to investigate 
+whether the algorithms are more adept at capturing 
+relative price fluctuations rather than absolute 
+prices. The overall purpose of this ablation study 
+is to uncover how different machine learning 
+frameworks react when given identical training 
+conditions under these varying settings.\\
+
+Producing a meaningful ablation study in this setting required substantial 
+preprocessing effort. The raw data sources used for this paper spans nearly 11 
+years, and consists of station-level weather measurements, energy production 
+and consumption records, and price data across two format changes. This data 
+was not designed for machine learning consumption. Constructing a consistent, 
+temporally aligned training dataset required geographic filtering of weather 
+stations, cross-year column homogenisation, resolution standardisation, and 
+imputation of structurally missing data. This preprocessing pipeline is a 
+necessary foundation for the validity of the experimental results, and is 
+described in detail in \autoref{sec:data_preprocessing} to enable 
+reproducibility\hltodo{.}{Will likely need to shorten introduction, though i am 
+not entirely sure how, as much of this motivation is necessary.}\\
+
+Related to this, one company has 
+actually already utilised weather data to 
+predict electricity production and consumption in Denmark. This company is 
+called Midas Energy~\cite{midasEnergy}. They do this with the purpose of 
+supplying their customers, energy trading companies, with this information, in 
+order to enable them to make decisions on a stronger foundation. They provide 
+short term energy production and consumption forecasts, so that their 
+customers may buy and sell electricity with the ability to consider the future 
+to a greater degree than they otherwise would be able to~\cite{midasEnergy}. 
+Notably, Midas Energy provides production and consumption forecasts, not price 
+forecasts, but is interested in expanding into such areas, which is why they 
+have acted as partners during the development process of this paper. Their 
+contributions have been mostly related to data acquisition, performance metric 
+evaluations, and benchmarking, and their contributions will be discussed 
+further when relevant.

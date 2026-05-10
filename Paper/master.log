@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.17)  2 FEB 2026 21:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.17)  10 MAY 2026 23:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1355,7 +1355,11 @@ Package: flafter 2021/07/31 v1.4e Standard LaTeX floats after reference (FMi)
 Applying: [2015/01/01] float order in 2-column on input line 49.
 Already applied: [0000/00/00] float order in 2-column on input line 151.
 )
-(c:/texlive/2024/texmf-dist/tex/latex/todonotes/todonotes.sty
+(c:/texlive/2024/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+
+xurl: Set penalties for biblatex
+) (c:/texlive/2024/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
 Package: todonotes 2024/01/05
 \c@@todonotes@numberoftodonotes=\count506
@@ -1389,15 +1393,7 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 (c:/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 ))
-(c:/texlive/2024/texmf-dist/tex/generic/soul/soulutf8.sty
-Package: soulutf8 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
-
-
-Package soulutf8 Warning: This package is obsolete,
-(soulutf8)                use the soul package directly. 
-(soulutf8)                 on input line 29.
-
-) (c:/texlive/2024/texmf-dist/tex/latex/mdwtools/footnote.sty
+(c:/texlive/2024/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box151
 \fn@width=\dimen361
@@ -1530,7 +1526,7 @@ Package: glossary-tree 2023/09/29 v4.53 (NLCT)
 \glo@main@file=\write6
 \openout6 = `master.glo'.
 
-Package glossaries Info: Writing glossary file master.glo on input line 88.
+Package glossaries Info: Writing glossary file master.glo on input line 90.
 )
 (./setup/acronyms.tex) (./setup/hyphensyion.tex) (./setup/customCommands.tex)
 \@quotelevel=\count532
@@ -1627,17 +1623,11 @@ Package microtype Info: No adjustment of character kerning.
 (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-
-Package todonotes Warning: The length marginparwidth is less than 2cm and will 
-most likely cause issues with the appearance of inserted todonotes. The issue c
-an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 21.
-
 (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
 
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1646,7 +1636,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
 
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1655,48 +1645,175 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 46
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 51
 .
 
 (c:/texlive/2024/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-Overfull \hbox (3.50006pt too wide) in paragraph at lines 46--46
+Overfull \hbox (3.50006pt too wide) in paragraph at lines 51--51
  [] 
  []
 
 
-Overfull \hbox (3.50006pt too wide) in paragraph at lines 46--46
+Overfull \hbox (3.50006pt too wide) in paragraph at lines 51--51
  [] 
  []
 
 
-Overfull \hbox (3.50006pt too wide) in paragraph at lines 46--46
+Overfull \hbox (3.50006pt too wide) in paragraph at lines 51--51
  [] 
  []
 
-(./setup/docSetup.tex (./sections/introduction.tex)
-(./sections/related_works.tex) (./sections/problem_formulation.tex)
-(./sections/data_preprocessing.tex) (./sections/implementation.tex)
-(./sections/experiments.tex) (./sections/results.tex)
-(./sections/conclusion.tex) (./sections/acknowledgement.tex)) [1{c:/texlive/202
-4/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/font
-s/enc/dvips/base/8r.enc}
+(./master.tdo)
+\tf@tdo=\write8
+\openout8 = `master.tdo'.
+
+ (./setup/docSetup.tex (./sections/introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--30
+
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 64--85
+[]\T1/ptm/m/n/10 (+20) These fac-tors sug-gest that one can use the weather
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--85
+
+ []
+
+[1{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/202
+4/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 \openout5 = `master.ist'.
 
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 86--96
 
-LaTeX Warning: Empty bibliography on input line 62.
+ []
 
-(./sections/appendix.tex [2
+
+Underfull \hbox (badness 1424) in paragraph at lines 112--140
+\T1/ptm/m/n/10 (+20) the cho-sen fore-cast-ing ap-proaches, the ex-per-i-ments 
+are
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--140
+
+ []
+
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 152.
+
+Underfull \hbox (badness 3612) in paragraph at lines 141--153
+\T1/ptm/m/n/10 (+20) col-umn ho-mogeni-sa-tion, res-o-lu-tion stan-dard-i-s-a-t
+ion, and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--153
+
+ []
+
+) (./sections/related_works.tex) (./sections/problem_formulation.tex [2]
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+[][][]\T1/ptm/m/n/10 (+20) Long-Short-Term-
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 27--47
+[]\T1/ptm/m/n/10 (+20) These ap-proaches can be di-vided into three gen-eral
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--47
+
+ []
+
+) (./sections/data_preprocessing.tex [3]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
+4.
+
+(c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [4]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 23
+7.
+
+(c:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pcr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [5]
+Underfull \hbox (badness 2951) in paragraph at lines 259--272
+\T1/ptm/m/n/10 (+20) sit-u-a-tion. Ap-prox-i-mately 9.87% of its nu-meric val-u
+es
+ []
+
+
+Underfull \hbox (badness 3536) in paragraph at lines 259--272
+\T1/ptm/m/n/10 (+20) were orig-i-nally miss-ing, con-cen-trated en-tirely in fo
+ur
+ []
+
+
+Underfull \hbox (badness 5985) in paragraph at lines 259--272
+\T1/ptm/m/n/10 (+20) columns: \T1/pcr/m/n/10 UnknownProdMWh\T1/ptm/m/n/10 (+20)
+ , \T1/pcr/m/n/10 CommercialPowerMWh\T1/ptm/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--272
+\T1/pcr/m/n/10 GridLossInterconnectorsMWh\T1/ptm/m/n/10 (+20) , and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--283
+
+ []
+
+) (./sections/implementation.tex) (./sections/experiments.tex [6] [7])
+(./sections/results.tex) (./sections/conclusion.tex)
+(./sections/acknowledgement.tex)) [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9
+
+]
+(./sections/appendix.tex [10
 
 ]
 \openout2 = `sections/appendix/appA.aux'.
 
- (./sections/appendix/appA.tex) [3
+ (./sections/appendix/appA.tex
+Underfull \hbox (badness 10000) in paragraph at lines 10--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--50
+
+ []
+
+) [11
 
 ])
 
@@ -1721,27 +1838,104 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 7264CF3307AFAF2DB19E92F74F5A9C17;3450.
+(rerunfilecheck)             Checksum: 302C6C9A77DEC6A18DBD4E67B9E4149A;5984.
 Package logreq Info: Writing requests to 'master.run.xml'.
 \openout1 = `master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43141 strings out of 474103
- 809069 string characters out of 5747481
- 1942496 words of memory out of 5000000
- 64670 multiletter control sequences out of 15000+600000
- 668249 words of font info for 185 fonts, out of 8000000 for 9000
+ 44560 strings out of 474103
+ 832780 string characters out of 5747481
+ 1971496 words of memory out of 5000000
+ 65714 multiletter control sequences out of 15000+600000
+ 689751 words of font info for 360 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 99i,10n,96p,2352b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024
-/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on master.pdf (3 pages, 61010 bytes).
+ 99i,11n,96p,2352b,1504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{glo:mda} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{glo:smape} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:wmape} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:r2} has been referenced but does not exist, rep
+laced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:rmse} has been referenced but does not exist, r
+eplaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:mse} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{glo:mae} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{glo:autogluon} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:gru} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{glo:lstm} has been referenced but does not exist, r
+eplaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:cb} has been referenced but does not exist, rep
+laced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:lgbm} has been referenced but does not exist, r
+eplaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:xgb} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{glo:rf} has been referenced but does not exist, rep
+laced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:en} has been referenced but does not exist, rep
+laced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:dmi} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{glo:pc} has been referenced but does not exist, rep
+laced by a fixed one
+
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/te
+xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/t
+ype1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utm
+bi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texli
+ve/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on master.pdf (11 pages, 230517 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 42693 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 550 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
+ 152 named destinations out of 1000 (max. 500000)
+ 62277 words of extra memory for PDF output out of 74296 (max. 10000000)
 

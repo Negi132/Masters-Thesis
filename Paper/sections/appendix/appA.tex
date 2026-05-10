@@ -1,4 +1,62 @@
-\subsection{Proofs}\label{app:A}
-\subsubsection{Proof: Recall Added 100\% = 
-	Precision Closed 
-	100\%}\label{app:A:RecallPrecision}
+\subsection{Additional evaluation criteria}\label{app:A}
+\subsubsection*{Equations}\label{app:A:equations}
+In the following equations $y_t$ and $\hat{y}t$ is the ground truth target 
+value at prediction time and the predicted value at prediction time 
+respectively. \\
+\Cref{eq:rmse} depicts how to calculate the \gls{rmse}.
+\begin{equation}
+	\text{RMSE} = \sqrt{\frac{1}{n} \sum_{t=1}^{n} (y_t - \hat{y}_t)^2}
+	\label{eq:rmse}
+\end{equation}
+This metric is similar to \gls{mae}, however, it squares the errors first, to 
+punish outliers more severely. In a market with frequent spikes, both positive 
+and negative, this behaviour may not be ideal. While it could have been used as 
+a performance metric, \gls{mae} was chosen instead due to their inherent 
+similarities and its easier interpretability. \\
+
+\Cref{eq:r2} depicts how to calculate the \gls{r2}.
+\begin{equation}
+	R^2 = 1 - \frac{\sum_{t=1}^{n} (y_t - \hat{y}_t)^2}{\sum_{t=1}^{n} (y_t - 
+		\bar{y})^2}
+	\label{eq:r2}
+\end{equation}
+This metric can be viewed in the same sense as an accuracy score in binary 
+classification. As is the case with accuracy in such scenarios, it gives you a 
+fair wholistic view of the models, but may be ineffective in capturing the 
+intricacies of what you are actually aiming for, and therefore this metric was 
+not chosen. \\
+
+\Cref{eq:wmape} depicts how to calculate the \gls{wmape}.
+\begin{equation}
+	\text{WMAPE} = \frac{\sum_{t=1}^{n} |y_t - \hat{y}_t|}{\sum_{t=1}^{n} |y_t|}
+	\label{eq:wmape}
+\end{equation}
+This metric represents the errors as a percentage, which is easily 
+understandable, however, in the case of energy markets, where prices may hover 
+around zero, or in the negative values, for extended periods of time, this 
+metric may become unstable, due to the low numbers involved. \\
+
+\Cref{eq:smape} depicts how to calculate the \gls{smape}. 
+\begin{equation}
+	\text{sMAPE} = \frac{1}{n} \sum_{t=1}^{n} \frac{2|y_t - \hat{y}_t|}{|y_t| + 
+		|\hat{y}_t|}
+	\label{eq:smape}
+\end{equation}
+This metric is similar to \gls{wmape}, however it treats positive and negative 
+errors as equally problematic, which is good in the case of price prediction, 
+since both high-balling and low-balling the price of energy is problematic when 
+trading energy. However, it has the some problem as \gls{wmape}, of becoming 
+unstable during low-number periods. \\
+
+\Cref{eq:mda} depicts how to calculate the \gls{mda}.
+\begin{equation}
+	\text{MDA} = \frac{1}{n-1} \sum_{t=1}^{n-1} \mathbf{1}_{\text{sgn}(y_{t+1} 
+		- y_t) == \text{sgn}(\hat{y}_{t+1} - y_t)}
+	\label{eq:mda}
+\end{equation}
+This metric signifies what percentage of the time the model was correct in the 
+direction of the next price, meaning, did the price go up, or did the price go 
+down. This is useful for energy traders, however, directionality itself is not 
+of a measurable magnitude, and does not align with the premise of this 
+comparison of how data constellations and horizons impact model behaviour, 
+therefore, this metric was not chosen for this paper. 

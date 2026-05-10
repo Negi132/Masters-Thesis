@@ -2361,6 +2361,24 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bib/mybib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">ppm-gridImpact</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">gridStrainIncreasingGraph</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">nordpoolTrading</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">homeAssistant</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">industrialHouseholdEnergyConsumption</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">forecastInput</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">productionPatterns</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">consumptionPatterns</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">energiStyrelsenEnergiStatestik2022</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">consumptionPatterns</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">energyPricePredictionMLNeighbors</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">energyPricePredictionUK</bcf:citekey>
+    <bcf:citekey order="11" intorder="3">energyPricePredictionNovelDeepLearning</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">energyPricePredictionNovelDeepLearning</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">energiStyrelsenEnergiStatestik2022</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">midasEnergy</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">midasEnergy</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">neuralNetworksMemory</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
