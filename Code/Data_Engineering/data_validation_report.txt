@@ -1,0 +1,220 @@
+==================================================
+          DATA VALIDATION & CLEANING REPORT
+==================================================
+
+Analyzing: ProductionConsumptionSettlement_standardized.csv
+  Filtered PriceArea: Kept 196530 DK1/DK2 rows (Dropped 0 foreign rows).
+  No columns required dropping.
+  Zero-filled 372555 missing values across 6 Exchange columns.
+  Interpolated/Filled 368544 numerical values.
+  Created binary '_imputed' flags for 4 columns.
+  Saved validated data to: ProductionConsumptionSettlement_validated.csv
+----------------------------------------
+
+Analyzing: Elspotprices_standardized.csv
+  Filtered PriceArea: Kept 188542 DK1/DK2 rows (Dropped 465716 foreign rows).
+  No columns required dropping.
+  Saved validated data to: Elspotprices_validated.csv
+----------------------------------------
+
+Analyzing: DayAheadPrices_standardized.csv
+  Filtered PriceArea: Kept 33608 DK1/DK2 rows (Dropped 67216 foreign rows).
+  No columns required dropping.
+  Saved validated data to: DayAheadPrices_validated.csv
+----------------------------------------
+
+Analyzing: 2015_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '77' in 100.0% of rows.
+  Interpolated/Filled 4 numerical values.
+  Created binary '_imputed' flags for 4 columns.
+  Saved validated data to: 2015_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2015_DK2_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '30' in 100.0% of rows.
+  Interpolated/Filled 8 numerical values.
+  Created binary '_imputed' flags for 4 columns.
+  Saved validated data to: 2015_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2016_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '77' in 100.0% of rows.
+  Interpolated/Filled 9 numerical values.
+  Created binary '_imputed' flags for 1 columns.
+  Saved validated data to: 2016_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2016_DK2_hourly.csv
+  Dropped 2 columns:
+    - Stations_Reporting_Min: Constant value '6' in 96.4% of rows.
+    - Stations_Reporting_Max: Constant value '30' in 100.0% of rows.
+  Interpolated/Filled 12 numerical values.
+  Created binary '_imputed' flags for 4 columns.
+  Saved validated data to: 2016_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2017_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '77' in 100.0% of rows.
+  Interpolated/Filled 84 numerical values.
+  Created binary '_imputed' flags for 5 columns.
+  Saved validated data to: 2017_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2017_DK2_hourly.csv
+  Dropped 2 columns:
+    - Stations_Reporting_Min: Constant value '6' in 95.2% of rows.
+    - Stations_Reporting_Max: Constant value '30' in 100.0% of rows.
+  Interpolated/Filled 78 numerical values.
+  Created binary '_imputed' flags for 5 columns.
+  Saved validated data to: 2017_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2018_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '77' in 98.4% of rows.
+  Interpolated/Filled 16 numerical values.
+  Created binary '_imputed' flags for 4 columns.
+  Saved validated data to: 2018_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2018_DK2_hourly.csv
+  Dropped 2 columns:
+    - Stations_Reporting_Min: Constant value '6' in 96.6% of rows.
+    - Stations_Reporting_Max: Constant value '30' in 100.0% of rows.
+  Interpolated/Filled 16 numerical values.
+  Created binary '_imputed' flags for 4 columns.
+  Saved validated data to: 2018_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2019_DK1_hourly.csv
+  Dropped 2 columns:
+    - Stations_Reporting_Min: Constant value '9' in 98.6% of rows.
+    - Stations_Reporting_Max: Constant value '77' in 100.0% of rows.
+  Interpolated/Filled 7 numerical values.
+  Created binary '_imputed' flags for 4 columns.
+  Saved validated data to: 2019_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2019_DK2_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Min: Constant value '6' in 96.9% of rows.
+  Interpolated/Filled 11 numerical values.
+  Created binary '_imputed' flags for 4 columns.
+  Saved validated data to: 2019_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2020_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '77' in 100.0% of rows.
+  Interpolated/Filled 5 numerical values.
+  Created binary '_imputed' flags for 5 columns.
+  Saved validated data to: 2020_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2020_DK2_hourly.csv
+  Dropped 2 columns:
+    - Stations_Reporting_Min: Constant value '6' in 98.3% of rows.
+    - Stations_Reporting_Max: Constant value '29' in 100.0% of rows.
+  Interpolated/Filled 5 numerical values.
+  Created binary '_imputed' flags for 5 columns.
+  Saved validated data to: 2020_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2021_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '77' in 100.0% of rows.
+  Interpolated/Filled 20 numerical values.
+  Created binary '_imputed' flags for 5 columns.
+  Saved validated data to: 2021_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2021_DK2_hourly.csv
+  Dropped 2 columns:
+    - Stations_Reporting_Min: Constant value '6' in 99.1% of rows.
+    - Stations_Reporting_Max: Constant value '29' in 100.0% of rows.
+  Interpolated/Filled 20 numerical values.
+  Created binary '_imputed' flags for 5 columns.
+  Saved validated data to: 2021_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2022_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '77' in 100.0% of rows.
+  Interpolated/Filled 77 numerical values.
+  Created binary '_imputed' flags for 5 columns.
+  Saved validated data to: 2022_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2022_DK2_hourly.csv
+  Dropped 2 columns:
+    - Stations_Reporting_Min: Constant value '6' in 98.7% of rows.
+    - Stations_Reporting_Max: Constant value '29' in 100.0% of rows.
+  Interpolated/Filled 79 numerical values.
+  Created binary '_imputed' flags for 5 columns.
+  Saved validated data to: 2022_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2023_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '77' in 100.0% of rows.
+  Interpolated/Filled 199 numerical values.
+  Created binary '_imputed' flags for 6 columns.
+  Saved validated data to: 2023_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2023_DK2_hourly.csv
+  No columns required dropping.
+  Interpolated/Filled 253 numerical values.
+  Created binary '_imputed' flags for 6 columns.
+  Saved validated data to: 2023_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2024_DK1_hourly.csv
+  No columns required dropping.
+  Interpolated/Filled 1582 numerical values.
+  Created binary '_imputed' flags for 3 columns.
+  Saved validated data to: 2024_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2024_DK2_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '29' in 100.0% of rows.
+  Interpolated/Filled 1614 numerical values.
+  Created binary '_imputed' flags for 3 columns.
+  Saved validated data to: 2024_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2025_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Min: Constant value '1' in 98.2% of rows.
+  Interpolated/Filled 1619 numerical values.
+  Created binary '_imputed' flags for 4 columns.
+  Saved validated data to: 2025_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2025_DK2_hourly.csv
+  No columns required dropping.
+  Interpolated/Filled 4989 numerical values.
+  Created binary '_imputed' flags for 6 columns.
+  Saved validated data to: 2025_DK2_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2026_DK1_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Min: Constant value '1' in 100.0% of rows.
+  Interpolated/Filled 884 numerical values.
+  Created binary '_imputed' flags for 6 columns.
+  Saved validated data to: 2026_DK1_hourly_validated.csv
+----------------------------------------
+
+Analyzing: 2026_DK2_hourly.csv
+  Dropped 1 columns:
+    - Stations_Reporting_Max: Constant value '30' in 100.0% of rows.
+  Interpolated/Filled 2146 numerical values.
+  Created binary '_imputed' flags for 5 columns.
+  Saved validated data to: 2026_DK2_hourly_validated.csv
+----------------------------------------

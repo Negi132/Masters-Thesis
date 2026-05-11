@@ -1,0 +1,39 @@
+experiment,horizon,target,groups,needed_by_models
+Exp6_Weather_WeatherLags_Grid,0,Price,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Time']",['LSTM']
+Exp3_Weather_Prices,48,Price,"['Weather', 'Prices', 'Time']","['LSTM', 'Transformer']"
+Exp6_Weather_WeatherLags_Grid,48,Price,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Time']",['LSTM']
+Exp3_Weather_Prices,72,Price,"['Weather', 'Prices', 'Time']","['LSTM', 'Transformer']"
+Exp6_Weather_WeatherLags_Grid,72,Price,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Time']",['LSTM']
+Exp3_Weather_Prices,96,Price,"['Weather', 'Prices', 'Time']","['LSTM', 'Transformer']"
+Exp6_Weather_WeatherLags_Grid,96,Price,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Time']",['LSTM']
+Exp6_Weather_WeatherLags_Grid,120,Price,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Time']",['LSTM']
+Exp3_Weather_Prices,144,Price,"['Weather', 'Prices', 'Time']","['LSTM', 'Transformer']"
+Exp6_Weather_WeatherLags_Grid,144,Price,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Time']",['LSTM']
+Exp6_Weather_WeatherLags_Grid,168,Price,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Time']",['LSTM']
+Exp5_Weather_Grid,0,Price,"['Weather', 'Grid', 'GridExchange', 'Time']",['Transformer']
+Exp5_Weather_Grid,48,Price,"['Weather', 'Grid', 'GridExchange', 'Time']",['Transformer']
+Exp5_Weather_Grid,72,Price,"['Weather', 'Grid', 'GridExchange', 'Time']",['Transformer']
+Exp5_Weather_Grid,96,Price,"['Weather', 'Grid', 'GridExchange', 'Time']",['Transformer']
+Exp5_Weather_Grid,120,Price,"['Weather', 'Grid', 'GridExchange', 'Time']",['Transformer']
+Exp5_Weather_Grid,144,Price,"['Weather', 'Grid', 'GridExchange', 'Time']",['Transformer']
+Exp1_Weather_Only,144,Price,"['Weather', 'Time']",['Transformer']
+Exp5_Weather_Grid,168,Price,"['Weather', 'Grid', 'GridExchange', 'Time']",['Transformer']
+Exp1_Weather_Only,168,Price,"['Weather', 'Time']",['Transformer']
+Exp7_Weather_Grid_Prices,48,Delta,"['Weather', 'Grid', 'GridExchange', 'Prices', 'Time']",['AutoGluon']
+Exp5_Weather_Grid,48,Delta,"['Weather', 'Grid', 'GridExchange', 'Time']",['AutoGluon']
+Exp7_Weather_Grid_Prices,72,Delta,"['Weather', 'Grid', 'GridExchange', 'Prices', 'Time']",['AutoGluon']
+Exp5_Weather_Grid,72,Delta,"['Weather', 'Grid', 'GridExchange', 'Time']",['AutoGluon']
+Exp7_Weather_Grid_Prices,96,Delta,"['Weather', 'Grid', 'GridExchange', 'Prices', 'Time']",['AutoGluon']
+Exp5_Weather_Grid,96,Delta,"['Weather', 'Grid', 'GridExchange', 'Time']",['AutoGluon']
+Exp7_Weather_Grid_Prices,120,Delta,"['Weather', 'Grid', 'GridExchange', 'Prices', 'Time']",['AutoGluon']
+Exp5_Weather_Grid,120,Delta,"['Weather', 'Grid', 'GridExchange', 'Time']",['AutoGluon']
+Exp7_Weather_Grid_Prices,144,Delta,"['Weather', 'Grid', 'GridExchange', 'Prices', 'Time']",['AutoGluon']
+Exp5_Weather_Grid,144,Delta,"['Weather', 'Grid', 'GridExchange', 'Time']",['AutoGluon']
+Exp7_Weather_Grid_Prices,168,Delta,"['Weather', 'Grid', 'GridExchange', 'Prices', 'Time']",['AutoGluon']
+Exp5_Weather_Grid,168,Delta,"['Weather', 'Grid', 'GridExchange', 'Time']",['AutoGluon']
+Exp1_Weather_Only,168,Delta,"['Weather', 'Time']","['GRU', 'LSTM', 'Transformer']"
+Exp8_Weather_WeatherLags_Grid_Prices,168,Delta,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Prices', 'Time']","['GRU', 'Transformer']"
+Exp9_Weather_Grid_Gridlags,168,Delta,"['Weather', 'Grid', 'GridExchange', 'GridLags', 'GridExchangeLags', 'Time']",['LSTM']
+Exp8_Weather_WeatherLags_Grid_Prices,48,Delta,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Prices', 'Time']",['Transformer']
+Exp8_Weather_WeatherLags_Grid_Prices,72,Delta,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Prices', 'Time']",['Transformer']
+Exp8_Weather_WeatherLags_Grid_Prices,96,Delta,"['Weather', 'WeatherLags', 'Grid', 'GridExchange', 'Prices', 'Time']",['Transformer']

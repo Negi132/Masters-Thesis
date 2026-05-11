@@ -1,0 +1,35 @@
+==================================================
+      ALIGNMENT & SPLIT DIAGNOSTIC REPORT
+==================================================
+--- STEP 1: DMI COLUMN CONSISTENCY ---
+  [WARN] 10 columns dropped due to cross-year inconsistency: ['Stations_Reporting_Max', 'Stations_Reporting_Min', 'bright_sunshine_imputed', 'leaf_moisture_imputed', 'max_wind_speed_3sec_imputed', 'mean_radiation_imputed', 'temp_grass_imputed', 'temp_soil_10_imputed', 'temp_soil_30', 'temp_soil_30_imputed']
+  -> Preserving 17 common columns across all DMI files.
+
+--- STEP 2: PRICE COMBINATION & AGGREGATION ---
+  -> Aggregated and combined prices into master frame with 196944 rows.
+
+--- STEP 3: YEARLY & REGIONAL SPLITS ---
+  -> 2015 DK1: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2015 DK2: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2016 DK1: Generated Prices (8784 rows), ProdCons (8784 rows)
+  -> 2016 DK2: Generated Prices (8784 rows), ProdCons (8784 rows)
+  -> 2017 DK1: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2017 DK2: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2018 DK1: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2018 DK2: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2019 DK1: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2019 DK2: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2020 DK1: Generated Prices (8784 rows), ProdCons (8784 rows)
+  -> 2020 DK2: Generated Prices (8784 rows), ProdCons (8784 rows)
+  -> 2021 DK1: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2021 DK2: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2022 DK1: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2022 DK2: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2023 DK1: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2023 DK2: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2024 DK1: Generated Prices (8784 rows), ProdCons (8784 rows)
+  -> 2024 DK2: Generated Prices (8784 rows), ProdCons (8784 rows)
+  -> 2025 DK1: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2025 DK2: Generated Prices (8760 rows), ProdCons (8760 rows)
+  -> 2026 DK1: Generated Prices (1991 rows), ProdCons (1784 rows)
+  -> 2026 DK2: Generated Prices (1991 rows), ProdCons (1784 rows)

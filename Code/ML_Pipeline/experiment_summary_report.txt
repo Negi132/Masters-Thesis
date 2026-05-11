@@ -1,0 +1,3372 @@
+=================================================================
+                 EXPERIMENT SUMMARY REPORT
+=================================================================
+
+METHODOLOGICAL NOTE ON METRICS AND DELTA TARGETS:
+When predicting 'Delta' (the hour-to-hour change in price), percentage-based
+metrics like WMAPE mathematically explode. Because the actual target values
+are clustered near zero, dividing any error by a near-zero denominator
+creates an artificially massive percentage.
+
+To ensure a true 1:1 scientific comparison between Absolute Price targets
+and Delta targets, this summary ranks all experiments using Mean Absolute
+Error (MAE). MAE represents the average error in raw Euros, stripping away
+percentage distortions and revealing the true predictive accuracy.
+-----------------------------------------------------------------
+
+PART 1: BEST & WORST FEATURE SETS PER HORIZON
+(Ranked by Average MAE [Raw Euro Error] across all tested models)
+-----------------------------------------------------------------
+
+[ TARGET TYPE: Delta ]
+  Horizon 24h:
+    -> BEST OVERALL:  Exp12_Weather_WeatherLags_Grid_Gridlags_Prices (Avg MAE: 20.97 Euros)
+    -> WORST OVERALL: Exp8_Weather_WeatherLags_Grid_Prices (Avg MAE: 31.63 Euros)
+  Horizon 48h:
+    -> BEST OVERALL:  Exp8_Weather_WeatherLags_Grid_Prices (Avg MAE: 24.73 Euros)
+    -> WORST OVERALL: Exp12_Weather_WeatherLags_Grid_Gridlags_Prices (Avg MAE: 34.03 Euros)
+  Horizon 72h:
+    -> BEST OVERALL:  Exp8_Weather_WeatherLags_Grid_Prices (Avg MAE: 26.11 Euros)
+    -> WORST OVERALL: Exp12_Weather_WeatherLags_Grid_Gridlags_Prices (Avg MAE: 31.58 Euros)
+  Horizon 96h:
+    -> BEST OVERALL:  Exp11_Weather_Grid_Gridlags_Prices (Avg MAE: 26.81 Euros)
+    -> WORST OVERALL: Exp12_Weather_WeatherLags_Grid_Gridlags_Prices (Avg MAE: 41.11 Euros)
+  Horizon 120h:
+    -> BEST OVERALL:  Exp8_Weather_WeatherLags_Grid_Prices (Avg MAE: 27.14 Euros)
+    -> WORST OVERALL: Exp11_Weather_Grid_Gridlags_Prices (Avg MAE: 35.06 Euros)
+  Horizon 144h:
+    -> BEST OVERALL:  Exp8_Weather_WeatherLags_Grid_Prices (Avg MAE: 27.47 Euros)
+    -> WORST OVERALL: Exp2_Weather_WeatherLags_Only (Avg MAE: 29.95 Euros)
+  Horizon 168h:
+    -> BEST OVERALL:  Exp3_Weather_Prices (Avg MAE: 27.51 Euros)
+    -> WORST OVERALL: Exp2_Weather_WeatherLags_Only (Avg MAE: 29.34 Euros)
+
+[ TARGET TYPE: Price ]
+  Horizon 0h:
+    -> BEST OVERALL:  Exp12_Weather_WeatherLags_Grid_Gridlags_Prices (Avg MAE: 16.66 Euros)
+    -> WORST OVERALL: Exp1_Weather_Only (Avg MAE: 42.00 Euros)
+  Horizon 24h:
+    -> BEST OVERALL:  Exp3_Weather_Prices (Avg MAE: 23.46 Euros)
+    -> WORST OVERALL: Exp13_Total_Information (Avg MAE: 57.98 Euros)
+  Horizon 48h:
+    -> BEST OVERALL:  Exp4_Weather_WeatherLags_Prices (Avg MAE: 27.01 Euros)
+    -> WORST OVERALL: Exp13_Total_Information (Avg MAE: 63.81 Euros)
+  Horizon 72h:
+    -> BEST OVERALL:  Exp3_Weather_Prices (Avg MAE: 27.97 Euros)
+    -> WORST OVERALL: Exp13_Total_Information (Avg MAE: 55.18 Euros)
+  Horizon 96h:
+    -> BEST OVERALL:  Exp3_Weather_Prices (Avg MAE: 28.59 Euros)
+    -> WORST OVERALL: Exp13_Total_Information (Avg MAE: 71.11 Euros)
+  Horizon 120h:
+    -> BEST OVERALL:  Exp13_Total_Information (Avg MAE: 28.67 Euros)
+    -> WORST OVERALL: Exp1_Weather_Only (Avg MAE: 45.50 Euros)
+  Horizon 144h:
+    -> BEST OVERALL:  Exp3_Weather_Prices (Avg MAE: 28.83 Euros)
+    -> WORST OVERALL: Exp1_Weather_Only (Avg MAE: 45.47 Euros)
+  Horizon 168h:
+    -> BEST OVERALL:  Exp4_Weather_WeatherLags_Prices (Avg MAE: 29.07 Euros)
+    -> WORST OVERALL: Exp1_Weather_Only (Avg MAE: 45.57 Euros)
+
+
+PART 2: METRIC BREAKDOWN BY MODEL AND HORIZON
+-----------------------------------------------------------------
+
+==================================================
+ HORIZON: 24h  |  TARGET: Delta
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 21.5903
+      Max:     21.5903  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     21.5903  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    RMSE:
+      Average: 37.3849
+      Max:     37.3849  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     37.3849  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 93.7132
+      Max:     93.7132  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     93.7132  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    MDA:
+      Average: 62.1549
+      Max:     62.1549  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     62.1549  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    R2:
+      Average: 0.2049
+      Max:     0.2049  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     0.2049  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    sMAPE:
+      Average: 122.6473
+      Max:     122.6473  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     122.6473  (from Exp8_Weather_WeatherLags_Grid_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 20.4802
+      Max:     21.2210  (from Exp2_Weather_WeatherLags_Only)
+      Min:     20.1678  (from Exp7_Weather_Grid_Prices)
+    RMSE:
+      Average: 36.8504
+      Max:     39.2509  (from Exp2_Weather_WeatherLags_Only)
+      Min:     35.9261  (from Exp7_Weather_Grid_Prices)
+    WMAPE:
+      Average: 88.8950
+      Max:     92.1104  (from Exp2_Weather_WeatherLags_Only)
+      Min:     87.5390  (from Exp7_Weather_Grid_Prices)
+    MDA:
+      Average: 57.3337
+      Max:     61.2063  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     53.1244  (from Exp5_Weather_Grid)
+    R2:
+      Average: 0.2268
+      Max:     0.2657  (from Exp7_Weather_Grid_Prices)
+      Min:     0.1235  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 128.3569
+      Max:     137.5442  (from Exp2_Weather_WeatherLags_Only)
+      Min:     125.1440  (from Exp8_Weather_WeatherLags_Grid_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 75.4773
+      Max:     75.4773  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     75.4773  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    RMSE:
+      Average: 1723.6286
+      Max:     1723.6286  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     1723.6286  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 327.6111
+      Max:     327.6111  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     327.6111  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    MDA:
+      Average: 59.7020
+      Max:     59.7020  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     59.7020  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    R2:
+      Average: -1689.1613
+      Max:     -1689.1613  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     -1689.1613  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    sMAPE:
+      Average: 129.3100
+      Max:     129.3100  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     129.3100  (from Exp8_Weather_WeatherLags_Grid_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 49.1750
+      Max:     49.1750  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     49.1750  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    RMSE:
+      Average: 1779.8997
+      Max:     1779.8997  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     1779.8997  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 213.4453
+      Max:     213.4453  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     213.4453  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    MDA:
+      Average: 59.5160
+      Max:     59.5160  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     59.5160  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    R2:
+      Average: -1801.3197
+      Max:     -1801.3197  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     -1801.3197  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    sMAPE:
+      Average: 129.3585
+      Max:     129.3585  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     129.3585  (from Exp8_Weather_WeatherLags_Grid_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 21.3870
+      Max:     21.7433  (from Exp9_Weather_Grid_Gridlags)
+      Min:     21.0970  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 37.8297
+      Max:     39.4560  (from Exp2_Weather_WeatherLags_Only)
+      Min:     37.1550  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 92.8306
+      Max:     94.3773  (from Exp9_Weather_Grid_Gridlags)
+      Min:     91.5720  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 57.4050
+      Max:     61.3989  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     52.2937  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.1855
+      Max:     0.2146  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     0.1143  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 127.0730
+      Max:     137.6242  (from Exp2_Weather_WeatherLags_Only)
+      Min:     123.6590  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 21.4945
+      Max:     21.8354  (from Exp6_Weather_WeatherLags_Grid)
+      Min:     21.1880  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    RMSE:
+      Average: 38.1471
+      Max:     39.5793  (from Exp2_Weather_WeatherLags_Only)
+      Min:     37.3090  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 93.2973
+      Max:     94.7773  (from Exp6_Weather_WeatherLags_Grid)
+      Min:     91.9670  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    MDA:
+      Average: 55.9478
+      Max:     59.2395  (from Exp3_Weather_Prices)
+      Min:     51.2507  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.1718
+      Max:     0.2081  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     0.1088  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 129.4783
+      Max:     138.0128  (from Exp2_Weather_WeatherLags_Only)
+      Min:     126.6883  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 23.0325
+      Max:     23.0325  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     23.0325  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    RMSE:
+      Average: 40.1431
+      Max:     40.1431  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     40.1431  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 99.9734
+      Max:     99.9734  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     99.9734  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    MDA:
+      Average: 60.5197
+      Max:     60.5197  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     60.5197  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    R2:
+      Average: 0.0832
+      Max:     0.0832  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     0.0832  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    sMAPE:
+      Average: 127.3511
+      Max:     127.3511  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     127.3511  (from Exp8_Weather_WeatherLags_Grid_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 21.5637
+      Max:     22.0113  (from Exp9_Weather_Grid_Gridlags)
+      Min:     21.2235  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 38.1161
+      Max:     39.4522  (from Exp1_Weather_Only)
+      Min:     37.4493  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 93.5976
+      Max:     95.5404  (from Exp9_Weather_Grid_Gridlags)
+      Min:     92.1212  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 57.4050
+      Max:     61.2783  (from Exp3_Weather_Prices)
+      Min:     53.4362  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.1732
+      Max:     0.2021  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.1145  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 126.8548
+      Max:     136.9179  (from Exp2_Weather_WeatherLags_Only)
+      Min:     123.4863  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+==================================================
+ HORIZON: 48h  |  TARGET: Delta
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 25.1902
+      Max:     25.1902  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     25.1902  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 44.3746
+      Max:     44.3746  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     44.3746  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 84.6381
+      Max:     84.6381  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     84.6381  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 64.4794
+      Max:     64.4794  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     64.4794  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.3057
+      Max:     0.3057  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.3057  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 114.0588
+      Max:     114.0588  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     114.0588  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 24.6218
+      Max:     26.4078  (from Exp2_Weather_WeatherLags_Only)
+      Min:     23.8635  (from Exp7_Weather_Grid_Prices)
+    RMSE:
+      Average: 44.3906
+      Max:     48.8909  (from Exp2_Weather_WeatherLags_Only)
+      Min:     42.5539  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 82.7284
+      Max:     88.7294  (from Exp2_Weather_WeatherLags_Only)
+      Min:     80.1805  (from Exp7_Weather_Grid_Prices)
+    MDA:
+      Average: 59.2030
+      Max:     63.9487  (from Exp3_Weather_Prices)
+      Min:     54.2250  (from Exp10_Weather_WeatherLags_Grid_Gridlags)
+    R2:
+      Average: 0.3037
+      Max:     0.3615  (from Exp13_Total_Information)
+      Min:     0.1571  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 118.7535
+      Max:     129.0661  (from Exp2_Weather_WeatherLags_Only)
+      Min:     114.9982  (from Exp7_Weather_Grid_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 74.4837
+      Max:     74.4837  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     74.4837  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 1373.5485
+      Max:     1373.5485  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     1373.5485  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 250.2626
+      Max:     250.2626  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     250.2626  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.1185
+      Max:     61.1185  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     61.1185  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: -664.2574
+      Max:     -664.2574  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     -664.2574  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 119.1279
+      Max:     119.1279  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     119.1279  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 46.6814
+      Max:     46.6814  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     46.6814  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 678.7941
+      Max:     678.7941  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     678.7941  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 156.8477
+      Max:     156.8477  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     156.8477  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 60.9887
+      Max:     60.9887  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     60.9887  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: -161.4717
+      Max:     -161.4717  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     -161.4717  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 119.5743
+      Max:     119.5743  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     119.5743  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 25.5957
+      Max:     26.8131  (from Exp2_Weather_WeatherLags_Only)
+      Min:     24.7337  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 45.5845
+      Max:     49.2419  (from Exp1_Weather_Only)
+      Min:     43.9012  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 86.0006
+      Max:     90.0912  (from Exp2_Weather_WeatherLags_Only)
+      Min:     83.1044  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 59.2435
+      Max:     63.5844  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     53.6577  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2662
+      Max:     0.3204  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.1450  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 118.2944
+      Max:     130.1023  (from Exp2_Weather_WeatherLags_Only)
+      Min:     113.8390  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 26.0080
+      Max:     27.0278  (from Exp2_Weather_WeatherLags_Only)
+      Min:     25.0905  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 46.6248
+      Max:     49.5228  (from Exp1_Weather_Only)
+      Min:     44.9171  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 87.3858
+      Max:     90.8123  (from Exp2_Weather_WeatherLags_Only)
+      Min:     84.3032  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 57.8673
+      Max:     61.5928  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     52.3972  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.2325
+      Max:     0.2886  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.1352  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 119.7814
+      Max:     129.9336  (from Exp1_Weather_Only)
+      Min:     116.1731  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 27.1332
+      Max:     27.1332  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     27.1332  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 47.4577
+      Max:     47.4577  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     47.4577  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 91.1665
+      Max:     91.1665  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     91.1665  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.6753
+      Max:     61.6753  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     61.6753  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.2058
+      Max:     0.2058  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.2058  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 119.0693
+      Max:     119.0693  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     119.0693  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 25.7084
+      Max:     26.9070  (from Exp2_Weather_WeatherLags_Only)
+      Min:     24.9347  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 45.7629
+      Max:     49.3550  (from Exp1_Weather_Only)
+      Min:     44.0888  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 86.3794
+      Max:     90.4064  (from Exp2_Weather_WeatherLags_Only)
+      Min:     83.7799  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 59.2276
+      Max:     63.5346  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     54.7688  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2605
+      Max:     0.3146  (from Exp13_Total_Information)
+      Min:     0.1411  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 117.9502
+      Max:     129.4755  (from Exp2_Weather_WeatherLags_Only)
+      Min:     113.8184  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+==================================================
+ HORIZON: 72h  |  TARGET: Delta
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 26.3978
+      Max:     26.3978  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     26.3978  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 46.6084
+      Max:     46.6084  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     46.6084  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 83.0125
+      Max:     83.0125  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     83.0125  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 64.3064
+      Max:     64.3064  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     64.3064  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.3279
+      Max:     0.3279  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.3279  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 113.7540
+      Max:     113.7540  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     113.7540  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 26.0841
+      Max:     28.0809  (from Exp2_Weather_WeatherLags_Only)
+      Min:     25.1790  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 47.1907
+      Max:     52.0317  (from Exp2_Weather_WeatherLags_Only)
+      Min:     45.3621  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 82.0257
+      Max:     88.3051  (from Exp2_Weather_WeatherLags_Only)
+      Min:     79.1795  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 59.0400
+      Max:     63.8203  (from Exp3_Weather_Prices)
+      Min:     54.0927  (from Exp9_Weather_Grid_Gridlags)
+    R2:
+      Average: 0.3095
+      Max:     0.3633  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.1623  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 118.1504
+      Max:     128.8574  (from Exp2_Weather_WeatherLags_Only)
+      Min:     114.1596  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 45.4364
+      Max:     45.4364  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     45.4364  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 668.0529
+      Max:     668.0529  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     668.0529  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 142.8824
+      Max:     142.8824  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     142.8824  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.2560
+      Max:     61.2560  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     61.2560  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: -137.0884
+      Max:     -137.0884  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     -137.0884  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 118.1730
+      Max:     118.1730  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     118.1730  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 48.3060
+      Max:     48.3060  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     48.3060  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 734.1153
+      Max:     734.1153  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     734.1153  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 151.9065
+      Max:     151.9065  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     151.9065  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.2652
+      Max:     61.2652  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     61.2652  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: -165.7494
+      Max:     -165.7494  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     -165.7494  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 118.2372
+      Max:     118.2372  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     118.2372  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 27.0210
+      Max:     28.3921  (from Exp2_Weather_WeatherLags_Only)
+      Min:     26.1479  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    RMSE:
+      Average: 48.2386
+      Max:     52.2338  (from Exp1_Weather_Only)
+      Min:     46.6212  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 84.9720
+      Max:     89.2839  (from Exp2_Weather_WeatherLags_Only)
+      Min:     82.2265  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    MDA:
+      Average: 59.2173
+      Max:     63.8727  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     53.5830  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2790
+      Max:     0.3275  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     0.1558  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 117.7300
+      Max:     129.3527  (from Exp1_Weather_Only)
+      Min:     113.1683  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 27.6005
+      Max:     28.7876  (from Exp2_Weather_WeatherLags_Only)
+      Min:     26.6862  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    RMSE:
+      Average: 49.5363
+      Max:     52.7649  (from Exp1_Weather_Only)
+      Min:     47.9670  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 86.7945
+      Max:     90.5276  (from Exp2_Weather_WeatherLags_Only)
+      Min:     83.9194  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    MDA:
+      Average: 57.7761
+      Max:     61.8103  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     51.9176  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.2399
+      Max:     0.2881  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     0.1386  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 119.3595
+      Max:     129.7293  (from Exp1_Weather_Only)
+      Min:     115.5585  (from Exp7_Weather_Grid_Prices)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 28.2655
+      Max:     28.2655  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     28.2655  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 49.4371
+      Max:     49.4371  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     49.4371  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 88.8856
+      Max:     88.8856  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     88.8856  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.4290
+      Max:     61.4290  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     61.4290  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.2438
+      Max:     0.2438  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.2438  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 117.5882
+      Max:     117.5882  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     117.5882  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 27.0961
+      Max:     28.4627  (from Exp2_Weather_WeatherLags_Only)
+      Min:     26.1548  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 48.3319
+      Max:     52.2478  (from Exp2_Weather_WeatherLags_Only)
+      Min:     46.3195  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 85.2084
+      Max:     89.5059  (from Exp2_Weather_WeatherLags_Only)
+      Min:     82.2483  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 59.2509
+      Max:     63.4351  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     54.8199  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.2761
+      Max:     0.3362  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.1554  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 117.4576
+      Max:     128.8266  (from Exp2_Weather_WeatherLags_Only)
+      Min:     113.4230  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+==================================================
+ HORIZON: 96h  |  TARGET: Delta
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 27.1476
+      Max:     27.1476  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     27.1476  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 48.1863
+      Max:     48.1863  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     48.1863  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 82.0706
+      Max:     82.0706  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     82.0706  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 64.3903
+      Max:     64.3903  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     64.3903  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.3316
+      Max:     0.3316  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.3316  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 113.6887
+      Max:     113.6887  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     113.6887  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 26.8761
+      Max:     29.2434  (from Exp2_Weather_WeatherLags_Only)
+      Min:     25.8664  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 48.6362
+      Max:     54.0034  (from Exp2_Weather_WeatherLags_Only)
+      Min:     46.5552  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 81.2498
+      Max:     88.4064  (from Exp2_Weather_WeatherLags_Only)
+      Min:     78.1974  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 59.3611
+      Max:     64.1990  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     54.0390  (from Exp9_Weather_Grid_Gridlags)
+    R2:
+      Average: 0.3173
+      Max:     0.3761  (from Exp13_Total_Information)
+      Min:     0.1605  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 118.4420
+      Max:     130.4909  (from Exp2_Weather_WeatherLags_Only)
+      Min:     114.2086  (from Exp8_Weather_WeatherLags_Grid_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 76.7415
+      Max:     76.7415  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     76.7415  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 1627.1547
+      Max:     1627.1547  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     1627.1547  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 231.9991
+      Max:     231.9991  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     231.9991  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.7802
+      Max:     61.7802  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     61.7802  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: -761.1329
+      Max:     -761.1329  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     -761.1329  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 118.0316
+      Max:     118.0316  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     118.0316  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 88.8620
+      Max:     88.8620  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     88.8620  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 2667.9865
+      Max:     2667.9865  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     2667.9865  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 268.6406
+      Max:     268.6406  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     268.6406  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.0150
+      Max:     61.0150  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     61.0150  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: -2047.9920
+      Max:     -2047.9920  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     -2047.9920  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 118.6014
+      Max:     118.6014  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     118.6014  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 27.9197
+      Max:     29.7012  (from Exp2_Weather_WeatherLags_Only)
+      Min:     27.0067  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 49.9551
+      Max:     54.3996  (from Exp1_Weather_Only)
+      Min:     48.0717  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 84.4046
+      Max:     89.7903  (from Exp2_Weather_WeatherLags_Only)
+      Min:     81.6447  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 59.5076
+      Max:     63.9212  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     53.4638  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2804
+      Max:     0.3348  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.1481  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 118.3076
+      Max:     131.2740  (from Exp1_Weather_Only)
+      Min:     113.5844  (from Exp13_Total_Information)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 28.3624
+      Max:     29.9955  (from Exp1_Weather_Only)
+      Min:     27.1418  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 50.9067
+      Max:     54.8395  (from Exp1_Weather_Only)
+      Min:     48.4804  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 85.7429
+      Max:     90.6799  (from Exp1_Weather_Only)
+      Min:     82.0531  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 57.5560
+      Max:     61.5469  (from Exp13_Total_Information)
+      Min:     51.9373  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.2526
+      Max:     0.3234  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.1343  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 120.4687
+      Max:     132.0555  (from Exp2_Weather_WeatherLags_Only)
+      Min:     115.3410  (from Exp13_Total_Information)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 28.9058
+      Max:     28.9058  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     28.9058  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 50.2781
+      Max:     50.2781  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     50.2781  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 87.3857
+      Max:     87.3857  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     87.3857  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.5744
+      Max:     61.5744  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     61.5744  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.2723
+      Max:     0.2723  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.2723  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 117.6992
+      Max:     117.6992  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     117.6992  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 28.0191
+      Max:     29.6815  (from Exp1_Weather_Only)
+      Min:     27.0186  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 50.0985
+      Max:     54.2705  (from Exp1_Weather_Only)
+      Min:     48.2171  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 84.7052
+      Max:     89.7308  (from Exp1_Weather_Only)
+      Min:     81.6806  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 59.5343
+      Max:     63.9683  (from Exp3_Weather_Prices)
+      Min:     54.5605  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2763
+      Max:     0.3308  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.1522  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 118.0088
+      Max:     130.5602  (from Exp1_Weather_Only)
+      Min:     113.6577  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+==================================================
+ HORIZON: 120h  |  TARGET: Delta
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 27.8161
+      Max:     27.8161  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     27.8161  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 49.1948
+      Max:     49.1948  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     49.1948  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 82.9397
+      Max:     82.9397  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     82.9397  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 64.3234
+      Max:     64.3234  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     64.3234  (from Exp11_Weather_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.3086
+      Max:     0.3086  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.3086  (from Exp11_Weather_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 113.1266
+      Max:     113.1266  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     113.1266  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 27.1866
+      Max:     29.6941  (from Exp2_Weather_WeatherLags_Only)
+      Min:     26.1129  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 48.8423
+      Max:     54.2400  (from Exp2_Weather_WeatherLags_Only)
+      Min:     46.6865  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 81.0628
+      Max:     88.5396  (from Exp2_Weather_WeatherLags_Only)
+      Min:     77.8615  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 59.4302
+      Max:     64.5645  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     53.7402  (from Exp10_Weather_WeatherLags_Grid_Gridlags)
+    R2:
+      Average: 0.3166
+      Max:     0.3773  (from Exp13_Total_Information)
+      Min:     0.1595  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 118.4481
+      Max:     130.6674  (from Exp2_Weather_WeatherLags_Only)
+      Min:     113.6282  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 68.0184
+      Max:     68.0184  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     68.0184  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 2041.0980
+      Max:     2041.0980  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     2041.0980  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 202.8119
+      Max:     202.8119  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     202.8119  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 62.0396
+      Max:     62.0396  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     62.0396  (from Exp11_Weather_Grid_Gridlags_Prices)
+    R2:
+      Average: -1189.2020
+      Max:     -1189.2020  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     -1189.2020  (from Exp11_Weather_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 117.2835
+      Max:     117.2835  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     117.2835  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 45.7465
+      Max:     45.7465  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     45.7465  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 1036.7774
+      Max:     1036.7774  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     1036.7774  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 136.4034
+      Max:     136.4034  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     136.4034  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.6413
+      Max:     61.6413  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     61.6413  (from Exp11_Weather_Grid_Gridlags_Prices)
+    R2:
+      Average: -306.0888
+      Max:     -306.0888  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     -306.0888  (from Exp11_Weather_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 117.2242
+      Max:     117.2242  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     117.2242  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 28.3174
+      Max:     30.1267  (from Exp2_Weather_WeatherLags_Only)
+      Min:     27.2787  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    RMSE:
+      Average: 50.5007
+      Max:     54.5151  (from Exp1_Weather_Only)
+      Min:     48.7212  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 84.4345
+      Max:     89.8295  (from Exp2_Weather_WeatherLags_Only)
+      Min:     81.3374  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    MDA:
+      Average: 59.4146
+      Max:     64.2540  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     52.8401  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2703
+      Max:     0.3218  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.1510  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 117.9817
+      Max:     131.7518  (from Exp1_Weather_Only)
+      Min:     112.6704  (from Exp13_Total_Information)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 28.7992
+      Max:     30.3575  (from Exp6_Weather_WeatherLags_Grid)
+      Min:     27.5542  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 51.5522
+      Max:     54.8295  (from Exp1_Weather_Only)
+      Min:     49.4141  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 85.8712
+      Max:     90.5177  (from Exp6_Weather_WeatherLags_Grid)
+      Min:     82.1588  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 57.6894
+      Max:     62.1641  (from Exp3_Weather_Prices)
+      Min:     50.5981  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.2394
+      Max:     0.3024  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.1411  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 120.3364
+      Max:     132.7018  (from Exp1_Weather_Only)
+      Min:     114.7308  (from Exp13_Total_Information)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 30.4012
+      Max:     30.4012  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     30.4012  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 52.7083
+      Max:     52.7083  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     52.7083  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 90.6479
+      Max:     90.6479  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     90.6479  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 61.8037
+      Max:     61.8037  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     61.8037  (from Exp11_Weather_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.2063
+      Max:     0.2063  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.2063  (from Exp11_Weather_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 117.2703
+      Max:     117.2703  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     117.2703  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 28.4451
+      Max:     30.1795  (from Exp2_Weather_WeatherLags_Only)
+      Min:     27.4648  (from Exp7_Weather_Grid_Prices)
+    RMSE:
+      Average: 50.7372
+      Max:     54.6537  (from Exp2_Weather_WeatherLags_Only)
+      Min:     49.0172  (from Exp7_Weather_Grid_Prices)
+    WMAPE:
+      Average: 84.8153
+      Max:     89.9869  (from Exp2_Weather_WeatherLags_Only)
+      Min:     81.8923  (from Exp7_Weather_Grid_Prices)
+    MDA:
+      Average: 59.4654
+      Max:     64.0391  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     54.3836  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2635
+      Max:     0.3136  (from Exp7_Weather_Grid_Prices)
+      Min:     0.1466  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 117.9514
+      Max:     131.3948  (from Exp2_Weather_WeatherLags_Only)
+      Min:     112.8723  (from Exp8_Weather_WeatherLags_Grid_Prices)
+
+==================================================
+ HORIZON: 144h  |  TARGET: Delta
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 28.2085
+      Max:     28.2085  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     28.2085  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 50.5305
+      Max:     50.5305  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     50.5305  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 86.5262
+      Max:     86.5262  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     86.5262  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 63.7954
+      Max:     63.7954  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     63.7954  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.2444
+      Max:     0.2444  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.2444  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 118.7797
+      Max:     118.7797  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     118.7797  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 27.3807
+      Max:     29.5247  (from Exp1_Weather_Only)
+      Min:     26.3472  (from Exp13_Total_Information)
+    RMSE:
+      Average: 49.2570
+      Max:     53.9246  (from Exp1_Weather_Only)
+      Min:     47.1111  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 83.9869
+      Max:     90.5633  (from Exp1_Weather_Only)
+      Min:     80.8168  (from Exp13_Total_Information)
+    MDA:
+      Average: 58.0878
+      Max:     63.9985  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     52.0604  (from Exp9_Weather_Grid_Gridlags)
+    R2:
+      Average: 0.2804
+      Max:     0.3432  (from Exp13_Total_Information)
+      Min:     0.1395  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 123.6942
+      Max:     136.4909  (from Exp1_Weather_Only)
+      Min:     118.6591  (from Exp8_Weather_WeatherLags_Grid_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 28.0767
+      Max:     28.0767  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     28.0767  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 50.4476
+      Max:     50.4476  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     50.4476  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 86.1217
+      Max:     86.1217  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     86.1217  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 63.1442
+      Max:     63.1442  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     63.1442  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.2469
+      Max:     0.2469  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.2469  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 121.6872
+      Max:     121.6872  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     121.6872  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 28.5182
+      Max:     28.5182  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     28.5182  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 50.4347
+      Max:     50.4347  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     50.4347  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 87.4762
+      Max:     87.4762  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     87.4762  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 63.1913
+      Max:     63.1913  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     63.1913  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.2473
+      Max:     0.2473  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.2473  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 121.8111
+      Max:     121.8111  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     121.8111  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 28.5858
+      Max:     30.0537  (from Exp1_Weather_Only)
+      Min:     27.5960  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 51.0784
+      Max:     54.3739  (from Exp2_Weather_WeatherLags_Only)
+      Min:     49.2675  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 87.6833
+      Max:     92.1862  (from Exp1_Weather_Only)
+      Min:     84.6474  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 58.4408
+      Max:     63.4468  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     51.5796  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2272
+      Max:     0.2817  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+      Min:     0.1251  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 122.7546
+      Max:     136.5894  (from Exp1_Weather_Only)
+      Min:     117.4446  (from Exp13_Total_Information)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 28.7192
+      Max:     30.2465  (from Exp2_Weather_WeatherLags_Only)
+      Min:     27.7341  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 51.5712
+      Max:     54.6771  (from Exp2_Weather_WeatherLags_Only)
+      Min:     49.8745  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 88.0927
+      Max:     92.7775  (from Exp2_Weather_WeatherLags_Only)
+      Min:     85.0710  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+    MDA:
+      Average: 56.9445
+      Max:     61.9269  (from Exp13_Total_Information)
+      Min:     48.4493  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2122
+      Max:     0.2639  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     0.1154  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 125.6843
+      Max:     139.0655  (from Exp1_Weather_Only)
+      Min:     119.6225  (from Exp13_Total_Information)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 29.2240
+      Max:     29.2240  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     29.2240  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 53.2140
+      Max:     53.2140  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     53.2140  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 89.6409
+      Max:     89.6409  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     89.6409  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 64.4374
+      Max:     64.4374  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     64.4374  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.1621
+      Max:     0.1621  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.1621  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 120.2641
+      Max:     120.2641  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     120.2641  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 28.6255
+      Max:     30.0095  (from Exp1_Weather_Only)
+      Min:     27.6480  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 51.1383
+      Max:     54.2857  (from Exp1_Weather_Only)
+      Min:     49.5330  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 87.8053
+      Max:     92.0504  (from Exp1_Weather_Only)
+      Min:     84.8069  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 58.3944
+      Max:     63.2922  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     52.9737  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2254
+      Max:     0.2740  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.1280  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 122.7164
+      Max:     136.2126  (from Exp1_Weather_Only)
+      Min:     117.5598  (from Exp13_Total_Information)
+
+==================================================
+ HORIZON: 168h  |  TARGET: Delta
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 28.3812
+      Max:     28.3812  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     28.3812  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 51.2840
+      Max:     51.2840  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     51.2840  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 91.4488
+      Max:     91.4488  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     91.4488  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 62.4274
+      Max:     62.4274  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     62.4274  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.1740
+      Max:     0.1740  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.1740  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 124.5605
+      Max:     124.5605  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     124.5605  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 27.1131
+      Max:     28.8031  (from Exp1_Weather_Only)
+      Min:     26.2320  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 49.3394
+      Max:     53.0502  (from Exp1_Weather_Only)
+      Min:     47.5237  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 87.3626
+      Max:     92.8082  (from Exp1_Weather_Only)
+      Min:     84.5237  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 54.0839
+      Max:     59.8632  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     47.5858  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.2343
+      Max:     0.2907  (from Exp13_Total_Information)
+      Min:     0.1161  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 130.3417
+      Max:     142.3803  (from Exp2_Weather_WeatherLags_Only)
+      Min:     126.1389  (from Exp8_Weather_WeatherLags_Grid_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 28.4058
+      Max:     28.4058  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     28.4058  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 51.2703
+      Max:     51.2703  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     51.2703  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 91.5277
+      Max:     91.5277  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     91.5277  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 61.0595
+      Max:     61.0595  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     61.0595  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.1745
+      Max:     0.1745  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.1745  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 127.5699
+      Max:     127.5699  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     127.5699  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 28.7225
+      Max:     28.7225  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     28.7225  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 51.3077
+      Max:     51.3077  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     51.3077  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 92.5483
+      Max:     92.5483  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     92.5483  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 60.8944
+      Max:     60.8944  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     60.8944  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.1733
+      Max:     0.1733  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.1733  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 127.7632
+      Max:     127.7632  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     127.7632  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 28.6714
+      Max:     29.4923  (from Exp9_Weather_Grid_Gridlags)
+      Min:     27.7451  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 51.7363
+      Max:     53.6706  (from Exp1_Weather_Only)
+      Min:     50.4190  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 92.3837
+      Max:     95.0288  (from Exp9_Weather_Grid_Gridlags)
+      Min:     89.3989  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 56.6207
+      Max:     61.8313  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     49.0808  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.1589
+      Max:     0.2016  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.0954  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 128.7200
+      Max:     141.1944  (from Exp1_Weather_Only)
+      Min:     124.3919  (from Exp7_Weather_Grid_Prices)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 28.8890
+      Max:     29.9018  (from Exp9_Weather_Grid_Gridlags)
+      Min:     27.8613  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 52.2287
+      Max:     53.9799  (from Exp2_Weather_WeatherLags_Only)
+      Min:     50.7400  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 93.0850
+      Max:     96.3482  (from Exp9_Weather_Grid_Gridlags)
+      Min:     89.7733  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 55.7638
+      Max:     59.9890  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     49.3861  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.1428
+      Max:     0.1914  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.0849  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 131.6389
+      Max:     142.1840  (from Exp2_Weather_WeatherLags_Only)
+      Min:     127.2073  (from Exp13_Total_Information)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 28.1584
+      Max:     28.1584  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     28.1584  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 50.6357
+      Max:     50.6357  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     50.6357  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 90.7306
+      Max:     90.7306  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     90.7306  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 63.1795
+      Max:     63.1795  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     63.1795  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.1948
+      Max:     0.1948  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.1948  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 125.4290
+      Max:     125.4290  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     125.4290  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 28.8303
+      Max:     29.7147  (from Exp5_Weather_Grid)
+      Min:     27.9599  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 51.8238
+      Max:     54.1374  (from Exp2_Weather_WeatherLags_Only)
+      Min:     50.3625  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 92.8957
+      Max:     95.7455  (from Exp5_Weather_Grid)
+      Min:     90.0913  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 56.8001
+      Max:     61.5718  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     51.2376  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.1560
+      Max:     0.2034  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     0.0795  (from Exp2_Weather_WeatherLags_Only)
+    sMAPE:
+      Average: 128.5540
+      Max:     140.9092  (from Exp1_Weather_Only)
+      Min:     123.9116  (from Exp13_Total_Information)
+
+==================================================
+ HORIZON: 0h  |  TARGET: Price
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 16.7687
+      Max:     16.7687  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     16.7687  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 35.6814
+      Max:     35.6814  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     35.6814  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 22.0568
+      Max:     22.0568  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     22.0568  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 73.7955
+      Max:     73.7955  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     73.7955  (from Exp11_Weather_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.8179
+      Max:     0.8179  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.8179  (from Exp11_Weather_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 28.5107
+      Max:     28.5107  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     28.5107  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 22.8700
+      Max:     40.6467  (from Exp1_Weather_Only)
+      Min:     16.0328  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 46.3235
+      Max:     82.3639  (from Exp1_Weather_Only)
+      Min:     31.6309  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 30.0823
+      Max:     53.4650  (from Exp1_Weather_Only)
+      Min:     21.0889  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 69.3614
+      Max:     73.3802  (from Exp3_Weather_Prices)
+      Min:     61.6688  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.6491
+      Max:     0.8569  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.0298  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 36.5838
+      Max:     56.5069  (from Exp1_Weather_Only)
+      Min:     29.0908  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 125.4248
+      Max:     125.4248  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     125.4248  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 3963.0417
+      Max:     3963.0417  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     3963.0417  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 164.9786
+      Max:     164.9786  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     164.9786  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 71.3440
+      Max:     71.3440  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     71.3440  (from Exp11_Weather_Grid_Gridlags_Prices)
+    R2:
+      Average: -2245.1551
+      Max:     -2245.1551  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     -2245.1551  (from Exp11_Weather_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 29.9299
+      Max:     29.9299  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     29.9299  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 81.2591
+      Max:     81.2591  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     81.2591  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 2073.9566
+      Max:     2073.9566  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     2073.9566  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 106.8848
+      Max:     106.8848  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     106.8848  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 70.3036
+      Max:     70.3036  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     70.3036  (from Exp11_Weather_Grid_Gridlags_Prices)
+    R2:
+      Average: -614.1511
+      Max:     -614.1511  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     -614.1511  (from Exp11_Weather_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 30.8092
+      Max:     30.8092  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     30.8092  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 23.4894
+      Max:     42.5905  (from Exp1_Weather_Only)
+      Min:     16.1905  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 47.8185
+      Max:     84.2618  (from Exp1_Weather_Only)
+      Min:     33.0375  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 30.8970
+      Max:     56.0219  (from Exp1_Weather_Only)
+      Min:     21.2963  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 70.7219
+      Max:     72.4079  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     67.5074  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.6272
+      Max:     0.8439  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     -0.0154  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 37.0186
+      Max:     60.2800  (from Exp1_Weather_Only)
+      Min:     29.0576  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 24.9146
+      Max:     42.7003  (from Exp2_Weather_WeatherLags_Only)
+      Min:     17.9507  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 50.1384
+      Max:     83.9687  (from Exp1_Weather_Only)
+      Min:     35.0040  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 32.7717
+      Max:     56.1662  (from Exp2_Weather_WeatherLags_Only)
+      Min:     23.6117  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 67.1581
+      Max:     70.5801  (from Exp7_Weather_Grid_Prices)
+      Min:     59.8200  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.5956
+      Max:     0.8248  (from Exp3_Weather_Prices)
+      Min:     -0.0084  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 38.6614
+      Max:     60.2582  (from Exp1_Weather_Only)
+      Min:     31.3922  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 16.1978
+      Max:     16.1978  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     16.1978  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 30.3692
+      Max:     30.3692  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     30.3692  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 21.3059
+      Max:     21.3059  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     21.3059  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 71.6126
+      Max:     71.6126  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     71.6126  (from Exp11_Weather_Grid_Gridlags_Prices)
+    R2:
+      Average: 0.8681
+      Max:     0.8681  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     0.8681  (from Exp11_Weather_Grid_Gridlags_Prices)
+    sMAPE:
+      Average: 30.9083
+      Max:     30.9083  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     30.9083  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 23.5962
+      Max:     42.0682  (from Exp1_Weather_Only)
+      Min:     16.2098  (from Exp11_Weather_Grid_Gridlags_Prices)
+    RMSE:
+      Average: 48.1821
+      Max:     83.6204  (from Exp1_Weather_Only)
+      Min:     33.2463  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 31.0375
+      Max:     55.3348  (from Exp1_Weather_Only)
+      Min:     21.3218  (from Exp11_Weather_Grid_Gridlags_Prices)
+    MDA:
+      Average: 70.2894
+      Max:     71.9166  (from Exp3_Weather_Prices)
+      Min:     67.0895  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.6230
+      Max:     0.8419  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     -0.0000  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 36.8835
+      Max:     59.8784  (from Exp1_Weather_Only)
+      Min:     28.9696  (from Exp12_Weather_WeatherLags_Grid_Gridlags_Prices)
+
+==================================================
+ HORIZON: 24h  |  TARGET: Price
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 24.4292
+      Max:     24.4292  (from Exp13_Total_Information)
+      Min:     24.4292  (from Exp13_Total_Information)
+    RMSE:
+      Average: 45.0457
+      Max:     45.0457  (from Exp13_Total_Information)
+      Min:     45.0457  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 32.1306
+      Max:     32.1306  (from Exp13_Total_Information)
+      Min:     32.1306  (from Exp13_Total_Information)
+    MDA:
+      Average: 71.3807
+      Max:     71.3807  (from Exp13_Total_Information)
+      Min:     71.3807  (from Exp13_Total_Information)
+    R2:
+      Average: 0.7098
+      Max:     0.7098  (from Exp13_Total_Information)
+      Min:     0.7098  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 38.3345
+      Max:     38.3345  (from Exp13_Total_Information)
+      Min:     38.3345  (from Exp13_Total_Information)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 28.5083
+      Max:     42.9837  (from Exp1_Weather_Only)
+      Min:     22.3626  (from Exp13_Total_Information)
+    RMSE:
+      Average: 53.6405
+      Max:     84.0724  (from Exp1_Weather_Only)
+      Min:     40.7776  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 37.4958
+      Max:     56.5346  (from Exp1_Weather_Only)
+      Min:     29.4126  (from Exp13_Total_Information)
+    MDA:
+      Average: 65.5215
+      Max:     70.6168  (from Exp3_Weather_Prices)
+      Min:     54.6836  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.5556
+      Max:     0.7622  (from Exp13_Total_Information)
+      Min:     -0.0108  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 43.0511
+      Max:     59.3789  (from Exp1_Weather_Only)
+      Min:     36.5080  (from Exp13_Total_Information)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 201.2175
+      Max:     201.2175  (from Exp13_Total_Information)
+      Min:     201.2175  (from Exp13_Total_Information)
+    RMSE:
+      Average: 6131.4519
+      Max:     6131.4519  (from Exp13_Total_Information)
+      Min:     6131.4519  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 264.6527
+      Max:     264.6527  (from Exp13_Total_Information)
+      Min:     264.6527  (from Exp13_Total_Information)
+    MDA:
+      Average: 66.4710
+      Max:     66.4710  (from Exp13_Total_Information)
+      Min:     66.4710  (from Exp13_Total_Information)
+    R2:
+      Average: -5375.3235
+      Max:     -5375.3235  (from Exp13_Total_Information)
+      Min:     -5375.3235  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 40.0777
+      Max:     40.0777  (from Exp13_Total_Information)
+      Min:     40.0777  (from Exp13_Total_Information)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 120.6132
+      Max:     120.6132  (from Exp13_Total_Information)
+      Min:     120.6132  (from Exp13_Total_Information)
+    RMSE:
+      Average: 3505.5794
+      Max:     3505.5794  (from Exp13_Total_Information)
+      Min:     3505.5794  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 158.6373
+      Max:     158.6373  (from Exp13_Total_Information)
+      Min:     158.6373  (from Exp13_Total_Information)
+    MDA:
+      Average: 66.3950
+      Max:     66.3950  (from Exp13_Total_Information)
+      Min:     66.3950  (from Exp13_Total_Information)
+    R2:
+      Average: -1756.4313
+      Max:     -1756.4313  (from Exp13_Total_Information)
+      Min:     -1756.4313  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 40.5063
+      Max:     40.5063  (from Exp13_Total_Information)
+      Min:     40.5063  (from Exp13_Total_Information)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 29.4323
+      Max:     44.8596  (from Exp1_Weather_Only)
+      Min:     23.1919  (from Exp13_Total_Information)
+    RMSE:
+      Average: 54.8543
+      Max:     85.8847  (from Exp1_Weather_Only)
+      Min:     41.7879  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 38.7110
+      Max:     59.0019  (from Exp1_Weather_Only)
+      Min:     30.5033  (from Exp13_Total_Information)
+    MDA:
+      Average: 68.6111
+      Max:     70.2394  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     66.5090  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.5362
+      Max:     0.7503  (from Exp3_Weather_Prices)
+      Min:     -0.0548  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 44.1732
+      Max:     63.4340  (from Exp1_Weather_Only)
+      Min:     37.3818  (from Exp13_Total_Information)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 30.8103
+      Max:     45.5116  (from Exp1_Weather_Only)
+      Min:     23.4383  (from Exp13_Total_Information)
+    RMSE:
+      Average: 57.1611
+      Max:     86.3773  (from Exp1_Weather_Only)
+      Min:     42.7131  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 40.5235
+      Max:     59.8594  (from Exp1_Weather_Only)
+      Min:     30.8273  (from Exp13_Total_Information)
+    MDA:
+      Average: 64.3973
+      Max:     68.0512  (from Exp3_Weather_Prices)
+      Min:     58.4664  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4997
+      Max:     0.7391  (from Exp13_Total_Information)
+      Min:     -0.0670  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 45.5493
+      Max:     63.9758  (from Exp1_Weather_Only)
+      Min:     37.7408  (from Exp13_Total_Information)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 25.2345
+      Max:     25.2345  (from Exp13_Total_Information)
+      Min:     25.2345  (from Exp13_Total_Information)
+    RMSE:
+      Average: 43.4520
+      Max:     43.4520  (from Exp13_Total_Information)
+      Min:     43.4520  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 33.1898
+      Max:     33.1898  (from Exp13_Total_Information)
+      Min:     33.1898  (from Exp13_Total_Information)
+    MDA:
+      Average: 66.5994
+      Max:     66.5994  (from Exp13_Total_Information)
+      Min:     66.5994  (from Exp13_Total_Information)
+    R2:
+      Average: 0.7300
+      Max:     0.7300  (from Exp13_Total_Information)
+      Min:     0.7300  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 41.3866
+      Max:     41.3866  (from Exp13_Total_Information)
+      Min:     41.3866  (from Exp13_Total_Information)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 29.7828
+      Max:     44.6955  (from Exp1_Weather_Only)
+      Min:     23.3816  (from Exp13_Total_Information)
+    RMSE:
+      Average: 55.6705
+      Max:     85.4542  (from Exp1_Weather_Only)
+      Min:     42.6454  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 39.1720
+      Max:     58.7861  (from Exp1_Weather_Only)
+      Min:     30.7528  (from Exp13_Total_Information)
+    MDA:
+      Average: 68.0989
+      Max:     69.7507  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     66.0858  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.5252
+      Max:     0.7399  (from Exp3_Weather_Prices)
+      Min:     -0.0443  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 44.4185
+      Max:     63.5416  (from Exp1_Weather_Only)
+      Min:     37.5626  (from Exp13_Total_Information)
+
+==================================================
+ HORIZON: 48h  |  TARGET: Price
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 27.3856
+      Max:     27.3856  (from Exp13_Total_Information)
+      Min:     27.3856  (from Exp13_Total_Information)
+    RMSE:
+      Average: 49.6161
+      Max:     49.6161  (from Exp13_Total_Information)
+      Min:     49.6161  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 36.0085
+      Max:     36.0085  (from Exp13_Total_Information)
+      Min:     36.0085  (from Exp13_Total_Information)
+    MDA:
+      Average: 71.3033
+      Max:     71.3033  (from Exp13_Total_Information)
+      Min:     71.3033  (from Exp13_Total_Information)
+    R2:
+      Average: 0.6479
+      Max:     0.6479  (from Exp13_Total_Information)
+      Min:     0.6479  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 41.4942
+      Max:     41.4942  (from Exp13_Total_Information)
+      Min:     41.4942  (from Exp13_Total_Information)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 30.5522
+      Max:     43.4588  (from Exp1_Weather_Only)
+      Min:     25.7894  (from Exp13_Total_Information)
+    RMSE:
+      Average: 56.8124
+      Max:     84.2134  (from Exp1_Weather_Only)
+      Min:     46.4770  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 40.1721
+      Max:     57.1425  (from Exp1_Weather_Only)
+      Min:     33.9096  (from Exp13_Total_Information)
+    MDA:
+      Average: 63.7125
+      Max:     68.6657  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     52.1194  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.5139
+      Max:     0.6911  (from Exp13_Total_Information)
+      Min:     -0.0142  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 45.0020
+      Max:     59.8944  (from Exp1_Weather_Only)
+      Min:     39.6605  (from Exp13_Total_Information)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 228.9178
+      Max:     228.9178  (from Exp13_Total_Information)
+      Min:     228.9178  (from Exp13_Total_Information)
+    RMSE:
+      Average: 6308.2016
+      Max:     6308.2016  (from Exp13_Total_Information)
+      Min:     6308.2016  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 300.9964
+      Max:     300.9964  (from Exp13_Total_Information)
+      Min:     300.9964  (from Exp13_Total_Information)
+    MDA:
+      Average: 65.4634
+      Max:     65.4634  (from Exp13_Total_Information)
+      Min:     65.4634  (from Exp13_Total_Information)
+    R2:
+      Average: -5689.8928
+      Max:     -5689.8928  (from Exp13_Total_Information)
+      Min:     -5689.8928  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 43.3605
+      Max:     43.3605  (from Exp13_Total_Information)
+      Min:     43.3605  (from Exp13_Total_Information)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 118.6952
+      Max:     118.6952  (from Exp13_Total_Information)
+      Min:     118.6952  (from Exp13_Total_Information)
+    RMSE:
+      Average: 2947.5899
+      Max:     2947.5899  (from Exp13_Total_Information)
+      Min:     2947.5899  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 156.0684
+      Max:     156.0684  (from Exp13_Total_Information)
+      Min:     156.0684  (from Exp13_Total_Information)
+    MDA:
+      Average: 64.8449
+      Max:     64.8449  (from Exp13_Total_Information)
+      Min:     64.8449  (from Exp13_Total_Information)
+    R2:
+      Average: -1241.5200
+      Max:     -1241.5200  (from Exp13_Total_Information)
+      Min:     -1241.5200  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 43.8087
+      Max:     43.8087  (from Exp13_Total_Information)
+      Min:     43.8087  (from Exp13_Total_Information)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 31.7875
+      Max:     45.5655  (from Exp1_Weather_Only)
+      Min:     26.7378  (from Exp13_Total_Information)
+    RMSE:
+      Average: 58.4083
+      Max:     86.4396  (from Exp1_Weather_Only)
+      Min:     48.0741  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 41.7963
+      Max:     59.9126  (from Exp1_Weather_Only)
+      Min:     35.1566  (from Exp13_Total_Information)
+    MDA:
+      Average: 68.3798
+      Max:     69.9734  (from Exp3_Weather_Prices)
+      Min:     66.7448  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4879
+      Max:     0.6695  (from Exp13_Total_Information)
+      Min:     -0.0685  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 46.5446
+      Max:     64.2286  (from Exp1_Weather_Only)
+      Min:     40.8806  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 33.0385
+      Max:     46.0016  (from Exp1_Weather_Only)
+      Min:     27.6073  (from Exp13_Total_Information)
+    RMSE:
+      Average: 60.7708
+      Max:     87.0053  (from Exp1_Weather_Only)
+      Min:     49.6613  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 43.4413
+      Max:     60.4860  (from Exp1_Weather_Only)
+      Min:     36.3000  (from Exp13_Total_Information)
+    MDA:
+      Average: 63.3321
+      Max:     67.0384  (from Exp3_Weather_Prices)
+      Min:     58.6892  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4474
+      Max:     0.6473  (from Exp3_Weather_Prices)
+      Min:     -0.0826  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 47.9060
+      Max:     64.7166  (from Exp1_Weather_Only)
+      Min:     41.5894  (from Exp13_Total_Information)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 28.5120
+      Max:     28.5120  (from Exp13_Total_Information)
+      Min:     28.5120  (from Exp13_Total_Information)
+    RMSE:
+      Average: 50.9251
+      Max:     50.9251  (from Exp13_Total_Information)
+      Min:     50.9251  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 37.4894
+      Max:     37.4894  (from Exp13_Total_Information)
+      Min:     37.4894  (from Exp13_Total_Information)
+    MDA:
+      Average: 65.4870
+      Max:     65.4870  (from Exp13_Total_Information)
+      Min:     65.4870  (from Exp13_Total_Information)
+    R2:
+      Average: 0.6291
+      Max:     0.6291  (from Exp13_Total_Information)
+      Min:     0.6291  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 43.9046
+      Max:     43.9046  (from Exp13_Total_Information)
+      Min:     43.9046  (from Exp13_Total_Information)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 31.9083
+      Max:     45.1237  (from Exp1_Weather_Only)
+      Min:     26.8434  (from Exp13_Total_Information)
+    RMSE:
+      Average: 58.7379
+      Max:     85.5504  (from Exp1_Weather_Only)
+      Min:     48.7706  (from Exp11_Weather_Grid_Gridlags_Prices)
+    WMAPE:
+      Average: 41.9551
+      Max:     59.3317  (from Exp1_Weather_Only)
+      Min:     35.2955  (from Exp13_Total_Information)
+    MDA:
+      Average: 67.9714
+      Max:     69.5515  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     66.0661  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4836
+      Max:     0.6598  (from Exp11_Weather_Grid_Gridlags_Prices)
+      Min:     -0.0467  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 46.7429
+      Max:     64.2021  (from Exp1_Weather_Only)
+      Min:     40.9945  (from Exp13_Total_Information)
+
+==================================================
+ HORIZON: 72h  |  TARGET: Price
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 28.1626
+      Max:     28.1626  (from Exp13_Total_Information)
+      Min:     28.1626  (from Exp13_Total_Information)
+    RMSE:
+      Average: 50.5625
+      Max:     50.5625  (from Exp13_Total_Information)
+      Min:     50.5625  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 37.0227
+      Max:     37.0227  (from Exp13_Total_Information)
+      Min:     37.0227  (from Exp13_Total_Information)
+    MDA:
+      Average: 70.8749
+      Max:     70.8749  (from Exp13_Total_Information)
+      Min:     70.8749  (from Exp13_Total_Information)
+    R2:
+      Average: 0.6344
+      Max:     0.6344  (from Exp13_Total_Information)
+      Min:     0.6344  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 42.2848
+      Max:     42.2848  (from Exp13_Total_Information)
+      Min:     42.2848  (from Exp13_Total_Information)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 31.0673
+      Max:     43.5247  (from Exp1_Weather_Only)
+      Min:     26.7135  (from Exp13_Total_Information)
+    RMSE:
+      Average: 57.7155
+      Max:     84.5355  (from Exp1_Weather_Only)
+      Min:     47.8976  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 40.8412
+      Max:     57.2178  (from Exp1_Weather_Only)
+      Min:     35.1178  (from Exp13_Total_Information)
+    MDA:
+      Average: 62.1752
+      Max:     67.2218  (from Exp3_Weather_Prices)
+      Min:     49.3442  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.5004
+      Max:     0.6719  (from Exp13_Total_Information)
+      Min:     -0.0220  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 45.3890
+      Max:     59.7743  (from Exp1_Weather_Only)
+      Min:     40.5497  (from Exp13_Total_Information)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 199.9894
+      Max:     199.9894  (from Exp13_Total_Information)
+      Min:     199.9894  (from Exp13_Total_Information)
+    RMSE:
+      Average: 7613.9948
+      Max:     7613.9948  (from Exp13_Total_Information)
+      Min:     7613.9948  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 262.9073
+      Max:     262.9073  (from Exp13_Total_Information)
+      Min:     262.9073  (from Exp13_Total_Information)
+    MDA:
+      Average: 64.8279
+      Max:     64.8279  (from Exp13_Total_Information)
+      Min:     64.8279  (from Exp13_Total_Information)
+    R2:
+      Average: -8290.1277
+      Max:     -8290.1277  (from Exp13_Total_Information)
+      Min:     -8290.1277  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 44.4524
+      Max:     44.4524  (from Exp13_Total_Information)
+      Min:     44.4524  (from Exp13_Total_Information)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 72.1522
+      Max:     72.1522  (from Exp13_Total_Information)
+      Min:     72.1522  (from Exp13_Total_Information)
+    RMSE:
+      Average: 2041.8989
+      Max:     2041.8989  (from Exp13_Total_Information)
+      Min:     2041.8989  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 94.8518
+      Max:     94.8518  (from Exp13_Total_Information)
+      Min:     94.8518  (from Exp13_Total_Information)
+    MDA:
+      Average: 64.1898
+      Max:     64.1898  (from Exp13_Total_Information)
+      Min:     64.1898  (from Exp13_Total_Information)
+    R2:
+      Average: -595.2892
+      Max:     -595.2892  (from Exp13_Total_Information)
+      Min:     -595.2892  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 43.8888
+      Max:     43.8888  (from Exp13_Total_Information)
+      Min:     43.8888  (from Exp13_Total_Information)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 32.4946
+      Max:     45.7603  (from Exp1_Weather_Only)
+      Min:     27.7597  (from Exp13_Total_Information)
+    RMSE:
+      Average: 59.4124
+      Max:     86.7500  (from Exp1_Weather_Only)
+      Min:     49.3782  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 42.7176
+      Max:     60.1568  (from Exp1_Weather_Only)
+      Min:     36.4931  (from Exp13_Total_Information)
+    MDA:
+      Average: 68.1248
+      Max:     69.4768  (from Exp3_Weather_Prices)
+      Min:     66.8588  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4722
+      Max:     0.6513  (from Exp13_Total_Information)
+      Min:     -0.0763  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 47.1804
+      Max:     64.3822  (from Exp1_Weather_Only)
+      Min:     41.7648  (from Exp13_Total_Information)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 33.8837
+      Max:     46.2928  (from Exp1_Weather_Only)
+      Min:     28.7414  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 62.0102
+      Max:     87.0603  (from Exp1_Weather_Only)
+      Min:     51.6453  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 44.5437
+      Max:     60.8569  (from Exp1_Weather_Only)
+      Min:     37.7836  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 62.9944
+      Max:     66.5011  (from Exp3_Weather_Prices)
+      Min:     57.6672  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4288
+      Max:     0.6185  (from Exp3_Weather_Prices)
+      Min:     -0.0840  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 48.5173
+      Max:     64.8134  (from Exp1_Weather_Only)
+      Min:     42.6592  (from Exp3_Weather_Prices)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 29.7919
+      Max:     29.7919  (from Exp13_Total_Information)
+      Min:     29.7919  (from Exp13_Total_Information)
+    RMSE:
+      Average: 53.0352
+      Max:     53.0352  (from Exp13_Total_Information)
+      Min:     53.0352  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 39.1646
+      Max:     39.1646  (from Exp13_Total_Information)
+      Min:     39.1646  (from Exp13_Total_Information)
+    MDA:
+      Average: 65.5119
+      Max:     65.5119  (from Exp13_Total_Information)
+      Min:     65.5119  (from Exp13_Total_Information)
+    R2:
+      Average: 0.5977
+      Max:     0.5977  (from Exp13_Total_Information)
+      Min:     0.5977  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 45.0877
+      Max:     45.0877  (from Exp13_Total_Information)
+      Min:     45.0877  (from Exp13_Total_Information)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 32.6203
+      Max:     45.3474  (from Exp1_Weather_Only)
+      Min:     27.8137  (from Exp13_Total_Information)
+    RMSE:
+      Average: 59.6890
+      Max:     85.8250  (from Exp1_Weather_Only)
+      Min:     49.5790  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 42.8829
+      Max:     59.6140  (from Exp1_Weather_Only)
+      Min:     36.5641  (from Exp13_Total_Information)
+    MDA:
+      Average: 67.5301
+      Max:     68.9094  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     65.9456  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4689
+      Max:     0.6485  (from Exp13_Total_Information)
+      Min:     -0.0535  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 47.3578
+      Max:     64.3380  (from Exp1_Weather_Only)
+      Min:     41.9626  (from Exp13_Total_Information)
+
+==================================================
+ HORIZON: 96h  |  TARGET: Price
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 28.8978
+      Max:     28.8978  (from Exp13_Total_Information)
+      Min:     28.8978  (from Exp13_Total_Information)
+    RMSE:
+      Average: 52.4032
+      Max:     52.4032  (from Exp13_Total_Information)
+      Min:     52.4032  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 37.9810
+      Max:     37.9810  (from Exp13_Total_Information)
+      Min:     37.9810  (from Exp13_Total_Information)
+    MDA:
+      Average: 71.0125
+      Max:     71.0125  (from Exp13_Total_Information)
+      Min:     71.0125  (from Exp13_Total_Information)
+    R2:
+      Average: 0.6072
+      Max:     0.6072  (from Exp13_Total_Information)
+      Min:     0.6072  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 42.8845
+      Max:     42.8845  (from Exp13_Total_Information)
+      Min:     42.8845  (from Exp13_Total_Information)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 31.3340
+      Max:     43.6288  (from Exp1_Weather_Only)
+      Min:     27.1805  (from Exp7_Weather_Grid_Prices)
+    RMSE:
+      Average: 58.3252
+      Max:     84.7428  (from Exp1_Weather_Only)
+      Min:     48.4508  (from Exp7_Weather_Grid_Prices)
+    WMAPE:
+      Average: 41.1829
+      Max:     57.3422  (from Exp1_Weather_Only)
+      Min:     35.7238  (from Exp7_Weather_Grid_Prices)
+    MDA:
+      Average: 62.0333
+      Max:     66.0320  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     51.0017  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4917
+      Max:     0.6643  (from Exp7_Weather_Grid_Prices)
+      Min:     -0.0271  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 45.5874
+      Max:     59.9576  (from Exp1_Weather_Only)
+      Min:     40.9848  (from Exp7_Weather_Grid_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 286.1319
+      Max:     286.1319  (from Exp13_Total_Information)
+      Min:     286.1319  (from Exp13_Total_Information)
+    RMSE:
+      Average: 8736.7365
+      Max:     8736.7365  (from Exp13_Total_Information)
+      Min:     8736.7365  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 376.0688
+      Max:     376.0688  (from Exp13_Total_Information)
+      Min:     376.0688  (from Exp13_Total_Information)
+    MDA:
+      Average: 64.6091
+      Max:     64.6091  (from Exp13_Total_Information)
+      Min:     64.6091  (from Exp13_Total_Information)
+    R2:
+      Average: -10916.1585
+      Max:     -10916.1585  (from Exp13_Total_Information)
+      Min:     -10916.1585  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 44.2685
+      Max:     44.2685  (from Exp13_Total_Information)
+      Min:     44.2685  (from Exp13_Total_Information)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 109.3265
+      Max:     109.3265  (from Exp13_Total_Information)
+      Min:     109.3265  (from Exp13_Total_Information)
+    RMSE:
+      Average: 2771.8028
+      Max:     2771.8028  (from Exp13_Total_Information)
+      Min:     2771.8028  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 143.6899
+      Max:     143.6899  (from Exp13_Total_Information)
+      Min:     143.6899  (from Exp13_Total_Information)
+    MDA:
+      Average: 64.3614
+      Max:     64.3614  (from Exp13_Total_Information)
+      Min:     64.3614  (from Exp13_Total_Information)
+    R2:
+      Average: -1097.8434
+      Max:     -1097.8434  (from Exp13_Total_Information)
+      Min:     -1097.8434  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 44.4028
+      Max:     44.4028  (from Exp13_Total_Information)
+      Min:     44.4028  (from Exp13_Total_Information)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 32.9382
+      Max:     45.8278  (from Exp1_Weather_Only)
+      Min:     28.5238  (from Exp13_Total_Information)
+    RMSE:
+      Average: 60.4006
+      Max:     86.9533  (from Exp1_Weather_Only)
+      Min:     50.8421  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 43.2913
+      Max:     60.2324  (from Exp1_Weather_Only)
+      Min:     37.4894  (from Exp13_Total_Information)
+    MDA:
+      Average: 68.3094
+      Max:     69.6406  (from Exp3_Weather_Prices)
+      Min:     66.5142  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4566
+      Max:     0.6303  (from Exp13_Total_Information)
+      Min:     -0.0814  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 47.6214
+      Max:     64.5665  (from Exp1_Weather_Only)
+      Min:     42.4920  (from Exp13_Total_Information)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 34.5369
+      Max:     46.3722  (from Exp1_Weather_Only)
+      Min:     29.2526  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 63.0430
+      Max:     87.3236  (from Exp1_Weather_Only)
+      Min:     52.3641  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 45.3925
+      Max:     60.9479  (from Exp1_Weather_Only)
+      Min:     38.4473  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 63.0005
+      Max:     66.2980  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     57.8349  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4106
+      Max:     0.6078  (from Exp3_Weather_Prices)
+      Min:     -0.0906  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 49.0413
+      Max:     65.0296  (from Exp1_Weather_Only)
+      Min:     43.1474  (from Exp3_Weather_Prices)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 30.3486
+      Max:     30.3486  (from Exp13_Total_Information)
+      Min:     30.3486  (from Exp13_Total_Information)
+    RMSE:
+      Average: 53.7974
+      Max:     53.7974  (from Exp13_Total_Information)
+      Min:     53.7974  (from Exp13_Total_Information)
+    WMAPE:
+      Average: 39.8878
+      Max:     39.8878  (from Exp13_Total_Information)
+      Min:     39.8878  (from Exp13_Total_Information)
+    MDA:
+      Average: 65.4437
+      Max:     65.4437  (from Exp13_Total_Information)
+      Min:     65.4437  (from Exp13_Total_Information)
+    R2:
+      Average: 0.5861
+      Max:     0.5861  (from Exp13_Total_Information)
+      Min:     0.5861  (from Exp13_Total_Information)
+    sMAPE:
+      Average: 45.4801
+      Max:     45.4801  (from Exp13_Total_Information)
+      Min:     45.4801  (from Exp13_Total_Information)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 33.0319
+      Max:     45.6364  (from Exp1_Weather_Only)
+      Min:     28.3996  (from Exp13_Total_Information)
+    RMSE:
+      Average: 60.6485
+      Max:     86.4370  (from Exp1_Weather_Only)
+      Min:     50.9589  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 43.4145
+      Max:     59.9808  (from Exp1_Weather_Only)
+      Min:     37.3261  (from Exp13_Total_Information)
+    MDA:
+      Average: 67.7029
+      Max:     69.0955  (from Exp3_Weather_Prices)
+      Min:     66.0045  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4527
+      Max:     0.6286  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     -0.0686  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 47.6862
+      Max:     64.7395  (from Exp1_Weather_Only)
+      Min:     42.2735  (from Exp13_Total_Information)
+
+==================================================
+ HORIZON: 120h  |  TARGET: Price
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 29.8322
+      Max:     29.8322  (from Exp3_Weather_Prices)
+      Min:     29.8322  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 53.7219
+      Max:     53.7219  (from Exp3_Weather_Prices)
+      Min:     53.7219  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 39.2026
+      Max:     39.2026  (from Exp3_Weather_Prices)
+      Min:     39.2026  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 70.2604
+      Max:     70.2604  (from Exp3_Weather_Prices)
+      Min:     70.2604  (from Exp3_Weather_Prices)
+    R2:
+      Average: 0.5872
+      Max:     0.5872  (from Exp3_Weather_Prices)
+      Min:     0.5872  (from Exp3_Weather_Prices)
+    sMAPE:
+      Average: 44.2407
+      Max:     44.2407  (from Exp3_Weather_Prices)
+      Min:     44.2407  (from Exp3_Weather_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 31.5379
+      Max:     43.7725  (from Exp1_Weather_Only)
+      Min:     27.5513  (from Exp7_Weather_Grid_Prices)
+    RMSE:
+      Average: 58.8914
+      Max:     84.9923  (from Exp1_Weather_Only)
+      Min:     49.6648  (from Exp8_Weather_WeatherLags_Grid_Prices)
+    WMAPE:
+      Average: 41.4442
+      Max:     57.5217  (from Exp1_Weather_Only)
+      Min:     36.2053  (from Exp7_Weather_Grid_Prices)
+    MDA:
+      Average: 61.5349
+      Max:     65.8250  (from Exp7_Weather_Grid_Prices)
+      Min:     48.6275  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4828
+      Max:     0.6472  (from Exp8_Weather_WeatherLags_Grid_Prices)
+      Min:     -0.0332  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 45.7601
+      Max:     60.1263  (from Exp1_Weather_Only)
+      Min:     41.1822  (from Exp13_Total_Information)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 28.5280
+      Max:     28.5280  (from Exp3_Weather_Prices)
+      Min:     28.5280  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 50.8618
+      Max:     50.8618  (from Exp3_Weather_Prices)
+      Min:     50.8618  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 37.4889
+      Max:     37.4889  (from Exp3_Weather_Prices)
+      Min:     37.4889  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 69.8175
+      Max:     69.8175  (from Exp3_Weather_Prices)
+      Min:     69.8175  (from Exp3_Weather_Prices)
+    R2:
+      Average: 0.6300
+      Max:     0.6300  (from Exp3_Weather_Prices)
+      Min:     0.6300  (from Exp3_Weather_Prices)
+    sMAPE:
+      Average: 42.2156
+      Max:     42.2156  (from Exp3_Weather_Prices)
+      Min:     42.2156  (from Exp3_Weather_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 28.8505
+      Max:     28.8505  (from Exp3_Weather_Prices)
+      Min:     28.8505  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 51.0655
+      Max:     51.0655  (from Exp3_Weather_Prices)
+      Min:     51.0655  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 37.9126
+      Max:     37.9126  (from Exp3_Weather_Prices)
+      Min:     37.9126  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 68.7011
+      Max:     68.7011  (from Exp3_Weather_Prices)
+      Min:     68.7011  (from Exp3_Weather_Prices)
+    R2:
+      Average: 0.6270
+      Max:     0.6270  (from Exp3_Weather_Prices)
+      Min:     0.6270  (from Exp3_Weather_Prices)
+    sMAPE:
+      Average: 42.8616
+      Max:     42.8616  (from Exp3_Weather_Prices)
+      Min:     42.8616  (from Exp3_Weather_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 33.1399
+      Max:     45.9262  (from Exp1_Weather_Only)
+      Min:     28.5999  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 61.0353
+      Max:     87.0910  (from Exp1_Weather_Only)
+      Min:     51.2339  (from Exp7_Weather_Grid_Prices)
+    WMAPE:
+      Average: 43.5494
+      Max:     60.3518  (from Exp1_Weather_Only)
+      Min:     37.5833  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 68.3835
+      Max:     69.6760  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     66.5994  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4457
+      Max:     0.6246  (from Exp7_Weather_Grid_Prices)
+      Min:     -0.0849  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 47.6225
+      Max:     64.7266  (from Exp1_Weather_Only)
+      Min:     42.3435  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 34.7079
+      Max:     46.4567  (from Exp1_Weather_Only)
+      Min:     29.3792  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 63.6978
+      Max:     87.5867  (from Exp1_Weather_Only)
+      Min:     52.2527  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 45.6099
+      Max:     61.0490  (from Exp1_Weather_Only)
+      Min:     38.6074  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 63.1596
+      Max:     66.5352  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     57.7091  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.3971
+      Max:     0.6095  (from Exp3_Weather_Prices)
+      Min:     -0.0973  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 48.9219
+      Max:     65.0926  (from Exp1_Weather_Only)
+      Min:     42.7824  (from Exp13_Total_Information)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 29.4855
+      Max:     29.4855  (from Exp3_Weather_Prices)
+      Min:     29.4855  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 51.9151
+      Max:     51.9151  (from Exp3_Weather_Prices)
+      Min:     51.9151  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 38.7470
+      Max:     38.7470  (from Exp3_Weather_Prices)
+      Min:     38.7470  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 70.8631
+      Max:     70.8631  (from Exp3_Weather_Prices)
+      Min:     70.8631  (from Exp3_Weather_Prices)
+    R2:
+      Average: 0.6145
+      Max:     0.6145  (from Exp3_Weather_Prices)
+      Min:     0.6145  (from Exp3_Weather_Prices)
+    sMAPE:
+      Average: 43.7719
+      Max:     43.7719  (from Exp3_Weather_Prices)
+      Min:     43.7719  (from Exp3_Weather_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 33.4281
+      Max:     45.8411  (from Exp1_Weather_Only)
+      Min:     28.5494  (from Exp13_Total_Information)
+    RMSE:
+      Average: 61.6275
+      Max:     86.7957  (from Exp1_Weather_Only)
+      Min:     51.6464  (from Exp7_Weather_Grid_Prices)
+    WMAPE:
+      Average: 43.9281
+      Max:     60.2401  (from Exp1_Weather_Only)
+      Min:     37.5170  (from Exp13_Total_Information)
+    MDA:
+      Average: 67.8004
+      Max:     69.4886  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     65.9652  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4354
+      Max:     0.6185  (from Exp7_Weather_Grid_Prices)
+      Min:     -0.0775  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 47.8352
+      Max:     64.9154  (from Exp1_Weather_Only)
+      Min:     42.1461  (from Exp13_Total_Information)
+
+==================================================
+ HORIZON: 144h  |  TARGET: Price
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 29.9655
+      Max:     29.9655  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     29.9655  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 54.7573
+      Max:     54.7573  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     54.7573  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 39.3684
+      Max:     39.3684  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     39.3684  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 70.8500
+      Max:     70.8500  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     70.8500  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.5711
+      Max:     0.5711  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.5711  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 43.7567
+      Max:     43.7567  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     43.7567  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 31.6770
+      Max:     43.7198  (from Exp1_Weather_Only)
+      Min:     27.6714  (from Exp7_Weather_Grid_Prices)
+    RMSE:
+      Average: 59.4258
+      Max:     84.8970  (from Exp1_Weather_Only)
+      Min:     50.2116  (from Exp7_Weather_Grid_Prices)
+    WMAPE:
+      Average: 41.6168
+      Max:     57.4386  (from Exp1_Weather_Only)
+      Min:     36.3544  (from Exp7_Weather_Grid_Prices)
+    MDA:
+      Average: 62.6493
+      Max:     67.1956  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     50.5169  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4749
+      Max:     0.6394  (from Exp7_Weather_Grid_Prices)
+      Min:     -0.0310  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 45.7335
+      Max:     60.1455  (from Exp1_Weather_Only)
+      Min:     41.0181  (from Exp11_Weather_Grid_Gridlags_Prices)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 29.1532
+      Max:     29.1532  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     29.1532  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 52.3685
+      Max:     52.3685  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     52.3685  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 38.3012
+      Max:     38.3012  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     38.3012  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 69.6891
+      Max:     69.6891  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     69.6891  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.6077
+      Max:     0.6077  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.6077  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 42.6448
+      Max:     42.6448  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     42.6448  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 29.1677
+      Max:     29.1677  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     29.1677  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 52.0419
+      Max:     52.0419  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     52.0419  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 38.3203
+      Max:     38.3203  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     38.3203  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 69.0968
+      Max:     69.0968  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     69.0968  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.6126
+      Max:     0.6126  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.6126  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 42.6484
+      Max:     42.6484  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     42.6484  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 33.5520
+      Max:     45.8758  (from Exp1_Weather_Only)
+      Min:     28.7055  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 61.8726
+      Max:     86.9219  (from Exp1_Weather_Only)
+      Min:     51.9697  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 44.0803
+      Max:     60.2711  (from Exp1_Weather_Only)
+      Min:     37.7129  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 68.5666
+      Max:     70.3888  (from Exp3_Weather_Prices)
+      Min:     66.7488  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4330
+      Max:     0.6137  (from Exp3_Weather_Prices)
+      Min:     -0.0807  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 47.7074
+      Max:     64.6211  (from Exp1_Weather_Only)
+      Min:     42.3118  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 34.9109
+      Max:     46.4592  (from Exp1_Weather_Only)
+      Min:     29.5826  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 64.3624
+      Max:     87.7272  (from Exp1_Weather_Only)
+      Min:     53.6642  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 45.8656
+      Max:     61.0376  (from Exp1_Weather_Only)
+      Min:     38.8653  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 63.7418
+      Max:     66.8051  (from Exp3_Weather_Prices)
+      Min:     58.0275  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.3855
+      Max:     0.5881  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     -0.1008  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 48.7345
+      Max:     64.9915  (from Exp1_Weather_Only)
+      Min:     42.7586  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 29.5250
+      Max:     29.5250  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     29.5250  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 52.9072
+      Max:     52.9072  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     52.9072  (from Exp4_Weather_WeatherLags_Prices)
+    WMAPE:
+      Average: 38.7896
+      Max:     38.7896  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     38.7896  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 70.5565
+      Max:     70.5565  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     70.5565  (from Exp4_Weather_WeatherLags_Prices)
+    R2:
+      Average: 0.5996
+      Max:     0.5996  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     0.5996  (from Exp4_Weather_WeatherLags_Prices)
+    sMAPE:
+      Average: 43.6410
+      Max:     43.6410  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     43.6410  (from Exp4_Weather_WeatherLags_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 33.8057
+      Max:     45.8154  (from Exp1_Weather_Only)
+      Min:     28.7889  (from Exp4_Weather_WeatherLags_Prices)
+    RMSE:
+      Average: 62.3606
+      Max:     86.6801  (from Exp1_Weather_Only)
+      Min:     52.2617  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 44.4135
+      Max:     60.1917  (from Exp1_Weather_Only)
+      Min:     37.8226  (from Exp4_Weather_WeatherLags_Prices)
+    MDA:
+      Average: 67.8977
+      Max:     69.6144  (from Exp3_Weather_Prices)
+      Min:     66.2784  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4238
+      Max:     0.6093  (from Exp3_Weather_Prices)
+      Min:     -0.0747  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 47.8440
+      Max:     64.8231  (from Exp1_Weather_Only)
+      Min:     42.3057  (from Exp4_Weather_WeatherLags_Prices)
+
+==================================================
+ HORIZON: 168h  |  TARGET: Price
+==================================================
+
+  MODEL: AutoGluon
+  ----------------------------------------
+    MAE:
+      Average: 30.4589
+      Max:     30.4589  (from Exp3_Weather_Prices)
+      Min:     30.4589  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 55.3303
+      Max:     55.3303  (from Exp3_Weather_Prices)
+      Min:     55.3303  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 40.0079
+      Max:     40.0079  (from Exp3_Weather_Prices)
+      Min:     40.0079  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 70.2459
+      Max:     70.2459  (from Exp3_Weather_Prices)
+      Min:     70.2459  (from Exp3_Weather_Prices)
+    R2:
+      Average: 0.5621
+      Max:     0.5621  (from Exp3_Weather_Prices)
+      Min:     0.5621  (from Exp3_Weather_Prices)
+    sMAPE:
+      Average: 44.5135
+      Max:     44.5135  (from Exp3_Weather_Prices)
+      Min:     44.5135  (from Exp3_Weather_Prices)
+
+  MODEL: CatBoost
+  ----------------------------------------
+    MAE:
+      Average: 31.5609
+      Max:     43.6638  (from Exp1_Weather_Only)
+      Min:     27.6138  (from Exp13_Total_Information)
+    RMSE:
+      Average: 59.0240
+      Max:     84.8208  (from Exp1_Weather_Only)
+      Min:     50.4567  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 41.4554
+      Max:     57.3526  (from Exp1_Weather_Only)
+      Min:     36.2708  (from Exp13_Total_Information)
+    MDA:
+      Average: 62.7726
+      Max:     66.7815  (from Exp13_Total_Information)
+      Min:     50.7606  (from Exp1_Weather_Only)
+    R2:
+      Average: 0.4819
+      Max:     0.6358  (from Exp3_Weather_Prices)
+      Min:     -0.0291  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 45.7278
+      Max:     60.0300  (from Exp1_Weather_Only)
+      Min:     41.0457  (from Exp13_Total_Information)
+
+  MODEL: GRU
+  ----------------------------------------
+    MAE:
+      Average: 28.9813
+      Max:     28.9813  (from Exp3_Weather_Prices)
+      Min:     28.9813  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 51.9063
+      Max:     51.9063  (from Exp3_Weather_Prices)
+      Min:     51.9063  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 38.0671
+      Max:     38.0671  (from Exp3_Weather_Prices)
+      Min:     38.0671  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 69.2868
+      Max:     69.2868  (from Exp3_Weather_Prices)
+      Min:     69.2868  (from Exp3_Weather_Prices)
+    R2:
+      Average: 0.6146
+      Max:     0.6146  (from Exp3_Weather_Prices)
+      Min:     0.6146  (from Exp3_Weather_Prices)
+    sMAPE:
+      Average: 42.3232
+      Max:     42.3232  (from Exp3_Weather_Prices)
+      Min:     42.3232  (from Exp3_Weather_Prices)
+
+  MODEL: LSTM
+  ----------------------------------------
+    MAE:
+      Average: 29.2751
+      Max:     29.2751  (from Exp3_Weather_Prices)
+      Min:     29.2751  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 52.6050
+      Max:     52.6050  (from Exp3_Weather_Prices)
+      Min:     52.6050  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 38.4530
+      Max:     38.4530  (from Exp3_Weather_Prices)
+      Min:     38.4530  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 68.3277
+      Max:     68.3277  (from Exp3_Weather_Prices)
+      Min:     68.3277  (from Exp3_Weather_Prices)
+    R2:
+      Average: 0.6042
+      Max:     0.6042  (from Exp3_Weather_Prices)
+      Min:     0.6042  (from Exp3_Weather_Prices)
+    sMAPE:
+      Average: 43.1734
+      Max:     43.1734  (from Exp3_Weather_Prices)
+      Min:     43.1734  (from Exp3_Weather_Prices)
+
+  MODEL: LightGBM
+  ----------------------------------------
+    MAE:
+      Average: 33.7529
+      Max:     46.2530  (from Exp1_Weather_Only)
+      Min:     28.9419  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 61.7706
+      Max:     87.3485  (from Exp1_Weather_Only)
+      Min:     52.7543  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 44.3345
+      Max:     60.7535  (from Exp1_Weather_Only)
+      Min:     38.0153  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 68.6950
+      Max:     70.3626  (from Exp3_Weather_Prices)
+      Min:     66.6335  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4348
+      Max:     0.6019  (from Exp3_Weather_Prices)
+      Min:     -0.0914  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 48.0165
+      Max:     65.0476  (from Exp1_Weather_Only)
+      Min:     42.4922  (from Exp3_Weather_Prices)
+
+  MODEL: RandomForest
+  ----------------------------------------
+    MAE:
+      Average: 35.1084
+      Max:     46.5430  (from Exp1_Weather_Only)
+      Min:     29.7697  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 64.2684
+      Max:     87.7317  (from Exp1_Weather_Only)
+      Min:     54.1797  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 46.1151
+      Max:     61.1344  (from Exp1_Weather_Only)
+      Min:     39.1027  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 64.2065
+      Max:     67.3568  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     57.8899  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.3898
+      Max:     0.5801  (from Exp3_Weather_Prices)
+      Min:     -0.1010  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 49.0080
+      Max:     65.2147  (from Exp1_Weather_Only)
+      Min:     42.9227  (from Exp3_Weather_Prices)
+
+  MODEL: Transformer
+  ----------------------------------------
+    MAE:
+      Average: 29.2347
+      Max:     29.2347  (from Exp3_Weather_Prices)
+      Min:     29.2347  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 52.9477
+      Max:     52.9477  (from Exp3_Weather_Prices)
+      Min:     52.9477  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 38.4000
+      Max:     38.4000  (from Exp3_Weather_Prices)
+      Min:     38.4000  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 70.8854
+      Max:     70.8854  (from Exp3_Weather_Prices)
+      Min:     70.8854  (from Exp3_Weather_Prices)
+    R2:
+      Average: 0.5990
+      Max:     0.5990  (from Exp3_Weather_Prices)
+      Min:     0.5990  (from Exp3_Weather_Prices)
+    sMAPE:
+      Average: 43.4721
+      Max:     43.4721  (from Exp3_Weather_Prices)
+      Min:     43.4721  (from Exp3_Weather_Prices)
+
+  MODEL: XGBoost
+  ----------------------------------------
+    MAE:
+      Average: 33.9997
+      Max:     45.8287  (from Exp1_Weather_Only)
+      Min:     29.0986  (from Exp3_Weather_Prices)
+    RMSE:
+      Average: 62.1373
+      Max:     86.5918  (from Exp1_Weather_Only)
+      Min:     52.6559  (from Exp3_Weather_Prices)
+    WMAPE:
+      Average: 44.6588
+      Max:     60.1962  (from Exp1_Weather_Only)
+      Min:     38.2211  (from Exp3_Weather_Prices)
+    MDA:
+      Average: 67.8225
+      Max:     69.7795  (from Exp4_Weather_WeatherLags_Prices)
+      Min:     65.9875  (from Exp2_Weather_WeatherLags_Only)
+    R2:
+      Average: 0.4284
+      Max:     0.6034  (from Exp3_Weather_Prices)
+      Min:     -0.0726  (from Exp1_Weather_Only)
+    sMAPE:
+      Average: 48.3036
+      Max:     64.9164  (from Exp1_Weather_Only)
+      Min:     42.7635  (from Exp3_Weather_Prices)

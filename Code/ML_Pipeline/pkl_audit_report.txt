@@ -1,0 +1,2555 @@
+============================================================
+           PKL FILE AUDIT REPORT
+============================================================
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_0h_Price_Pruned_DK1_0h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_120h_Price_Pruned_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_144h_Price_Pruned_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_168h_Price_Pruned_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_24h_Price_Pruned_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_48h_Price_Pruned_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_72h_Price_Pruned_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_96h_Price_Pruned_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp10_Weather_WeatherLags_Grid_Gridlags_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp11_Weather_Grid_Gridlags_Prices_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_0h_Price_DK1_0h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_0h_Price_Pruned_DK1_0h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_120h_Delta_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_120h_Price_Pruned_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_144h_Price_Pruned_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_168h_Price_Pruned_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_24h_Price_Pruned_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_48h_Price_Pruned_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_72h_Price_Pruned_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_96h_Price_Pruned_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp11_Weather_Grid_Gridlags_Prices_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_48h_Delta_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_72h_Delta_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_96h_Delta_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp12_Weather_WeatherLags_Grid_Gridlags_Prices_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp13_Total_Information_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_120h_Delta_Fullweek_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_144h_Delta_Fullweek_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_168h_Delta_Fullweek_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_24h_Delta_Fullweek_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_48h_Delta_Fullweek_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_48h_Price_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_72h_Delta_Fullweek_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_72h_Price_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_96h_Delta_Fullweek_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_96h_Price_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp13_Total_Information_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp1_Weather_Only_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_0h_Price_Pruned_DK1_0h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_120h_Delta_Fullweek_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_120h_Price_Pruned_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_144h_Delta_Fullweek_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_144h_Price_Pruned_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_168h_Delta_Fullweek_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_168h_Price_Pruned_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_24h_Delta_Fullweek_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_24h_Price_Pruned_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_48h_Delta_Fullweek_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_48h_Price_Pruned_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_72h_Delta_Fullweek_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_72h_Price_Pruned_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_96h_Delta_Fullweek_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_96h_Price_Pruned_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp1_Weather_Only_DK1_0h_Results.pkl
+--------------------------------------------------
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp2_Weather_WeatherLags_Only_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_120h_Delta_Pruned_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_144h_Delta_Pruned_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_168h_Delta_Pruned_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_24h_Delta_Pruned_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_48h_Delta_Pruned_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_72h_Delta_Pruned_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_96h_Delta_Pruned_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp2_Weather_WeatherLags_Only_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp3_Weather_Prices_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_0h_Price_Fullweek_DK1_0h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_120h_Price_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_120h_Price_Fullweek_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_144h_Price_Fullweek_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_168h_Price_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_168h_Price_Fullweek_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_24h_Price_Fullweek_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_48h_Price_Fullweek_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_72h_Price_Fullweek_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_96h_Price_Fullweek_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp3_Weather_Prices_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp4_Weather_WeatherLags_Prices_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_120h_Delta_Pruned_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_144h_Delta_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_144h_Delta_Pruned_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_144h_Price_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_168h_Delta_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_168h_Delta_Pruned_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_24h_Delta_Pruned_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_48h_Delta_Pruned_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_72h_Delta_Pruned_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_96h_Delta_Pruned_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp4_Weather_WeatherLags_Prices_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp5_Weather_Grid_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_120h_Delta_Pruned_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_144h_Delta_Pruned_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_168h_Delta_Pruned_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_24h_Delta_Pruned_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_48h_Delta_Pruned_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_72h_Delta_Pruned_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_96h_Delta_Pruned_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp5_Weather_Grid_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp6_Weather_WeatherLags_Grid_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_0h_Price_Fullweek_DK1_0h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_120h_Price_Fullweek_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_144h_Price_Fullweek_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_168h_Price_Fullweek_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_24h_Price_Fullweek_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_48h_Price_Fullweek_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_72h_Price_Fullweek_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_96h_Price_Fullweek_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp6_Weather_WeatherLags_Grid_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp7_Weather_Grid_Prices_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_0h_Price_Fullweek_DK1_0h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_120h_Price_Fullweek_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_144h_Price_Fullweek_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_168h_Price_Fullweek_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_24h_Price_Fullweek_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_48h_Price_Fullweek_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_72h_Price_Fullweek_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_96h_Price_Fullweek_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp7_Weather_Grid_Prices_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp8_Weather_WeatherLags_Grid_Prices_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_120h_Delta_Pruned_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_144h_Delta_Pruned_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_168h_Delta_Pruned_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_24h_Delta_Pruned_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_48h_Delta_Pruned_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_72h_Delta_Pruned_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_96h_Delta_Pruned_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp8_Weather_WeatherLags_Grid_Prices_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_0h_Delta_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  LightGBM        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  CatBoost        | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+  RandomForest    | Predictions:      0 rows | Curves: 106 windows | [EMPTY]
+
+Exp9_Weather_Grid_Gridlags_0h_Price_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_120h_Delta_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_120h_Delta_Fullweek_DK1_120h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_120h_Price_DK1_120h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_144h_Delta_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_144h_Delta_Fullweek_DK1_144h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_144h_Price_DK1_144h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_168h_Delta_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_168h_Delta_Fullweek_DK1_168h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_168h_Price_DK1_168h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_24h_Delta_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_24h_Delta_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_24h_Delta_Fullweek_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_24h_Price_DK1_24h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_24h_Price_DK1_24h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_48h_Delta_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_48h_Delta_Fullweek_DK1_48h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_48h_Price_DK1_48h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_72h_Delta_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_72h_Delta_Fullweek_DK1_72h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_72h_Price_DK1_72h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_96h_Delta_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_96h_Delta_Fullweek_DK1_96h_Tree_Results.pkl
+--------------------------------------------------
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_96h_Price_DK1_96h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+Exp9_Weather_Grid_Gridlags_DK1_0h_Results.pkl
+--------------------------------------------------
+  XGBoost         | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LightGBM        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  CatBoost        | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  RandomForest    | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  LSTM            | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  GRU             | Predictions:  76320 rows | Curves: 106 windows | [OK]
+  Transformer     | Predictions:      0 rows | Curves:   0 windows | [EMPTY]
+  AutoGluon       | Predictions:  76320 rows | Curves: 106 windows | [OK]
+
+============================================================
+SUMMARY
+============================================================
+  Total model entries with data:  1409
+  Total empty model entries:      64
+  Total unreadable files:         0
+============================================================

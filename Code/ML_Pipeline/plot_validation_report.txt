@@ -1,0 +1,359 @@
+======================================================================
+          MASTER PLOTTER DATA VALIDATION REPORT
+======================================================================
+
+--- PLOT 1: DETERIORATION PLOTS ---
+  [MISSING] CatBoost | Exp13_Total_Information | 24h | Price
+  [MISSING] LightGBM | Exp13_Total_Information | 24h | Price
+  [MISSING] XGBoost | Exp13_Total_Information | 24h | Price
+  [MISSING] RandomForest | Exp13_Total_Information | 24h | Price
+
+--- PLOT 2: VARIANCE BOXPLOTS ---
+    Uses CSV only — no pkl files required. Skipping.
+
+--- PLOT 3: FEATURE SENSITIVITY LINES (Horizon: 24h) ---
+
+  Target: Price
+        CatBoost: Best=[Exp13_Total_Information] Mean=[Exp10_Weather_WeatherLags_Grid_Gridlags] Worst=[Exp1_Weather_Only]
+            [MISSING] Best | Baseline | CatBoost in Exp13_Total_Information
+            [MISSING] Best | FullWeek | CatBoost in Exp13_Total_Information
+            [MISSING] Best | Pruned | CatBoost in Exp13_Total_Information
+            [MISSING] Mean | FullWeek | CatBoost in Exp10_Weather_WeatherLags_Grid_Gridlags
+            [MISSING] Worst | FullWeek | CatBoost in Exp1_Weather_Only
+        LightGBM: Best=[Exp13_Total_Information] Mean=[Exp9_Weather_Grid_Gridlags] Worst=[Exp1_Weather_Only]
+            [MISSING] Best | Baseline | LightGBM in Exp13_Total_Information
+            [MISSING] Best | FullWeek | LightGBM in Exp13_Total_Information
+            [MISSING] Best | Pruned | LightGBM in Exp13_Total_Information
+            [MISSING] Mean | FullWeek | LightGBM in Exp9_Weather_Grid_Gridlags
+            [MISSING] Mean | Pruned | LightGBM in Exp9_Weather_Grid_Gridlags
+            [MISSING] Worst | FullWeek | LightGBM in Exp1_Weather_Only
+        XGBoost: Best=[Exp13_Total_Information] Mean=[Exp9_Weather_Grid_Gridlags] Worst=[Exp1_Weather_Only]
+            [MISSING] Best | Baseline | XGBoost in Exp13_Total_Information
+            [MISSING] Best | FullWeek | XGBoost in Exp13_Total_Information
+            [MISSING] Best | Pruned | XGBoost in Exp13_Total_Information
+            [MISSING] Mean | FullWeek | XGBoost in Exp9_Weather_Grid_Gridlags
+            [MISSING] Mean | Pruned | XGBoost in Exp9_Weather_Grid_Gridlags
+            [MISSING] Worst | FullWeek | XGBoost in Exp1_Weather_Only
+        RandomForest: Best=[Exp13_Total_Information] Mean=[Exp10_Weather_WeatherLags_Grid_Gridlags] Worst=[Exp1_Weather_Only]
+            [MISSING] Best | Baseline | RandomForest in Exp13_Total_Information
+            [MISSING] Best | FullWeek | RandomForest in Exp13_Total_Information
+            [MISSING] Best | Pruned | RandomForest in Exp13_Total_Information
+            [MISSING] Mean | FullWeek | RandomForest in Exp10_Weather_WeatherLags_Grid_Gridlags
+            [MISSING] Worst | FullWeek | RandomForest in Exp1_Weather_Only
+        LSTM: Best=[Exp3_Weather_Prices] Mean=[Exp13_Total_Information] Worst=[Exp6_Weather_WeatherLags_Grid]
+            [MISSING] Best | Pruned | LSTM in Exp3_Weather_Prices
+            [MISSING] Mean | FullWeek | LSTM in Exp13_Total_Information
+            [MISSING] Mean | Pruned | LSTM in Exp13_Total_Information
+            [MISSING] Worst | Pruned | LSTM in Exp6_Weather_WeatherLags_Grid
+        GRU: Best=[Exp3_Weather_Prices] Mean=[Exp12_Weather_WeatherLags_Grid_Gridlags_Prices] Worst=[Exp10_Weather_WeatherLags_Grid_Gridlags]
+            [MISSING] Best | Pruned | GRU in Exp3_Weather_Prices
+            [MISSING] Mean | FullWeek | GRU in Exp12_Weather_WeatherLags_Grid_Gridlags_Prices
+            [MISSING] Mean | Pruned | GRU in Exp12_Weather_WeatherLags_Grid_Gridlags_Prices
+            [MISSING] Worst | FullWeek | GRU in Exp10_Weather_WeatherLags_Grid_Gridlags
+            [MISSING] Worst | Pruned | GRU in Exp10_Weather_WeatherLags_Grid_Gridlags
+        Transformer: Best=[Exp3_Weather_Prices] Mean=[Exp5_Weather_Grid] Worst=[Exp1_Weather_Only]
+            [MISSING] Best | Pruned | Transformer in Exp3_Weather_Prices
+            [MISSING] Mean | FullWeek | Transformer in Exp5_Weather_Grid
+            [MISSING] Mean | Pruned | Transformer in Exp5_Weather_Grid
+            [MISSING] Worst | FullWeek | Transformer in Exp1_Weather_Only
+            [MISSING] Worst | Pruned | Transformer in Exp1_Weather_Only
+        AutoGluon: Best=[Exp13_Total_Information] Mean=[Exp10_Weather_WeatherLags_Grid_Gridlags] Worst=[Exp1_Weather_Only]
+            [MISSING] Best | FullWeek | AutoGluon in Exp13_Total_Information
+            [MISSING] Best | Pruned | AutoGluon in Exp13_Total_Information
+            [MISSING] Mean | FullWeek | AutoGluon in Exp10_Weather_WeatherLags_Grid_Gridlags
+            [MISSING] Mean | Pruned | AutoGluon in Exp10_Weather_WeatherLags_Grid_Gridlags
+            [MISSING] Worst | FullWeek | AutoGluon in Exp1_Weather_Only
+            [MISSING] Worst | Pruned | AutoGluon in Exp1_Weather_Only
+
+  Target: Delta
+        CatBoost: Best=[Exp7_Weather_Grid_Prices] Mean=[Exp10_Weather_WeatherLags_Grid_Gridlags] Worst=[Exp2_Weather_WeatherLags_Only]
+            [MISSING] Best | FullWeek | CatBoost in Exp7_Weather_Grid_Prices
+            [MISSING] Best | Pruned | CatBoost in Exp7_Weather_Grid_Prices
+            [MISSING] Mean | FullWeek | CatBoost in Exp10_Weather_WeatherLags_Grid_Gridlags
+            [MISSING] Mean | Pruned | CatBoost in Exp10_Weather_WeatherLags_Grid_Gridlags
+            [MISSING] Worst | FullWeek | CatBoost in Exp2_Weather_WeatherLags_Only
+        LightGBM: Best=[Exp4_Weather_WeatherLags_Prices] Mean=[Exp1_Weather_Only] Worst=[Exp9_Weather_Grid_Gridlags]
+            [MISSING] Best | FullWeek | LightGBM in Exp4_Weather_WeatherLags_Prices
+            [MISSING] Mean | FullWeek | LightGBM in Exp1_Weather_Only
+            [MISSING] Mean | Pruned | LightGBM in Exp1_Weather_Only
+            [MISSING] Worst | FullWeek | LightGBM in Exp9_Weather_Grid_Gridlags
+            [MISSING] Worst | Pruned | LightGBM in Exp9_Weather_Grid_Gridlags
+        XGBoost: Best=[Exp4_Weather_WeatherLags_Prices] Mean=[Exp3_Weather_Prices] Worst=[Exp9_Weather_Grid_Gridlags]
+            [MISSING] Best | FullWeek | XGBoost in Exp4_Weather_WeatherLags_Prices
+            [MISSING] Mean | FullWeek | XGBoost in Exp3_Weather_Prices
+            [MISSING] Mean | Pruned | XGBoost in Exp3_Weather_Prices
+            [MISSING] Worst | FullWeek | XGBoost in Exp9_Weather_Grid_Gridlags
+            [MISSING] Worst | Pruned | XGBoost in Exp9_Weather_Grid_Gridlags
+        RandomForest: Best=[Exp8_Weather_WeatherLags_Grid_Prices] Mean=[Exp1_Weather_Only] Worst=[Exp6_Weather_WeatherLags_Grid]
+            [MISSING] Best | Baseline | RandomForest in Exp8_Weather_WeatherLags_Grid_Prices
+            [MISSING] Best | FullWeek | RandomForest in Exp8_Weather_WeatherLags_Grid_Prices
+            [MISSING] Mean | FullWeek | RandomForest in Exp1_Weather_Only
+            [MISSING] Mean | Pruned | RandomForest in Exp1_Weather_Only
+            [MISSING] Worst | FullWeek | RandomForest in Exp6_Weather_WeatherLags_Grid
+            [MISSING] Worst | Pruned | RandomForest in Exp6_Weather_WeatherLags_Grid
+        LSTM: Best=[Exp1_Weather_Only] Mean=[Exp13_Total_Information] Worst=[Exp9_Weather_Grid_Gridlags]
+            [MISSING] Best | Pruned | LSTM in Exp1_Weather_Only
+            [MISSING] Mean | Pruned | LSTM in Exp13_Total_Information
+            [MISSING] Worst | Pruned | LSTM in Exp9_Weather_Grid_Gridlags
+        GRU: Best=[Exp1_Weather_Only] Mean=[Exp13_Total_Information] Worst=[Exp8_Weather_WeatherLags_Grid_Prices]
+            [MISSING] Best | Pruned | GRU in Exp1_Weather_Only
+            [MISSING] Mean | Pruned | GRU in Exp13_Total_Information
+            [MISSING] Worst | FullWeek | GRU in Exp8_Weather_WeatherLags_Grid_Prices
+            [MISSING] Worst | Pruned | GRU in Exp8_Weather_WeatherLags_Grid_Prices
+        Transformer: Best=[Exp1_Weather_Only] Mean=[Exp8_Weather_WeatherLags_Grid_Prices] Worst=[Exp12_Weather_WeatherLags_Grid_Gridlags_Prices]
+            [MISSING] Best | Pruned | Transformer in Exp1_Weather_Only
+            [MISSING] Mean | FullWeek | Transformer in Exp8_Weather_WeatherLags_Grid_Prices
+            [MISSING] Mean | Pruned | Transformer in Exp8_Weather_WeatherLags_Grid_Prices
+            [MISSING] Worst | FullWeek | Transformer in Exp12_Weather_WeatherLags_Grid_Gridlags_Prices
+            [MISSING] Worst | Pruned | Transformer in Exp12_Weather_WeatherLags_Grid_Gridlags_Prices
+        AutoGluon: Best=[Exp13_Total_Information] Mean=[Exp7_Weather_Grid_Prices] Worst=[Exp5_Weather_Grid]
+            [MISSING] Best | Pruned | AutoGluon in Exp13_Total_Information
+            [MISSING] Mean | FullWeek | AutoGluon in Exp7_Weather_Grid_Prices
+            [MISSING] Mean | Pruned | AutoGluon in Exp7_Weather_Grid_Prices
+            [MISSING] Worst | FullWeek | AutoGluon in Exp5_Weather_Grid
+            [MISSING] Worst | Pruned | AutoGluon in Exp5_Weather_Grid
+
+======================================================================
+RERUN SUMMARY
+======================================================================
+
+  38 experiment/version combinations need attention:
+
+    Experiment : Exp10_Weather_WeatherLags_Grid_Gridlags
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    Trees      : ['CatBoost']
+
+    Experiment : Exp10_Weather_WeatherLags_Grid_Gridlags
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    Trees      : ['CatBoost']
+
+    Experiment : Exp10_Weather_WeatherLags_Grid_Gridlags
+    Horizon    : 24h
+    Target     : Price
+    Version    : FullWeek
+    Trees      : ['CatBoost', 'RandomForest']
+    NNs        : ['AutoGluon', 'GRU']
+
+    Experiment : Exp10_Weather_WeatherLags_Grid_Gridlags
+    Horizon    : 24h
+    Target     : Price
+    Version    : Pruned
+    NNs        : ['GRU', 'AutoGluon']
+
+    Experiment : Exp12_Weather_WeatherLags_Grid_Gridlags_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    NNs        : ['Transformer']
+
+    Experiment : Exp12_Weather_WeatherLags_Grid_Gridlags_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    NNs        : ['Transformer']
+
+    Experiment : Exp12_Weather_WeatherLags_Grid_Gridlags_Prices
+    Horizon    : 24h
+    Target     : Price
+    Version    : FullWeek
+    NNs        : ['GRU']
+
+    Experiment : Exp12_Weather_WeatherLags_Grid_Gridlags_Prices
+    Horizon    : 24h
+    Target     : Price
+    Version    : Pruned
+    NNs        : ['GRU']
+
+    Experiment : Exp13_Total_Information
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    NNs        : ['GRU', 'AutoGluon', 'LSTM']
+
+    Experiment : Exp13_Total_Information
+    Horizon    : 24h
+    Target     : Price
+    Version    : Any
+    Trees      : ['CatBoost', 'RandomForest', 'LightGBM', 'XGBoost']
+
+    Experiment : Exp13_Total_Information
+    Horizon    : 24h
+    Target     : Price
+    Version    : Baseline
+    Trees      : ['CatBoost', 'RandomForest', 'LightGBM', 'XGBoost']
+
+    Experiment : Exp13_Total_Information
+    Horizon    : 24h
+    Target     : Price
+    Version    : FullWeek
+    Trees      : ['CatBoost', 'RandomForest', 'LightGBM', 'XGBoost']
+    NNs        : ['AutoGluon', 'LSTM']
+
+    Experiment : Exp13_Total_Information
+    Horizon    : 24h
+    Target     : Price
+    Version    : Pruned
+    Trees      : ['CatBoost', 'RandomForest', 'LightGBM', 'XGBoost']
+    NNs        : ['AutoGluon', 'LSTM']
+
+    Experiment : Exp1_Weather_Only
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    Trees      : ['RandomForest', 'LightGBM']
+
+    Experiment : Exp1_Weather_Only
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    Trees      : ['RandomForest', 'LightGBM']
+    NNs        : ['Transformer', 'LSTM', 'GRU']
+
+    Experiment : Exp1_Weather_Only
+    Horizon    : 24h
+    Target     : Price
+    Version    : FullWeek
+    Trees      : ['CatBoost', 'RandomForest', 'LightGBM', 'XGBoost']
+    NNs        : ['Transformer', 'AutoGluon']
+
+    Experiment : Exp1_Weather_Only
+    Horizon    : 24h
+    Target     : Price
+    Version    : Pruned
+    NNs        : ['Transformer', 'AutoGluon']
+
+    Experiment : Exp2_Weather_WeatherLags_Only
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    Trees      : ['CatBoost']
+
+    Experiment : Exp3_Weather_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    Trees      : ['XGBoost']
+
+    Experiment : Exp3_Weather_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    Trees      : ['XGBoost']
+
+    Experiment : Exp3_Weather_Prices
+    Horizon    : 24h
+    Target     : Price
+    Version    : Pruned
+    NNs        : ['Transformer', 'GRU', 'LSTM']
+
+    Experiment : Exp4_Weather_WeatherLags_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    Trees      : ['LightGBM', 'XGBoost']
+
+    Experiment : Exp5_Weather_Grid
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    NNs        : ['AutoGluon']
+
+    Experiment : Exp5_Weather_Grid
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    NNs        : ['AutoGluon']
+
+    Experiment : Exp5_Weather_Grid
+    Horizon    : 24h
+    Target     : Price
+    Version    : FullWeek
+    NNs        : ['Transformer']
+
+    Experiment : Exp5_Weather_Grid
+    Horizon    : 24h
+    Target     : Price
+    Version    : Pruned
+    NNs        : ['Transformer']
+
+    Experiment : Exp6_Weather_WeatherLags_Grid
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    Trees      : ['RandomForest']
+
+    Experiment : Exp6_Weather_WeatherLags_Grid
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    Trees      : ['RandomForest']
+
+    Experiment : Exp6_Weather_WeatherLags_Grid
+    Horizon    : 24h
+    Target     : Price
+    Version    : Pruned
+    NNs        : ['LSTM']
+
+    Experiment : Exp7_Weather_Grid_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    Trees      : ['CatBoost']
+    NNs        : ['AutoGluon']
+
+    Experiment : Exp7_Weather_Grid_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    Trees      : ['CatBoost']
+    NNs        : ['AutoGluon']
+
+    Experiment : Exp8_Weather_WeatherLags_Grid_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Baseline
+    Trees      : ['RandomForest']
+
+    Experiment : Exp8_Weather_WeatherLags_Grid_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    Trees      : ['RandomForest']
+    NNs        : ['Transformer', 'GRU']
+
+    Experiment : Exp8_Weather_WeatherLags_Grid_Prices
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    NNs        : ['Transformer', 'GRU']
+
+    Experiment : Exp9_Weather_Grid_Gridlags
+    Horizon    : 24h
+    Target     : Delta
+    Version    : FullWeek
+    Trees      : ['LightGBM', 'XGBoost']
+
+    Experiment : Exp9_Weather_Grid_Gridlags
+    Horizon    : 24h
+    Target     : Delta
+    Version    : Pruned
+    Trees      : ['LightGBM', 'XGBoost']
+    NNs        : ['LSTM']
+
+    Experiment : Exp9_Weather_Grid_Gridlags
+    Horizon    : 24h
+    Target     : Price
+    Version    : FullWeek
+    Trees      : ['LightGBM', 'XGBoost']
+
+    Experiment : Exp9_Weather_Grid_Gridlags
+    Horizon    : 24h
+    Target     : Price
+    Version    : Pruned
+    Trees      : ['LightGBM', 'XGBoost']
+
+======================================================================
