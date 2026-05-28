@@ -1,25 +1,30 @@
+Set-Content -Path .gitignore -Value @"
 # ==========================================
 # MASTER THESIS .GITIGNORE
 # ==========================================
 
-# --- 1. DATA & ML ARTIFACTS ---
+# --- 1. DATA & ML ARTIFACTS (CRITICAL) ---
 **/Data/
-Code/ML_Pipeline/Experiment_Logs/
-Code/ML_Pipeline/AutogluonModels/
-Code/ML_Pipeline/catboost_info/
-Code/ML_Pipeline/csv_backups/
-Code/.qodo/
-Code/oldAnalyses/
+**/Experiment_Logs/
+**/AutogluonModels/
+**/catboost_info/
+**/csv_backups/
 *.pkl
+*.pt
+*.pth
 
 # --- 2. PYTHON SYSTEM FILES & ENVIRONMENTS ---
 __pycache__/
 *.py[cod]
-Code/venv/
-venv/
+**/venv/
 .env
 
-# --- 3. LATEX BUILD FILES ---
+# --- 3. IDE & TEMPORARY FILES ---
+.qodo/
+**/oldAnalyses/
+New folder/
+
+# --- 4. LATEX BUILD FILES ---
 *.aux
 *.bbl
 *.bcf
@@ -34,7 +39,10 @@ venv/
 *.toc
 *.fls
 *.fdb_latexmk
+*.bak
+*~
 
-# --- 4. OS GENERATED FILES ---
+# --- 5. OS GENERATED FILES ---
 .DS_Store
 Thumbs.db
+"@
