@@ -1,10 +1,12 @@
 \section{Introduction} \label{sec:introduction}
-In a world of increasing amounts of electric vehicles, data centres, and other 
+In a world of increasing numbers of electric 
+vehicles, data centres, and other 
 large-scale electricity-hungry industries, electricity grids are beginning to 
 feel the strain~\cite{ppm-gridImpact}, contributing to an increase in 
 electricity prices~\cite{gridStrainIncreasingGraph}. When faced with such 
 increased prices, it is beneficial, from a monetary point of view, to schedule 
-electricity intensive tasks during periods where prices are low. However, to do 
+electricity-intensive tasks during periods where 
+prices are low. However, to do 
 this, one must know when such low-price periods occur. In Denmark, the price of 
 electricity is, in simple terms, fixed for the next 24-hour period at noon 
 daily\footnote{This is a simplification for ease of reading. For actual energy 
@@ -22,7 +24,8 @@ expensive. As an example, one might imagine a near-future where fleets of
 electric trucks need their batteries charged before delivery. In a scenario 
 like this, it may be beneficial for such companies, to be able to forecast 
 electricity prices further into the future, and plan their electricity 
-consumption accordingly, to minimize charging costs. \\
+consumption accordingly, to minimise charging 
+costs. \\
 
 When attempting to predict electricity prices, many different aspects can be 
 considered~\cite{forecastInput}. Among these, the ones of particular interest 
@@ -31,7 +34,8 @@ to this paper are:
 	\item Weather
 	\item Electricity production details
 	\item Electricity consumption details
-	\item Historical- or T-minus data\footnote{Data from an earlier point in 
+	\item Historical or T-minus data\footnote{Data 
+	from an earlier point in 
 	time before the current time, e.g. 24 hours before.}
 	\item Time of year/month/week/day
 	\item Electricity exchange with foreign countries
@@ -39,8 +43,10 @@ to this paper are:
 
 One factor that influences electricity prices is the weather, due to its direct 
 impact on both electricity production~\cite{productionPatterns} and 
-consumption~\cite{consumptionPatterns}. In a country that has invested 
-extensively in wind-energy, such as Denmark, the weather directly impacts 
+consumption~\cite{consumptionPatterns}. In a 
+country like Denmark, which has invested 
+extensively in wind energy, the weather directly 
+impacts 
 electricity production, as more than $80\%$ is produced by renewable 
 sources~\cite{energiStyrelsenEnergiStatestik2022}. Steady winds, and to a 
 lesser extent, clear skies therefore affect energy production quite heavily in 
@@ -49,18 +55,20 @@ comes to consumption, human consumption patterns also change depending on the
 weather~\cite{consumptionPatterns}. When it is cold, people turn on the heat to 
 warm themselves, and when it is hot, they turn on air conditioning, or fans, to 
 stay cool. Further, when it is cold, such as in the winter months, it is 
-typically also darker, necessitating the need to use lights more frequently. 
+typically also darker, necessitating the use of 
+lights more frequently. 
 
 These factors suggest that one can use the weather to predict electricity 
 \gls{pc} patterns, which implies that weather data may carry useful information 
 for electricity price forecasting. A substantial body of prior work has 
 examined short-term electricity price forecasting using statistical, 
-machine-learning, and deep-learning 
+machine learning, and deep learning 
 approaches~\cite{energyPricePredictionMLNeighbors,energyPricePredictionUK,energyPricePredictionNovelDeepLearning},
  showing various results in different forecasting scenarios. 
 However, much of this prior work shares common limitations. Results are 
 typically reported for a single model trained on a fixed feature set, often 
-utilizing highly specialized and computationally expensive deep-learning 
+utilising highly specialised and computationally 
+expensive deep learning 
 architectures~\cite{energyPricePredictionNovelDeepLearning}. While these 
 approaches achieve strong benchmarks, they may be difficult and costly for 
 industry practitioners to deploy, maintain, and retrain in production 
@@ -69,10 +77,13 @@ actually impacts the performance of models, and can standard, out-of-the-box
 algorithms perform comparably without the overhead? Someone wishing to deploy a 
 forecasting system is therefore left without clear guidance on whether 
 investing in comprehensive data collection and complex model development is 
-worthwhile, or whether a simpler feature set utilizing a general-purpose model 
+worthwhile, or whether a simpler feature set 
+utilising a general-purpose model 
 would suffice. Further, while related studies exist, the Danish setting 
-combines several factors that are not jointly emphasized in most of the 
-literature reviewed here, such as its heavy investment into wind-energy 
+combines several factors that are not jointly 
+emphasised in most of the 
+literature reviewed here, such as its heavy 
+investment into wind energy 
 ~\cite{energiStyrelsenEnergiStatestik2022}, its division of the energy grid 
 into two distinct bidding zones, and its heavy energy-exchange with its 
 neighbouring countries. \\
@@ -153,7 +164,9 @@ experiments further demonstrate that targeted hyperparameter tuning provides
 substantial accuracy gains. Additionally, substituting the custom-made, 
 aggregated, station-level weather data with professionally processed weather 
 data provides no significant predictive advantage. Ultimately, this study 
-demonstrates that industry practitioners can achieve respectively competitive 
+demonstrates that industry practitioners can 
+achieve reasonably competitive 
 forecasting accuracy using out-of-the-box algorithms and a constrained feature 
-set, avoiding the significant overhead of specialized deep learning 
+set, avoiding the significant overhead of 
+specialised deep learning 
 architectures and excessive data acquisition.\\

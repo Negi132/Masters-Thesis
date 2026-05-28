@@ -18,6 +18,7 @@ conflicting behaviour between targets, it will be noted.
 		achieved the best performance of each model differs depending
 		on model and horizon. Lower is better.}
 	\label{fig:modelComparisonDelta}
+	\vspace{-4mm}
 \end{figure}
 \autoref{fig:modelComparisonDelta} depicts the general best achieved MAE 
 score for each model at each horizon. Out of all the different architectures
@@ -46,8 +47,8 @@ However,
 upon further investigation into its sub-par performance, it
 was discovered that \gls{gru} had undergone the experiments
 with an ReLU activation function, rather than the TANH
-activation function that its' peers were using. Small scale
-follow-up experiments show in \cref{app:B} \autoref{fig:gruTANH}, show
+activation function that its peers were using. Small scale
+follow-up experiments shown in \cref{app:B} \autoref{fig:gruTANH}, show
 that these outliers were mitigated by activation function
 correction, but outside of that, general performance did not
 improve. Additionally, should the reader be interested in which
@@ -62,13 +63,14 @@ and \autoref{tab:best-feature-set-price} in \cref{app:C}.
 	\caption{Graph showing how each of the architectures degrade
 		as the forecasting horizon is expanded. Lower is better.}
 	\label{fig:horizonDegredation}
+	\vspace{-4mm}
 \end{figure}
 One might expect that as the forecasting horizon is expanded
 further into the future, that we would see a drastic drop
 in predictive performance, however, \autoref{fig:horizonDegredation} shows us a
 slightly different story. As can be seen in \autoref{fig:horizonDegredation}, 
 while there is a drop in \gls{mae} across all models when expanding the
-forecasting horizon, the differences in their degradation seems
+forecasting horizon, the differences in their degradation seem
 mostly similar. Tree-based models and Gluon seem to be more
 resilient to expanding horizons, but when approaching one week
 into the future, the neural network-based models catch up in
@@ -93,6 +95,7 @@ performance after pruning.
 		a given horizon and experiment-group combination with delta
 		as the target. Lower is better.}
 	\label{fig:featureContributionDelta}
+	\vspace{-4mm}
 \end{figure}
 \begin{figure}[t]
 	\centering
@@ -101,11 +104,12 @@ performance after pruning.
 		a given horizon and experiment-group combination with price
 		as the target. Lower is better.}
 	\label{fig:featureContributionPrice}
+	\vspace{-4mm}
 \end{figure} 
 As can be seen in both \autoref{fig:featureContributionDelta} and 
 \autoref{fig:featureContributionPrice}, this is the first time that 
-changing the target has a significant change in the behaviour of the models. 
-This data suggests that utilizing delta as ones forecasting target makes
+changing the target causes a significant change in the behaviour of the models. 
+This data suggests that utilising delta as one's forecasting target makes
 the models less sensitive to data compositions. The data also
 shows that the further the forecasting horizon expands, the
 closer the predictions cluster together, and that the sensitivity
@@ -115,15 +119,16 @@ to particular data-group constellations become less pronounced.
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\linewidth]{fig/Pruning_Gain_Price_MAE.png}
-	\caption{Visualization of pruning impact. Upwards bars indicate
+	\caption{Visualisation of pruning impact. Upwards bars indicate
 		improvement in performance after pruning, while downward
 		bars indicate a decrease in performance.}
 	\label{fig:pruningGain}
+	\vspace{-4mm}
 \end{figure} 
 With the knowledge that different data constellations impact the performance of 
 models, feature permutation was performed, retaining columns whose removal
 degraded \gls{mae} by more than 0.01 EUR/MWh, and the resulting
-changes to each models can be seen in \autoref{fig:pruningGain}. The data shows
+changes to each model can be seen in \autoref{fig:pruningGain}. The data shows
 that feature permutation and pruning generally affected the
 tree-based models negatively. This is not surprising, as it has
 been previously mentioned that tree-based models are generally
@@ -133,7 +138,7 @@ the MAE score by themselves, but in combination with other
 such features they reveal hidden combined information that the
 tree-based models utilise well. Fittingly, pruning almost always
 improved the performance of the neural network-based models
-and, in particular, seem to have largely mitigated the particular
+and, in particular, seems to have largely mitigated the particular
 noise sensitivity of \gls{gru}, as it saw particular improvements at
 its struggling horizons. It is worth noting that pruning typically
 produced results with a change of less than $\pm5\%$ in nearly
@@ -157,12 +162,13 @@ to address additional methodological concerns.
 	\caption{Comparison of the MAE achieved by the baseline and
 		the forecasted estimate. Lower is better.}
 	\label{fig:naiveBaseline}
+	\vspace{-4mm}
 \end{figure} 
 To determine whether it was
 even worth it to try and predict electricity prices, the best
 forecasting approach, CatBoost, was compared against a naive
 baseline. This baseline was constructed by always predicting
-yesterdays' price, no matter the horizon. As can be seen from
+yesterday's price, no matter the horizon. As can be seen from
 \autoref{fig:naiveBaseline}, forecasting exhibits particularly favourable 
 performance at low 
 horizons. As horizons escalate, the advantageous
@@ -179,6 +185,7 @@ preference to simply re-using previous prices.
 	\caption{MAE comparison between models trained on data from
 		the DK1 and DK2 regions respectively. Lower is better.}
 	\label{fig:DK1DK2}
+	\vspace{-4mm}
 \end{figure} 
 As the Danish energy grid is divided
 into two sections, DK1 and DK2, which differ significantly in
@@ -191,7 +198,7 @@ DK1 counterparts. However, the difference in performance is
 slightly larger between the CatBoost models than between
 the transformer models. This indicates that there may be
 some factors that make DK2 a harder region to forecast
-utilizing the CatBoost architecture, be it its smaller area, less
+utilising the CatBoost architecture, be it its smaller area, less
 varied geography, or something else entirely. As it is not the
 primary focus of this paper, such investigation is left for future
 researchers to engage with.
@@ -203,6 +210,7 @@ researchers to engage with.
 	\caption{MAE and training time comparison between the fast
 		and medium AutoGluon presets. Lower is better.}
 	\label{fig:autoGluonPrice}
+	\vspace{-4mm}
 \end{figure} 
 As previously mentioned, during the ordinary experiments Gluon was, due to 
 time-constraints, run with its fastest preset. In this experiment, we
@@ -239,8 +247,9 @@ optimisation.
 	\centering
 	\includegraphics[width=\linewidth]{fig/Loss_Function_Summary_24h_Delta.png}
 	\caption{\gls{mae} comparison of neural network-based models
-		with \gls{mse} and \gls{mae}as loss functions. Lower is better.}
+		with \gls{mse} and \gls{mae} as loss functions. Lower is better.}
 	\label{fig:lossFunctionAlignment}
+	\vspace{-4mm}
 \end{figure} 
 Altering the loss function
 from the standard \gls{mse} to \gls{mae} had both a significant, and
@@ -253,7 +262,7 @@ there is slight improvement, the change in performance of
 the best models was typically less than one EUR/MWh. In a
 practical sense, this suggests that one may avoid many of the headaches that 
 come with choosing the right data constellation
-if one simply choses the correct loss function.
+if one simply chooses the correct loss function.
 
 \subsubsection{Midas Energy data}
 Lastly, the addition of- and substitution with Midas-prepared weather data to 

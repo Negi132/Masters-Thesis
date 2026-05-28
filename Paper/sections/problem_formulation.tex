@@ -8,7 +8,8 @@ which model architecture to use, which data sources to acquire
 and maintain, and over what horizon predictions remain useful.
 While prior work ~\cite{energyPricePredictionMLNeighbors, 
 energyPricePredictionUK, energyPricePredictionNovelDeepLearning} has addressed 
-each question in isolation, under specialized settings, the practical 
+each question in isolation, under specialised 
+settings, the practical 
 interactions between these choices remain under-explored. A company
 deploying such a system must weigh the recurring cost of
 data acquisition against the marginal predictive accuracy each
@@ -16,7 +17,8 @@ data source provides, often without clear guidance on whether
 comprehensive feature collection is justified.
 
 This paper investigates how the predictive performance of
-common machine learning architectures responds to systematic
+common machine learning architectures responds to 
+systematic
 variation in three settings: feature composition, forecasting
 horizon, and prediction target. Formally, the problem is
 structured as follows:
@@ -46,7 +48,8 @@ This is investigated through two sub-questions:
 Performance is measured using MAE in EUR/MWh, chosen
 for its interpretability and robustness to the frequent positive and negative 
 price spikes characteristic of the Danish
-electricity price market. A naive persistence baseline serves
+electricity market. A naive persistence baseline 
+serves
 as the non-ML reference point. Supplementary experiments
 address potential methodological pitfalls, including default
 hyperparameter assumptions, loss function alignment, weather
@@ -90,10 +93,10 @@ tree-based algorithms \cite[Sec. 2]{neuralNetworksMemory}.
 Gluon gets its own category, due to its 
 inherent differences to the other models, as it is 
 not a model itself, but an ensemble model creator. 
-Further, it utilizes decision trees, along with 
+Further, it utilises decision trees, along with 
 other base-models, for its forecasting ensemble, 
 but also exhibits longer training-times similarly 
-to the neural network based models.\\
+to the neural network-based models.\\
 
 To maintain a standardised baseline across the $1,052$ experiments performed 
 for this paper, as detailed in \autoref{sec:experiments}, all models were 
@@ -101,7 +104,8 @@ implemented using their default configurations, with no changes to
 hyperparameters or loss-functions. While it is acknowledged that neural 
 networks are highly sensitive to hyperparameter tuning and may underperform in 
 their default states compared to tree-based algorithms, performing exhaustive 
-hyperparameter optimization for every data constellation and horizon was 
+hyperparameter optimisation for every data 
+constellation and horizon was 
 computationally prohibitive. Consequently, the purpose of this paper is not 
 to compare peak model performance against one another. The goal is to 
 evaluate their relative performance by examining how the accuracy of 
@@ -120,7 +124,7 @@ evaluation metric would improve performance.
 Second, hyperparameter tuning via Optuna was 
 performed on the best, mean, and worst tree-based 
 feature sets at the 24h horizon to quantify the 
-improvement margin available through optimization. 
+improvement margin available through optimisation. 
 Third, AutoGluon was retrained at the 
 medium\_quality preset to determine whether the 
 computational constraints of the fastest setting 
@@ -129,15 +133,18 @@ these supplementary experiments are discussed in
 \autoref{sec:results}.
 
 \subsection{Prerequisite}\label{sec:prereq}
-As previously mentioned, the Danish electricity market is special in various 
+As previously mentioned, the Danish electricity 
+market is special in various 
 ways. These circumstances will be discussed here.
 \subsubsection{Daily market fixing}
 The most important thing to note about the Danish energy market is that the 
 hourly energy prices are fixed at noon via the day-ahead-market. At noon, Nord 
 Pool stops accepting bids and offers, processes all agreements and trades, and 
 then publishes the price based on this somewhere between 30-90 minutes later. 
-After this, energy producers, consumers, and traders, may utilize the 
-intra-day-market to minimize the fines and penalties that come with producing 
+After this, energy producers, consumers, and 
+traders, may utilise the 
+intra-day-market to minimise the fines and 
+penalties that come with producing 
 too much or too little depending on the actual demand. For the purposes of this 
 paper, we only consider the day-ahead-market.
 \subsubsection{Regions}

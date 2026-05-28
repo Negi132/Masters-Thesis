@@ -1,6 +1,6 @@
 \section{Conclusion \& Future Work}\label{sec:conclusion&future-works}
 \subsection{Conclusion}
-This paper presented a large-scale ablation study of shortterm electricity 
+This paper presented a large-scale ablation study of short-term electricity 
 price forecasting in Denmark, training 1,052
 models across eight architectures, 13 feature constellations,
 eight forecasting horizons, and two prediction targets. Rather
@@ -15,7 +15,7 @@ the lowest \gls{mae} overall and demonstrated the strongest
 performance at short horizons. Neural network architectures
 underperformed at the 24h horizon under default training
 settings. However, as horizons expanded this gap began
-minimizing, suggesting different architectural trade-offs apply at different 
+narrowing, suggesting different architectural trade-offs apply at different 
 timescales. Second, feature contribution analysis
 showed that historical price information was consistently the
 most impactful single feature group. When comparing the
@@ -92,22 +92,22 @@ The creation of a compound energy prediction model for the
 whole of Europe would likely be the most accurate, but is left
 for future, ambitious, researchers.
 \paragraph{Specialised neural networks} As stated within section II, 
-specialized neural networks have seen promising results
+specialised neural networks have seen promising results
 in various prediction scenarios. A deeper analysis into how
 such models may be adjusted for the Danish energy market
 may yield better performance than displayed in this paper.
 \paragraph{Including alternative electricity production prices}
 During this paper, conditions that impact the price and
-availability of fossil fuels for energy production was not
+availability of fossil fuels for energy production were not
 considered. One can imagine that factoring in the price of
 coal, oil, and natural gas would likely impact the price of
 energy as a whole.
-\paragraph{Investigation differing models on an individual weather
+\paragraph{Investigating differing models on an individual weather
 station basis} The supplementary experiment looking into the
-generalizability of prediction models into Danish energy region
-DK2 suggested generalizability, but results varied depending
+generalisability of prediction models into Danish energy region
+DK2 suggested generalisability, but results varied depending
 on target and architecture. This suggests that a full analysis
-of DK2 may be justified, and that further specialization of
+of DK2 may be justified, and that further specialisation of
 models, such as models targeted towards individual weather
 stations close to renewable energy sources, may yield even
 more accurate results.

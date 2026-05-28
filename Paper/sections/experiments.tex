@@ -59,8 +59,9 @@ information sequentially:
 	PriceLags, Time
 	\item AllFeatures
 \end{enumerate}
-These 13 experiments were run at horizons 0, 24, 48, 72, 96, 120, 144, and 168 
-hour for both targets absolute price and price delta. Note that price delta was 
+These 13 experiments were run at 0, 24, 48, 72, 96, 120, 144, and 168-hour 
+horizons for both, targets absolute price and price delta. Note that price 
+delta was 
 not used as a target for horizon 0 hour, as the delta between the current and 
 target would always be 0. The 24 hour horizon was run for all eight models, 
 with the subsequent horizons being run for all tree-based models, but only for 
@@ -83,7 +84,7 @@ a smaller number of additional, supplementary experiments
 discussed in \autoref{sec:expSupExp}.
 
 \subsection{Evaluation criteria}\label{sec:evaluationCriteria}
-While there are many different criteria one could chose to focus on when 
+While there are many different criteria one could choose to focus on when 
 comparing the performance of models, the one chosen for this paper is 
 \gls{mae}. The equation for calculating this metric is shown in 
 \autoref{eq:mae}.
@@ -99,7 +100,8 @@ the model was off. This metric was partly chosen due to the fact that it
 is comparable across various model architectures and target types. 
 Furthermore, it is expressed in the same unit as the target, making it 
 easily interpretable. Lastly, in a market with frequent price spikes, 
-both positive and negative, it does not penalize these extremes a 
+both positive and negative, it does not penalise 
+these extremes as 
 harshly as other criteria. Other considered metrics are discussed in 
 \cref{app:A:equations}, and all of the values, both for the chosen and 
 non-chosen metrics are available online in the GitHub repository. 
@@ -110,7 +112,8 @@ horizons to establish a non-ML reference point.
 \subsection{Experimental setup}
 All model training, validation, and testing were conducted locally on a machine 
 running Microsoft Windows 11 Home, equipped with a 13th Gen Intel Core 
-i7-13650HX processor and 16 GB of RAM, utilizing CPU computation exclusively. 
+i7-13650HX processor and 16 GB of RAM, utilising 
+CPU computation exclusively. 
 The exclusion of the GPU was evaluated on the basis that the libraries used for 
 training and validation of the neural network-based models were optimised for 
 the CPU. This means that while training time was a somewhat limiting factor for 
@@ -135,7 +138,7 @@ figure illustrating this process is shown in \autoref{fig:walkForward}.
 	\centering
 	\resizebox{\linewidth}{!}{%
 		\begin{tikzpicture}[
-			x=1cm, y=1cm,
+			x=1cm, y=0.8cm,
 			train/.style={rectangle, fill=darkgray, minimum height=0.5cm},
 			test/.style={rectangle, fill=orange, minimum height=0.5cm},
 			font=\sffamily
@@ -188,10 +191,11 @@ figure illustrating this process is shown in \autoref{fig:walkForward}.
 		a model through utilisation of walk-forward expanding-window
 		validation.}
 	\label{fig:walkForward}
+	\vspace{-4mm}
 \end{figure}
 While this approach of essentially retraining the model 12 times per
-year, for every year in the training data leading to about 100
-validation steps per model, and is therefore computationally
+year for every year in the training data, leading to about 100
+validation steps per model, is therefore computationally
 expensive, it is the generally preferred method of training when
 dealing with time-series data ~\cite{tashmanWalkForward}. This approach was 
 chosen over standard k-fold cross-validation, which randomly partitions
@@ -223,7 +227,7 @@ each architecture at each horizon. Permutation importance is
 an inspection technique applied by systematically dropping
 each column individually and measuring the impact on the
 evaluation criteria. For this paper, it was deemed that if
-the dropping of a column resulting in even a drop of 0,01
+the dropping of a column resulted in even a drop of 0,01
 EUR/MWh, then it would be allowed to stay. This method
 is an extensively rigorous, though computationally expensive,
 approach to feature importance. The results of these pruned
@@ -238,7 +242,8 @@ optimised for \gls{mse}, five supplementary experiments were conducted:
 network model, as identified from the 24h baseline results, was
 retrained using \gls{mae} loss instead of \gls{mse} to evaluate whether
 loss-metric alignment would improve performance.
-\paragraph{Hyperparameter tuning} Optuna-based hyperparameter optimization 
+\paragraph{Hyperparameter tuning} Optuna-based 
+hyperparameter optimisation 
 was applied to tree models on the best, mean, and worst performing feature sets 
 at 24h for both targets, with 30 trials per configuration, to gauge the 
 improvement such tuning may yield.
@@ -249,16 +254,17 @@ second time limit. This was done on the best feature set at the
 preset, with a six second time limit, that was used on the
 ordinary experiments
 \paragraph{Midas Energy data} Internally used weather features
-from Midas Energy were be merged with the master matrix
+from Midas Energy were merged with the master matrix
 and tested on all models at the 24h-horizon and on the tree-based models at all 
 horizons, to compare against the raw \gls{dmi}
 station-level aggregation. Additionally, it was also investigated
 how substituting the general weather data used in the paper
 for the Midas data would impact predictive performance
-\paragraph{DK2 generalization check} The best tree-based and
+\paragraph{DK2 generalisation check} The best 
+tree-based and
 neural network-based models were trained on DK2 data at a
 24h-horizon across best, mean, and worst feature sets to verify
-that DK1 findings generalize regionally.\\
+that DK1 findings generalise regionally.\\
 The results for all of these supplementary experiments may be
 found in \autoref{sec:resultsSupExp}, along with a comparison to a naive
 baseline, to verify whether a naive approach may compete with

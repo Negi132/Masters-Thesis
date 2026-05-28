@@ -21,19 +21,23 @@ Additionally, \gls{dmi} provides two different versions of meteorological
 measurement data, one 
 version that is purely raw data, and one that has been processed for quality 
 control by \gls{dmi} employees. The quality controlled version of the data was 
-chosen for this paper. The utilized data has a date range from 00:00:00 - 
+chosen for this paper. The utilised data has a 
+date range from 00:00:00 - 
 01/01/2015 until 00:00:00 - 
 03/25/2026, the end of the range signifies the date the download was performed. 
 Downloading the data was preferred to avoid multiple API calls, as there were a 
 limit of $300.000$ measurements accessible through the API in each call. If one 
-wishes to develop a prediction model utilizing this data, and update it during 
+wishes to develop a prediction model utilising 
+this data, and update it during 
 deployment, API calls would be the preferred method, to get limited daily data 
 amounts. 
 
 \subsubsection{Energy production \& consumption data}
 The data regarding energy \gls{pc} originates from 
-\gls{en}. They are a subsidiary of the Danish government and manages the Danish 
-energy grid. The also publish a variety of data regarding the Danish energy 
+\gls{en}. They are a subsidiary of the Danish 
+government and manage the Danish 
+energy grid. They also publish a variety of data 
+regarding the Danish energy 
 grid, again, through both API and downloadable files. For the same reason as 
 with \gls{dmi}, downloadable files were chosen. The \gls{pc} data used for this 
 paper is acquired from the "Production and Consumption - Settlement" 
@@ -55,7 +59,8 @@ simply discard prices that are not exactly hourly in the newer dataset.
 \subsubsection{Midas Energy data}
 Midas Energy has also provided weather data in the format they use for their 
 own prediction models. This is, in simple terms, a processed and generalised 
-version of the \gls{dmi} data. Two test were performed to investigate the 
+version of the \gls{dmi} data. Two tests were 
+performed to investigate the 
 impact of their data, compared to the \gls{dmi} data. The
 experiments consisted of adding the Midas data to an already constructed data 
 set, and the other consisted of substituting the weather data constructed for 
@@ -80,7 +85,8 @@ quality control status, etc. An example of all of these weather features can be
 seen in \cref{app:C} 
 \autoref{tab:snapshot-weather-data}, both pre and 
 post preprocessing. The features 
-related to internal DMI quality control do not contain any metrological and are 
+related to internal DMI quality control do not 
+contain any meteorological information and are 
 therefore
 discarded. Further, there exists four different timestamps within each entry. 
 For the purposes of this paper, we utilise the 'from' timestamp as the main 
@@ -101,7 +107,8 @@ validation of the preprocessed weather data
 was performed, in order to ensure data quality. Features that did
 not have data for the entire period were also entirely removed.
 This means that if a type of sensor was decommissioned during
-the decade of training data its feature data would be entirely
+the decade of training data, its feature data 
+would be entirely
 excluded from training, to enable expanding-window cross-validation, as will be 
 detailed in \autoref{sec:experiments}.
 
@@ -124,7 +131,8 @@ an energy exchange of zero, they were explicitly encoded as
 such. This ensures the models accurately interpret periods of
 national grid isolation, without the need for interpolation. Pre-and 
 post-preprocessing examples can be found in 
-\cref{app:C} \autoref{tab:snapshot-pc-data}.
+\cref{app:C} 
+\autoref{tab:snapshot-production-and-consumption-data}.
 
 \subsubsection{Price}
 The price data was divided into two publications,
@@ -138,7 +146,8 @@ examples can be found in \cref{app:C}
 \autoref{tab:snapshot-price-data}. 
 
 \subsubsection{General preprocessing}
-Additionally, general preprocessing was performed across all datasets, or to 
+Additionally, general preprocessing was performed 
+across all datasets, to 
 ensure consistent
 UTC time formatting, also removing the issue of daylight
 savings time anomalies. Lastly, all datasets were sorted into
@@ -163,7 +172,8 @@ them interpret consumption patterns, e.g. the differing patterns
 present during weekdays and weekends. To enable detection of
 such patterns further, we also encode these integers as Sine and
 Cosine waves, creating a scaled version of them, that may be
-more useful to certain model types. Utilizing both mitigates the
+more useful to certain model types. Utilising both 
+mitigates the
 natural symmetrical ambiguity that would be present otherwise,
 mapping each time step to a unique coordinate on a unit circle.
 The waves were created using the following formulae \ref{eq:sine_enc} 
@@ -176,9 +186,9 @@ and \ref{eq:cos_enc}:
 where $x$ is the integer being encoded, and $\max(x)$ is the maximum value of 
 that specific period e.g., 24 for the hour of the day, or 365 for the day of 
 the year. Notably, day of month was deliberately excluded as a feature, 
-because of its variable period length, due to not all months contain the same 
-number of days, would introduce gaps at the end of shorter months that cannot 
-be cleanly resolved with a static denominator. A dynamic denominator, adjusting 
+because of its variable period length: since not all months contain the same 
+number of days, a static denominator would introduce gaps at the end of shorter 
+months that cannot be cleanly resolved. A dynamic denominator, adjusting 
 $\max(x)$ to reflect the actual number of days in each specific month, would 
 resolve this, however, the same information is implicitly captured by the 
 combination of the day of year and month encodings already present.
@@ -187,13 +197,16 @@ combination of the day of year and month encodings already present.
 Since we will be training tree-based
 models, which does not possess any inherent memory capabilities, we introduce 
 T-Minus data, or lagging data, which are
-essentially just copies of earlier data at various horizons. All
+essentially just copies of earlier data at various 
+horizons. All
 weather-related measurements, as well as \gls{pc} related values,
 have been copied and inserted 24-hours later, giving the model
-inherent access to yesterdays weather and consumption at this
+inherent access to yesterday's weather and 
+consumption at this
 exact hour, in order to predict the price for the current hour.
 Additionally, for the price data specifically, t-minus data was
-included for the previous 24-hour, 48-hour, and 168-hour, as
+included for the previous 24-hour, 48-hour, and 
+168-hour, as
 previous prices were deemed especially relevant for predicting
 the current price.
 \paragraph{Targets}
@@ -234,7 +247,8 @@ For remaining missing values, three steps were performed to all columns. First,
 interpolation is applied to gaps of up to 12 consecutive hours, to fill in 
 smaller gaps. Second, forward and backward filling are applied as a 
 supplementary pass, also capped at 12 hours each, to handle edge cases where 
-interpolation is insufficient, due to a one of the sides of the gap being open. 
+interpolation is insufficient, due to one of the 
+sides of the gap being open. 
 Any values still missing after both passes, implying a consecutive gap 
 exceeding 24 hours, are filled using the column mean as a last resort.
 
@@ -270,7 +284,8 @@ models may learn to route predictions away from relying on such criteria when
 other features may be more reliable. Neural network-based 
 models can achieve a similar effect through their attention and gating 
 mechanisms without explicit flags, however, the flags are nonetheless present 
-within the master matrix for all models types, as they carry no cost for models 
+within the master matrix for all model types, as 
+they carry no cost for models 
 that do not benefit from them.\\
 
 \subsubsection{Midas Energy data}

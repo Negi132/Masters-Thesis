@@ -1,6 +1,6 @@
 \subsection{Additional evaluation criteria}\label{app:A}
 \subsubsection*{Equations}\label{app:A:equations}
-In the following equations $y_t$ and $\hat{y}_t$ is the ground truth target 
+In the following equations $y_t$ and $\hat{y}_t$ are the ground truth target 
 value at prediction time and the predicted value at prediction time 
 respectively. \\
 \Cref{eq:rmse} depicts how to calculate the \gls{rmse}.
@@ -22,7 +22,7 @@ similarities and its easier interpretability. \\
 \end{equation}
 This metric can be viewed in the same sense as an accuracy score in binary 
 classification. As is the case with accuracy in such scenarios, it gives you a 
-fair wholistic view of the models, but may be ineffective in capturing the 
+fair holistic view of the models, but may be ineffective in capturing the 
 intricacies of what you are actually aiming for, and therefore this metric was 
 not chosen. \\
 
@@ -45,7 +45,7 @@ metric may become unstable, due to the low numbers involved. \\
 This metric is similar to \gls{wmape}, however it treats positive and negative 
 errors as equally problematic, which is good in the case of price prediction, 
 since both high-balling and low-balling the price of energy is problematic when 
-trading energy. However, it has the some problem as \gls{wmape}, of becoming 
+trading energy. However, it has the same problem as \gls{wmape}, of becoming 
 unstable during low-number periods. \\
 
 \Cref{eq:mda} depicts how to calculate the \gls{mda}.
@@ -55,8 +55,8 @@ unstable during low-number periods. \\
 	\label{eq:mda}
 \end{equation}
 This metric signifies what percentage of the time the model was correct in the 
-direction of the next price, meaning, did the price go up, or did the price go 
-down. This is useful for energy traders, however, directionality itself is not 
+direction of the next price, meaning whether the price went up or down. This is 
+useful for energy traders, however, directionality itself is not 
 of a measurable magnitude, and does not align with the premise of this 
 comparison of how data constellations and horizons impact model behaviour, 
 therefore, this metric was not chosen for this paper. 
