@@ -1,2 +1,42 @@
 \onecolumn
-\subsection{Performance}\label{app:C}
+\subsection{Tables}\label{app:C}
+A list of the performed experiments with their numberings is included here as a 
+reminder so that one does not have to refer back to 
+\autoref{sec:experimentSuite}.
+\begin{enumerate}
+	\item Weather, Time
+	\item Weather, WeatherLags, Time
+	\item Weather, PriceLags, Time
+	\item Weather, WeatherLags, PriceLags, Time
+	\item Weather, Grid, GridExchange, Time
+	\item Weather, WeatherLags, Grid, 
+	GridExchange, Time
+	\item Weather, Grid, GridExchange, PriceLags, 
+	Time
+	\item Weather, WeatherLags, Grid, 
+	GridExchange, PriceLags, Time
+	\item Weather, Grid, GridExchange, GridLags, 
+	GridExchangeLags, Time
+	\item Weather, WeatherLags, Grid, 
+	GridExchange, GridLags,	GridExchangeLags, 
+	Time
+	\item Weather, Grid, GridExchange, GridLags, 
+	GridExchangeLags, PriceLags, Time
+	\item Weather, WeatherLags, Grid, 
+	GridExchange, GridLags, GridExchangeLags, 
+	PriceLags, Time
+	\item AllFeatures
+\end{enumerate}
+
+\input{../Code/Plotting/Tables/best_feature_set_Delta.tex}
+\input{../Code/Plotting/Tables/best_feature_set_Price.tex}
+
+\begin{landscape}
+	\input{../Code/Plotting/Tables/pruning_dropped_Delta.tex}
+	\input{../Code/Plotting/Tables/pruning_dropped_Price.tex}
+\end{landscape}
+
+\input{../Code/Plotting/Tables/data_snapshot_weather.tex}
+\input{../Code/Plotting/Tables/data_snapshot_pc.tex}
+\input{../Code/Plotting/Tables/data_snapshot_price.tex}
+\input{../Code/Plotting/Tables/data_snapshot_master.tex}

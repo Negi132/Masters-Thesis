@@ -1,9 +1,10 @@
 \section{Experiments} \label{sec:experiments}
 This section contains details of all the performed experiments, as well as 
 other considerations related thereto.
-\subsection{Experiment Suite}
+\subsection{Experiment suite}\label{sec:experimentSuite}
 All models were trained over data from an 11 year time-frame, from January 2015 
-to mid-March 2026. They were also trained in a walk-forward sliding-window with 
+to mid-March 2026. They were also trained in a walk-forward expanding-window 
+with 
 an initial training window of two years, then a test window of 30 days, as well 
 as a step size of 30 days. As previously mentioned, data-groups were 
 constructed in 
@@ -77,9 +78,11 @@ factor of 2 in both terms represents the two prediction targets. The reduced
 number of neural network-based experiments was determined by their 
 computational constraints, with the 3 selected feature sets identified as the 
 best, mean, and worst performers based on their 24h horizon results. This 
-results in a total of $780 + 272 = 1052$ models trained.
+results in a total of $780 + 272 = 1052$ models trained, with
+a smaller number of additional, supplementary experiments
+discussed in \autoref{sec:expSupExp}.
 
-\subsection{Evaluation Criteria}\label{sec:evaluationCriteria}
+\subsection{Evaluation criteria}\label{sec:evaluationCriteria}
 While there are many different criteria one could chose to focus on when 
 comparing the performance of models, the one chosen for this paper is 
 \gls{mae}. The equation for calculating this metric is shown in 
@@ -104,7 +107,7 @@ Additionally, a naive baseline, that simply reuses yesterday's price,
 calculated as follows: $\hat{y}_t = y_{t-24}$ was computed across all 
 horizons to establish a non-ML reference point. 
 
-\subsection{Experimental Setup}
+\subsection{Experimental setup}
 All model training, validation, and testing were conducted locally on a machine 
 running Microsoft Windows 11 Home, equipped with a 13th Gen Intel Core 
 i7-13650HX processor and 16 GB of RAM, utilizing CPU computation exclusively. 
@@ -115,36 +118,93 @@ the neural network-based models in this paper, this aspect may be mitigated
 with different training approaches and hardware, however, the performance 
 metrics, aside from training time, should be unaffected.
 
-\subsection{Training, Testing \& Validation}\label{sec:split_protocol}
-Model evaluation in this paper is performed using walk-forward 
-validation with an expanding training window. This approach was 
-chosen over standard k-fold cross-validation, which randomly 
-partitions data into folds without regard for temporal ordering. 
-Applying k-fold to time-series data would allow a model to be 
-trained on future observations and tested on past ones, 
-constituting a form of data leakage that would produce 
-optimistically biased results. Walk-forward validation avoids 
-this by strictly preserving the temporal ordering of time-series 
-data. The model is always trained exclusively on historical 
-data and evaluated on data it has never seen.
+\subsection{Training, testing \& validation}\label{sec:split_protocol}
+Model evaluation in this paper is performed using walk-forward validation with 
+an expanding training window. The procedure works as follows: An initial 
+training window covering January 2015 through December 2016 is used to train
+each model for the first time. The model is then evaluated on
+the immediately following 30-day test window. After evaluation,
+the training window expands to include those 30 days, and
+the test window slides forward to the next 30-day period.
+This process repeats until the full dataset is exhausted. The
+expanding window design ensures that all available historical
+data is utilised at each step, while the fixed 30-day test window
+provides a consistent evaluation unit across all iterations. A
+figure illustrating this process is shown in \autoref{fig:walkForward}. 
+\begin{figure}[t]
+	\centering
+	\resizebox{\linewidth}{!}{%
+		\begin{tikzpicture}[
+			x=1cm, y=1cm,
+			train/.style={rectangle, fill=darkgray, minimum height=0.5cm},
+			test/.style={rectangle, fill=orange, minimum height=0.5cm},
+			font=\sffamily
+			]
+			
+			% Axis
+			\draw[->, thick, >=stealth] (0, 0.5) -- (9.5, 0.5) node[above left, 
+			yshift=2pt] {\textbf{Present}};
+			\node[above right, yshift=2pt] at (0, 0.5) {\textbf{Time}};
+			
+			% Pass 1
+			\node[left] at (0, -0.5) {\textbf{Pass 1}};
+			\node[train, minimum width=3.5cm, anchor=west] at (0.2, -0.5) {};
+			\node[test, minimum width=1.5cm, anchor=west] at (3.8, -0.5) {};
+			
+			% Pass 2
+			\node[left] at (0, -1.2) {\textbf{Pass 2}};
+			\node[train, minimum width=4.2cm, anchor=west] at (0.2, -1.2) {};
+			\node[test, minimum width=1.5cm, anchor=west] at (4.5, -1.2) {};
+			
+			% Pass 3
+			\node[left] at (0, -1.9) {\textbf{Pass 3}};
+			\node[train, minimum width=4.9cm, anchor=west] at (0.2, -1.9) {};
+			\node[test, minimum width=1.5cm, anchor=west] at (5.2, -1.9) {};
+			
+			% Pass 4
+			\node[left] at (0, -2.6) {\textbf{Pass 4}};
+			\node[train, minimum width=5.6cm, anchor=west] at (0.2, -2.6) {};
+			\node[test, minimum width=1.5cm, anchor=west] at (5.9, -2.6) {};
+			
+			% Pass 5
+			\node[left] at (0, -3.3) {\textbf{Pass 5}};
+			\node[train, minimum width=6.3cm, anchor=west] at (0.2, -3.3) {};
+			\node[test, minimum width=1.5cm, anchor=west] at (6.6, -3.3) {};
+			
+			% Available Historical Time Series Base Bar
+			\node[rectangle, fill=gray!80, minimum width=9cm, minimum 
+			height=0.4cm, anchor=west] at (0.2, -4.2) 
+			{\color{white}\textbf{Available Historical Time Series}};
+			
+			% Legend
+			\node[train, minimum width=0.8cm, anchor=west, 
+			label=right:Training] at (2.5, -5.2) {};
+			\node[test, minimum width=0.8cm, anchor=west, 
+			label=right:Forecasting] at (5.0, -5.2) {};
+			
+		\end{tikzpicture}%
+	}
+	\caption{Figure visualising the method of training and validating
+		a model through utilisation of walk-forward expanding-window
+		validation.}
+	\label{fig:walkForward}
+\end{figure}
+While this approach of essentially retraining the model 12 times per
+year, for every year in the training data leading to about 100
+validation steps per model, and is therefore computationally
+expensive, it is the generally preferred method of training when
+dealing with time-series data ~\cite{tashmanWalkForward}. This approach was 
+chosen over standard k-fold cross-validation, which randomly partitions
+data into folds without regard for temporal ordering. Applying
+k-fold to time-series data would allow a model to be trained on
+future observations and tested on past ones, constituting a form
+of data leakage that would produce optimistically biased results.
+Walk-forward validation avoids this by strictly preserving the
+temporal ordering of time-series data. The model is always
+trained exclusively on historical data and evaluated on data it
+has never seen. 
 
-The procedure works as follows: An initial training window 
-covering January 2015 through December 2016 is used to train 
-each model for the first time. The model is then evaluated on 
-the immediately following 30-day test window. After evaluation, 
-the training window expands to include those 30 days, and the 
-test window slides forward to the next 30-day period. This 
-process repeats until the full dataset is exhausted. The 
-expanding window design ensures that all available historical 
-data is utilised at each step, while the fixed 30-day test 
-window provides a consistent evaluation unit across all 
-iterations. A figure illustrating this process is shown in 
-Figure X. While this approach of essentially retraining the model 12 times per 
-year, for every year in the training data, is computationally expensive, it is 
-the generally preferred method of training when dealing with time-series 
-data\hltodo{.}{needs source}. 
-
-\subsection{Data Leakage Prevention}
+\subsection{Data leakage prevention}
 The perceptive reader may have noticed that the master matrix dataset retains 
 the raw spot price and all target columns to serve as a shared foundation for 
 all experiments. However, feeding this matrix directly to a model would 
@@ -155,43 +215,51 @@ from the feature set. Specifically, the active prediction target is removed
 from the features, the raw spot price is excluded except when included as a 
 lagged historical feature, and the concurrent price delta columns are removed. 
 
-\subsection{Feature Importance}
-After training various constellations and horizons of many of the models, 
-feature importance was performed on the best performing models of each 
-architecture of each horizon. Feature importance was determined by performing 
-permutation importance, a method of systematically dropping each column 
-individually and measuring the impact on your evaluation criteria. For this 
-paper, it was deemed that if the dropping of a column resulting in even a drop 
-of 0,01 EUR/MWh, then it would be allowed to stay. This method is an 
-extensively rigorous, though computationally expensive, approach to feature 
-importance. The results of these pruned models will be discussed in 
-\autoref{sec:results}.
+\subsection{Feature importance}
+After training various constellations and horizons of many
+of the models, we analysed the feature importance through
+permutation importance on the best performing models of
+each architecture at each horizon. Permutation importance is
+an inspection technique applied by systematically dropping
+each column individually and measuring the impact on the
+evaluation criteria. For this paper, it was deemed that if
+the dropping of a column resulting in even a drop of 0,01
+EUR/MWh, then it would be allowed to stay. This method
+is an extensively rigorous, though computationally expensive,
+approach to feature importance. The results of these pruned
+models will be discussed in \autoref{sec:results}.
 
-\subsection{Supplementary Experiments}
-To address generalisability and the limitations that come with running 
-the models on their default settings i.e. with no hyperparameter tuning 
-and with default loss functions, five supplementary experiments will be 
-conducted:
-\paragraph{Loss Function Alignment}: The best-performing neural network 
-model, as will be identified from 24h baseline results, will be 
-retrained using \gls{mae} loss instead of \gls{mse} to evaluate whether 
+\subsection{Supplementary experiments}\label{sec:expSupExp}
+To address generalisability and the limitations that come
+with running the models on their default settings i.e. with no
+hyperparameter tuning and with library-default loss functions,
+optimised for \gls{mse}, five supplementary experiments were conducted:
+\paragraph{Loss function alignment} The best-performing neural
+network model, as identified from the 24h baseline results, was
+retrained using \gls{mae} loss instead of \gls{mse} to evaluate whether
 loss-metric alignment would improve performance.
-\paragraph{Hyperparameter Tuning}: Optuna-based hyperparameter 
-optimization will be applied to tree models on the best, mean, and worst 
-performing feature sets at 24h for both targets, with 30 trials per 
-configuration, to gauge the improvement such tuning may yield.
-\paragraph{AutoGluon Quality Escalation}: AutoGluon will be allowed to 
-train using the medium\_quality preset and a 180 second time limit. This 
-will be done on the best feature set at 24h, and is to be compared 
-against the baseline fastest preset, with a six second time limit, that 
-was used on the ordinary experiments.
-\paragraph{Midas Energy Data}: Internally used weather features from 
-Midas Energy will be merged with the master matrix and tested on all 
-models at the 24h-horizon and on the tree-based models at all horizons, 
-to compare against the raw DMI station-level aggregation.
-\paragraph{DK2 Generalization Check}: The best tree and best neural 
-network models will be trained on DK2 data at a 24h-horizon across best, 
-mean, and worst feature sets to verify that DK1 findings generalize 
-regionally.\\
-The results for all of these supplementary experiments may be found in 
-section \hltodo{reference}{.}
+\paragraph{Hyperparameter tuning} Optuna-based hyperparameter optimization 
+was applied to tree models on the best, mean, and worst performing feature sets 
+at 24h for both targets, with 30 trials per configuration, to gauge the 
+improvement such tuning may yield.
+\paragraph{AutoGluon quality escalation} AutoGluon was allowed to train using 
+the medium\_quality preset and a 180
+second time limit. This was done on the best feature set at the
+24h-horizon, and was compared against the baseline fastest
+preset, with a six second time limit, that was used on the
+ordinary experiments
+\paragraph{Midas Energy data} Internally used weather features
+from Midas Energy were be merged with the master matrix
+and tested on all models at the 24h-horizon and on the tree-based models at all 
+horizons, to compare against the raw \gls{dmi}
+station-level aggregation. Additionally, it was also investigated
+how substituting the general weather data used in the paper
+for the Midas data would impact predictive performance
+\paragraph{DK2 generalization check} The best tree-based and
+neural network-based models were trained on DK2 data at a
+24h-horizon across best, mean, and worst feature sets to verify
+that DK1 findings generalize regionally.\\
+The results for all of these supplementary experiments may be
+found in \autoref{sec:resultsSupExp}, along with a comparison to a naive
+baseline, to verify whether a naive approach may compete with
+machine learning architectures for this task.

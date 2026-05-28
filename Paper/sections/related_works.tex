@@ -1,5 +1,118 @@
 \section{Related Works} \label{sec:related-works}
-Related works goes here.
+Short-term electricity price forecasting has been studied
+extensively over the past decade, with approaches ranging from
+classical statistical models to recent deep-learning architectures.
+This section surveys literature most relevant to this paper,
+organised around three observations, that prior work tends to
+focus on:
+\begin{enumerate}
+	\item Single-model studies with fixed feature sets.
+	\item Multiple-model comparisons operating on single feature
+	configurations.
+	\item Specialised architectures not evaluated on the Danish
+	energy market.
+\end{enumerate}
+The lack of systematic ablation across feature composition, model architecture, 
+and forecasting horizon, particularly for the Danish day-ahead market, is the 
+gap this paper seeks to cover.
+\subsection{Single-architecture studies with feature-rich inputs}
+Various studies train a single model architecture, often with a
+fixed feature set chosen for that architecture, and report performance on one 
+market. Tschora et al. ~\cite{energyPricePredictionMLNeighbors} forecast 
+day-ahead prices in several European markets using gradient boosting trees
+on a feature set that includes neighbouring-country prices and
+applies SHAP (SHapley Additive exPlanations) to identify the
+most predictive inputs. Their study illustrates a common pattern
+in the literature, where the results of one, or few, architectures,
+typically trained with a single, carefully curated feature set,
+are reported as a benchmark rather than as one point within a
+sensitivity space. Ziel and Steinert ~\cite{forecastInput} take a related 
+approach for mid- and long-term horizons, building a probabilistic model
+that connects prices to fundamentals such as temperature,
+wind, solar production, load, and renewable penetration. While
+these studies establish that market-fundamental features carry
+useful information for price prediction, they either primarily
+consider the price fluctuations for neighbouring countries, or
+do not at all isolate the marginal contribution of each feature
+group for price prediction. Laitsos et al. 
+~\cite{energyPricePredictionNovelDeepLearning} represent the
+deep-learning strand of this literature, applying attention-based
+and neural network-ensemble architectures to short-term price
+forecasting. The reported results are strong exhibiting \gls{mape} values in 
+the 6\% range,
+but the design space is narrow, limiting themselves to only
+examining neural network-based architectures on a fixed feature
+configuration. The implicit question for a practitioner reading
+such papers is whether the architectural sophistication, the
+feature engineering, or some interaction of the two drives the
+reported accuracy. None of these single or few-model studies
+attempt to disentangle the two.
 
-\subsection{Separated by subsections}
-As stated in title.
+\subsection{Cross-architecture comparisons on fixed feature sets}
+A complementary strand of work compares multiple models
+on a common dataset. Mishra et al. ~\cite{energyPricePredictionUK} compare 
+ARIMA, Prophet, XGBoost, CNN, RNN, and LSTM on UK half-hourly
+day-ahead prices using primarily market variables, including
+gas prices and energy demand. This is closer in spirit to
+this paper in that several model families are evaluated under
+identical conditions, but the feature set itself is held constant
+across all models. The reader learns which architecture is best
+for that particular feature configuration but not whether that
+configuration is optimal, whether a simpler one would suffice,
+or whether different architectures prefer different feature sets.
+These are all questions that this paper addresses directly through
+its ablation methodology. El-Azab et al. ~\cite{consumptionPatterns} take a 
+step closer to ablation methodology by comparing forecasts with and without
+external factors such as temperature and calendar variables,
+finding that such inputs improve accuracy. However, the
+analysis remains binary, only investigating with versus without
+external factors, rather than a structured progression across
+feature groups. The granularity of this paper's 13-experiment
+progression, applied across eight forecasting horizons, is
+intended to fill exactly this gap. For a broader view of the
+model-comparison literature, Forootan et al. ~\cite{energySystemsReview} 
+provide a review of machine learning and deep learning applications in
+energy systems, surveying architectural choices across multiple
+forecasting tasks. Such reviews tend to confirm the pattern
+observed in the individual papers: most studies specialise in
+optimisations within a chosen architecture.
+
+\subsection{Specialised and hybrid architectures}
+A separate strand of the literature focuses on hybrid and
+decomposition-based methods, in which the input signal is
+transformed before being passed to a learning algorithm. Khan
+et al. ~\cite{eemdElmPricePrediction} combine Empirical Ensemble Mode 
+Decomposition with an Extreme Learning Machine for short-term price
+forecasting, exemplifying a class of methods that prioritises
+signal-processing sophistication over feature engineering. These
+approaches tend to report strong accuracy on specific markets
+but introduce methodological complexity that may be difficult
+to justify operationally when simpler models with appropriate
+feature selection may perform comparably. The present paper
+deliberately restricts its scope to general-purpose, off-the-shelf model 
+architectures specifically to characterise what is
+achievable without such specialisation, providing a baseline
+against which more elaborate architectures could be compared
+in future work.
+
+\subsection{The gap addressed by this paper}
+The literature surveyed above shares three recurring limitations when viewed 
+through the lens of practical deployment.
+First, results are typically reported for a single feature configuration, 
+leaving the question of which features actually matter
+unanswered. Second, comparisons between model families,
+where they exist, do not also vary feature availability, so it is
+unclear whether the relative ranking of architectures is robust to
+changes in input data. Third, to the best of our knowledge, no
+published study has systematically varied feature composition,
+model architecture, and forecasting horizon simultaneously on
+the Danish day-ahead market. This is a notable gap given the
+market's structural profile, which combines several features
+known to complicate price prediction: a small grid with
+heavy wind dependence, division into two bidding zones,
+and significant cross-border electricity exchange. The present
+paper addresses this gap through a 1,052-model ablation
+study evaluating eight model architectures across 13 feature
+constellations and eight horizons, with two prediction targets,
+under default configurations that isolate feature and architecture
+effects from hyperparameter tuning.

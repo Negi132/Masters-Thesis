@@ -1,16 +1,119 @@
-\section{Conclusion \& Future Works}\label{sec:conclusion&future-works}
+\section{Conclusion \& Future Work}\label{sec:conclusion&future-works}
 \subsection{Conclusion}
+This paper presented a large-scale ablation study of shortterm electricity 
+price forecasting in Denmark, training 1,052
+models across eight architectures, 13 feature constellations,
+eight forecasting horizons, and two prediction targets. Rather
+than optimising for peak performance, the study examined how
+default-configured models respond to systematic variation in
+training conditions, with the practical aim of identifying which
+data sources contribute meaningfully to predictive accuracy.
 
-\subsection{Future Work}\label{sec:futurework}
-To further investigate this topic, one could 
-start with the following subjects:
+Two primary findings emerge from the experimental results.
+First, tree-based models, in particular CatBoost, achieved
+the lowest \gls{mae} overall and demonstrated the strongest
+performance at short horizons. Neural network architectures
+underperformed at the 24h horizon under default training
+settings. However, as horizons expanded this gap began
+minimizing, suggesting different architectural trade-offs apply at different 
+timescales. Second, feature contribution analysis
+showed that historical price information was consistently the
+most impactful single feature group. When comparing the
+general performance of models in experiments with the pricing
+group to ones without it, when targeting absolute price, no
+experiment that included the price group performed worse than
+any experiment without it. Results when targeting the price
+delta are similar, where comparing an experiment to itself with
+and without the price group, the experiment including the price
+group almost always performed better. By contrast, adding
+lagged grid features beyond the immediate present produced
+a decrease in performance, indicating that the consumption
+patterns of previous days do not assist models in predicting
+the price in the future.
 
-\paragraph{Analysis of neighbouring countries}
+The supplementary experiments validated several methodological choices made in 
+the main study. Loss function
+alignment produced substantial improvements for poorly-performing feature sets 
+but only marginal gains for the best-performing ones, suggesting that loss 
+alignment is a useful
+safety net against suboptimal feature selection. Optuna-based
+walk-forward hyperparameter tuning displayed substantial improvements of 
+22-33\% across all tree-based models and both
+prediction targets. This suggests that default hyperparameters
+are sub-optimal and that targeted hyperparameter tuning offers a
+reliable path to improvement. The substitution of \gls{dmi} weather
+data with Midas-provided weather, under fair date-matched
+comparison, showed no practical difference in model performance across 
+architectures and targets. Adding Midas data to
+already existing datasets showed varied results, depending on
+target, supporting the broader observation that larger quantities
+of data do not directly result in better performance. The result
+suggests that the choice of weather provider may be flexible,
+and that comprehensive data preparation by external providers
+does not yield a measurable advantage over the per-station
+aggregation methodology used in this paper.
 
-\paragraph{Specialised neural networks}
+Regarding the central question of how much data is required,
+the results support a pragmatic conclusion: a forecasting system
+can achieve competitive accuracy with weather, time, and
+historical price features alone, without the need for additional
+data gathering and preprocessing. The marginal accuracy gains
+from comprehensive feature collection may not, depending on
+the particular use-case, justify the corresponding increase in
+data acquisition and maintenance complexity. This finding has
+direct practical implications for any organisation considering
+deployment of such a system in the Danish electricity market.
 
-\paragraph{Including alternative electricity 
-production prices}
+The limitations of this study should be acknowledged.
+All models were trained with default hyperparameters under
+fixed walk-forward validation settings, and the supplementary
+experiments suggest that targeted tuning could shift the relative
+performance of specific architectures. The neural network
+experiments were necessarily constrained in coverage due to
+computational costs, limiting the strength of architecture-family
+comparisons at longer horizons. Finally, all findings are specific
+to the Danish day-ahead market, particularly for energy region
+DK1. The performed cross-region comparison experiments
+between DK1 and DK2 suggests reasonable robustness, but
+extension to other electricity markets would require further
+validation.
 
-\paragraph{Investigation differing models on an 
-individual weather station basis}
+\subsection{Future work}\label{sec:futurework}
+To further investigate this topic, one could start with the
+following subjects:
+\paragraph{Analysis of neighbouring countries} Due to the
+interconnectedness of the European energy market, being able
+to accurately predict the production and consumption of neighbouring countries 
+would likely improve the accuracy of models
+for individual countries. However, doing so poses the problem
+of gathering data from multiple different governments and
+institutions with varying reporting standards and requirements.
+The creation of a compound energy prediction model for the
+whole of Europe would likely be the most accurate, but is left
+for future, ambitious, researchers.
+\paragraph{Specialised neural networks} As stated within section II, 
+specialized neural networks have seen promising results
+in various prediction scenarios. A deeper analysis into how
+such models may be adjusted for the Danish energy market
+may yield better performance than displayed in this paper.
+\paragraph{Including alternative electricity production prices}
+During this paper, conditions that impact the price and
+availability of fossil fuels for energy production was not
+considered. One can imagine that factoring in the price of
+coal, oil, and natural gas would likely impact the price of
+energy as a whole.
+\paragraph{Investigation differing models on an individual weather
+station basis} The supplementary experiment looking into the
+generalizability of prediction models into Danish energy region
+DK2 suggested generalizability, but results varied depending
+on target and architecture. This suggests that a full analysis
+of DK2 may be justified, and that further specialization of
+models, such as models targeted towards individual weather
+stations close to renewable energy sources, may yield even
+more accurate results.
+\paragraph{Mid-term prediction to confirm neural net applicability}
+As horizons expanded, all models seemed to experience a
+drop-off in performance. To further investigate this, one could
+expand the horizon, to see when performance may shift, perhaps
+leading to the neural network-based models gaining the upper
+hand.

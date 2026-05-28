@@ -2,16 +2,66 @@
 Prerequisite} 
 \label{sec:problem-formulation-and-approach}
 \subsection{Problem formulation}
-Problem formulation goes here.'
+The deployment of a real-time electricity price forecasting
+system requires choices about three intertwined questions:
+which model architecture to use, which data sources to acquire
+and maintain, and over what horizon predictions remain useful.
+While prior work ~\cite{energyPricePredictionMLNeighbors, 
+energyPricePredictionUK, energyPricePredictionNovelDeepLearning} has addressed 
+each question in isolation, under specialized settings, the practical 
+interactions between these choices remain under-explored. A company
+deploying such a system must weigh the recurring cost of
+data acquisition against the marginal predictive accuracy each
+data source provides, often without clear guidance on whether
+comprehensive feature collection is justified.
 
-\subsection{Forecasting Approach Selection}
-\textit{This section will not go here in the final 
-draft, i am simply writing it here so that it is 
-currently included somewhere within the paper.}\\
-As previously mentioned, the forecasting 
-approaches chosen for predicting the electricity 
-prices in Denmark are:\hltodo{.}{Add reference for each model, using their 
-library is fine. } 
+This paper investigates how the predictive performance of
+common machine learning architectures responds to systematic
+variation in three settings: feature composition, forecasting
+horizon, and prediction target. Formally, the problem is
+structured as follows:
+
+Given a set of architectures $M$ = RF, XGB, LGBM, CB,
+LSTM, GRU, Transformer, Gluon, a set of forecast horizons
+$H$ = 0, 24, 48, 72, 96, 120, 144, 168 hours, a set of feature
+subsets $F$ (13 progressively expanding feature constellations),
+and two prediction targets $T$ = Price, Delta, we evaluate the
+performance of every time-feasible combination $(m, h, f, t) \in
+M \times H \times F \times T$ using walk-forward validation over 11 years
+of Danish electricity prices.
+
+The central research question is: How much, and which,
+data does a forecasting system actually need, to perform
+competitively on short-term electricity price prediction in
+Denmark?
+This is investigated through two sub-questions:
+\begin{enumerate}
+	\item Architectural sensitivity: Do different architecture families respond 
+	differently to changes in feature availability
+	and forecasting horizon?
+	\item Feature contribution: Which feature categories are most
+	impactful to predictive accuracy, and at what point does
+	adding more data stop yielding improvements?
+\end{enumerate}
+Performance is measured using MAE in EUR/MWh, chosen
+for its interpretability and robustness to the frequent positive and negative 
+price spikes characteristic of the Danish
+electricity price market. A naive persistence baseline serves
+as the non-ML reference point. Supplementary experiments
+address potential methodological pitfalls, including default
+hyperparameter assumptions, loss function alignment, weather
+data source addition, and cross-region generalisation.
+This study deliberately does not pursue peak performance
+through exhaustive hyperparameter tuning or architectural
+specialisation. The contribution lies instead in the comparative behaviour of 
+default-configured models across a wide
+experimental grid, yielding practical guidance for the data-versus-performance 
+trade-off facing real-world deployments.
+
+
+\subsection{Forecasting approach selection}
+As previously mentioned, the forecasting approaches chosen for predicting the 
+electricity prices in Denmark are:
 \begin{multicols}{2}
 	\begin{enumerate}
 		\item \gls{rf}
